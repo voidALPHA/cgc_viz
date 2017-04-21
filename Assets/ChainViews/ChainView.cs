@@ -1388,6 +1388,7 @@ namespace ChainViews
             RealtimeLogger.Log("Finished load file job.");
 
             UndoLord.Instance.DropStack();
+            GraphicRaycasterVA.Instance.ForceReset();
 
             //Chain.Unload( );
         }
@@ -1590,6 +1591,7 @@ namespace ChainViews
             ChainNodeView.NextJsonId = 0;
 
             SatelliteUpdateLord.Clear();
+            GraphicRaycasterVA.Instance.ForceReset();
 
             IsDirty = false;
 

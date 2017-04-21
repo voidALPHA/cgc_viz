@@ -263,6 +263,11 @@ namespace UnityEngine.UI
         private readonly Queue<Graphic> GraphicsToTest = new Queue<Graphic>();
         private TransformTestDictionary transformTester = new TransformTestDictionary();
 
+        public void ForceReset()
+        {
+            LastKnownGraphicCount = 0;
+        }
+
         private void Raycast(List<Canvas> canvases, Camera eventCamera, Vector2 pointerPosition, List<Graphic> results)
         {
             var workspaceTest = new Predicate<Graphic>( // Unity's original test, with modifications from voidALPHA to perform less intensive tests first
