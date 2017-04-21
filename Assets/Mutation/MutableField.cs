@@ -174,6 +174,7 @@ namespace Mutation
 
         public string GetLiteralValueAsString()
         {
+            if(LiteralValue == null) return "";
             return LiteralValue.ToString();
         }
 
