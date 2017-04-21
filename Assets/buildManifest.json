@@ -1,0 +1,86 @@
+{
+  "Builds": [
+    {
+      "Name": "Haxxis",
+      "Scenes": [
+        "Scenes/HaxxisMainScene.unity"
+      ],
+      "Targets": [],
+      "FoldersToCopy": [],
+      "LocalFoldersToCopy": [
+        "ScoreData",
+        "TestScripts",
+        "HaxxisPackages",
+        "WinIncludes/Utilities"
+      ],
+      "LocalFilesToCopy": [
+        "README.txt",
+        "exampleSnailMailTrace",
+        "gpl.txt",
+        "gpl.md",
+        "ExampleArenaIntro.bat",
+        "ExampleArenaView.bat",
+        "ExampleInteractiveFilament.bat",
+        "ExampleInteractiveFilamentFromFile.bat",
+        "HaxxisVideogenAcidTest.bat",
+        "RunHaxxisAsOfflineVGS.bat",
+        "RunHaxxisForFilament.bat"
+      ],
+      "Target": 0
+    },
+    {
+      "Name": "HaxxisLinux",
+      "Scenes": [
+        "Scenes/HaxxisMainScene.unity"
+      ],
+      "Targets": [],
+      "FoldersToCopy": [],
+      "LocalFoldersToCopy": [
+        "TestScripts",
+        "HaxxisPackages",
+        "LinuxIncludes/Utilities"
+      ],
+      "LocalFilesToCopy": [
+        "README.txt",
+        "exampleSnailMailTrace",
+        "gpl.txt",
+        "gpl.md",
+        "ExampleArenaIntro.bat",
+        "ExampleArenaView.bat",
+        "ExampleInteractiveFilament.bat",
+        "ExampleInteractiveFilamentFromFile.bat",
+        "HaxxisVideogenAcidTest.bat",
+        "RunHaxxisAsOfflineVGS.bat",
+        "RunHaxxisForFilament.bat"
+      ],
+      "Target": 2
+    },
+    {
+      "Name": "HaxxisMac",
+      "Scenes": [
+        "Scenes/HaxxisMainScene.unity"
+      ],
+      "Targets": [],
+      "FoldersToCopy": [],
+      "LocalFoldersToCopy": [
+        "TestScripts",
+        "HaxxisPackages",
+        "MacIncludes/Utilities"
+      ],
+      "LocalFilesToCopy": [
+        "README.txt",
+        "exampleSnailMailTrace",
+        "gpl.txt",
+        "gpl.md",
+        "ExampleArenaIntro.bat",
+        "ExampleArenaView.bat",
+        "ExampleInteractiveFilament.bat",
+        "ExampleInteractiveFilamentFromFile.bat",
+        "HaxxisVideogenAcidTest.bat",
+        "RunHaxxisAsOfflineVGS.bat",
+        "RunHaxxisForFilament.bat"
+      ],
+      "Target": 1
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+### network localhost:8004/JobProcessID/{jobID}/{MSSID}/PROCESS_ID -resolveCmdLineArgs -resolveProcessID
+# The above line should be done as early as possible, to be able to kill Haxxis from the VGS worker server
+
+network localhost:8004/JobLifeline/{jobID}/{MSSID} -resolveCmdLineArgs -lifeline
+
+log "Haxxis launched for video generation job"
+
+Log ""
+Log "Command line arguments:"
+cla -dump
+
+# Set some defaults first, then set from command line arguments which may or may not be present
+# Theory on no full screen: x264 video codec does not play well with full screen mode
+### screen -fullscreenoff -resolution 1920x1080
+screen -fullScreenFromCmdLineArg fullScreen -resolutionFromCmdLineArg screenRes
+screen -dump
+
+# This sets the x264 codec to have an I-frame every frame:
+###registry  -setValue  "HKEY_CURRENT_USER\\SOFTWARE\\GNU\\x264vfw64" "extra_cmdline" String "--keyint 1"
+
+### input -mouseCursorOff
+
+# Note that in the 'network' dev command below, the dev command itself replaces {jobID} with a lookup of the command line argument of that name
+network localhost:8004/JobProgress/{jobID}/{MSSID}/0/Loading%20HP -resolveCmdLineArgs
+
+chainview -loadFromCmdLineArg HPName
+
+# Set some defaults first, then set from command line arguments which may or may not be present
+movie -realTimeOff -frameRate Thirty -downScale Original
+movie -setVCFromCmdLineArg videoCodec -realTimeFromCmdLineArg realTime -frameRateFromCmdLineArg frameRate -downScaleFromCmdLineArg downScale
+
+chainview -off
+choreography -timelineOff
+jm -busyIndicatorOff
+network -waitingIndicatorOff
+stats -displayOff
+
+network localhost:8004/JobProgress/{jobID}/{MSSID}/0/Evaluating -resolveCmdLineArgs
+
+choreography -startPlayback
+
+# wait 0.5
+## chainview -new      # Destroy lots of stuff so we're not hogging CPU or GPU during the wait that follows...
+## wait 10             # We wait a little to allow the video codec to finish up, since we just finished recording.  Would be nice if we had a call to see if it's done, but we don't
+
+# Cancel the lifeline request so we can proceed
+log "Script thinks choreography has completed, so is cancelling lifeline request"  # This is apparently too fast to get to the log because of the kill below.  Sheesh.
+network -cancelLifelineRequest
+
+# Wait for all pending network operations (Haxxis talking to worker server) to complete before quitting
+network -waitForAll
+
+wait 3
+
+quit -kill          # Quit, and do so by killing our own Haxxis process rather than calling Application.Quit (suicide, really)

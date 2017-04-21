@@ -1,0 +1,47 @@
+iso grid options:
+
+X/Zaxis options (ints, create the positioning axes):
+Stage_Order // use this for per-team
+Round_Number // use this for per-round
+CsId // use this for per-CS
+Team_ID
+
+X/ZAxisLabelValue options (labeling values, construct the positioning labels):
+// Leave field empty (using its default of VALUE) to use corresponding positional axis as the argument to the axis format string.  For example, displaying Round_Number can be done by entering "Xaxis=Round_Number, "XAxisLabelFormat=Round {0}", no AxisLabelValue is necessary
+Crs_Name // corresponds with Stage_Order
+Stage_Order
+CsId
+Challenge_Set_Name // corresponds with CsId
+Challenge_Shortname // corresponds with CsId
+Round_Number // obviously corresponds with Round_Number
+
+X/ZAxisLabelFormat (C# format string used to produce the related axis labels.  For example, the string "Team: {0}" together with an axis value of Team_Id will show the various team IDs used to generate the package, while zAxisLabelFormat="{0}", zAxis="Crs_Name" will put the cyber reasoning systems' names as the z axis labels.)
+
+Cell X / Y / Z axis options
+Availability.Total // standard A, renders green
+Availability.Performance.Total
+Availability.Performance.Execution_Time
+Availability.Performance.File_Size
+Availability.Performance.Memory_Use
+Security.Total // standard S, renders blue
+Security.Consensus
+Security.Reference
+Evaluation.Total // standard E, renders red
+Total_Score
+
+GimbalX/Y/ZLetter:
+Fill in a label to display on the xyz gimbal (Defaults to E, A, S)
+
+CellX/Y/ZMax:
+Fill in a per-cell maximum for each axis, or -1 to use the maximum located value for each.
+For example, entering CellXMax=100 will display each cell as a proportion of 100.
+
+Round:
+Set of rounds to use.  Must be in range format (accepts "0,2,6,8", "6", or "1..12").  Does not accept options ("all" will not work)
+
+Teams:
+Set of teams to display.  Remember that team IDs are 1-based (one through seven).  May be in optional range format, accepting "1,4,5", "5", "4..7", "all", or "none" (none will not produce anything interesting).
+
+CsIds:
+Set of CsIds to display.  Cs Ids are best referenced through the story finder API.  May be in optional range format, accepting "16,42,58", "58", "4..90", "all", or "none" (none will not produce anything interesting).
+

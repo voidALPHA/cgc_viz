@@ -1,0 +1,457 @@
+{
+"$id": "1",
+"Chain": {
+"$id": "2",
+"RootGroup": {
+"$id": "3",
+"Groups": {
+"$id": "4",
+"$values": []
+},
+"Nodes": {
+"$id": "5",
+"$values": [
+{
+"$id": "6",
+"$type": "Experimental.ConsecutiveValueAdapter, Assembly-CSharp",
+"EntryFieldName": "Entries",
+"NumberOfEntries": {
+"$id": "7",
+"GlobalParameterKey": "Number Of Rounds",
+"SchemaSource": 3
+},
+"IndexFieldName": "Index",
+"Comment": "",
+"Router": {
+"$id": "8",
+"SelectionStates": {
+"$id": "9",
+"$values": [
+{
+"$id": "10",
+"Name": "Default",
+"Targets": {
+"$id": "11",
+"$values": [
+{
+"$id": "12",
+"$type": "Mutation.Mutators.Enumeration.EnumeratorDecombiner, Assembly-CSharp",
+"EntriesList": {
+"$id": "13",
+"AbsoluteKey": "Entries",
+"SchemaSource": 1
+},
+"SingleEntryTarget": {
+"$id": "14",
+"AbsoluteKey": "Element"
+},
+"NumberOfEntriesTarget": {
+"$id": "15",
+"AbsoluteKey": "Number Of Elements"
+},
+"Comment": "",
+"Router": {
+"$id": "16",
+"SelectionStates": {
+"$id": "17",
+"$values": [
+{
+"$id": "18",
+"Name": "Per Element",
+"Targets": {
+"$id": "19",
+"$values": [
+{
+"$id": "20",
+"$type": "Mutation.Mutators.FormatStringMutator, Assembly-CSharp",
+"FormatString": {
+"$id": "21",
+"LiteralValue": "StartVideoGen/ArenaView\\\\ArenaViewIntroNamesOnly.json/26/-1/-1/ArenaStep{0}/-round={0} -useRoundAsRoundLabel",
+"SchemaSource": 0
+},
+"PrimaryArgument": {
+"$id": "22",
+"AbsoluteKey": "Element.Index",
+"SchemaSource": 1
+},
+"SecondaryArgument": {
+"$id": "23",
+"LiteralValue": "",
+"SchemaSource": 0
+},
+"TargetString": {
+"$id": "24",
+"AbsoluteKey": "Element.Formatted String"
+},
+"Comment": "",
+"Router": {
+"$id": "25",
+"SelectionStates": {
+"$id": "26",
+"$values": [
+{
+"$id": "27",
+"Name": "Default",
+"Targets": {
+"$id": "28",
+"$values": [
+{
+"$id": "29",
+"$type": "Mutation.Mutators.UriEncodeMutator, Assembly-CSharp",
+"InputString": {
+"$id": "30",
+"AbsoluteKey": "Element.Formatted String",
+"SchemaSource": 1
+},
+"OutputUri": {
+"$id": "31",
+"AbsoluteKey": "Element.EncodedURI"
+},
+"Comment": "",
+"Router": {
+"$id": "32",
+"SelectionStates": {
+"$id": "33",
+"$values": [
+{
+"$id": "34",
+"Name": "Default",
+"Targets": {
+"$id": "35",
+"$values": [
+{
+"$id": "36",
+"$type": "Mutation.Mutators.NetworkRequestMutator, Assembly-CSharp",
+"Url": {
+"$id": "37",
+"LiteralValue": "http://50.197.169.121:8003/",
+"SchemaSource": 0
+},
+"Request": {
+"$id": "38",
+"AbsoluteKey": "Element.EncodedURI",
+"SchemaSource": 1
+},
+"WaitForCompletion": {
+"$id": "39",
+"LiteralValue": false,
+"SchemaSource": 0
+},
+"Comment": "",
+"Router": {
+"$id": "40",
+"SelectionStates": {
+"$id": "41",
+"$values": [
+{
+"$id": "42",
+"Name": "Default",
+"Targets": {
+"$id": "43",
+"$values": []
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+},
+{
+"$ref": "12"
+},
+{
+"$ref": "20"
+},
+{
+"$ref": "36"
+},
+{
+"$id": "44",
+"$type": "Adapters.GlobalParameters.CommandLineArgumentAdapter, Assembly-CSharp",
+"ParameterName": {
+"$id": "45",
+"LiteralValue": "NumberOfRounds",
+"SchemaSource": 0
+},
+"DefaultValue": {
+"$id": "46",
+"LiteralValue": "96",
+"SchemaSource": 0
+},
+"ParameterTarget": {
+"$id": "47",
+"AbsoluteKey": "New Param"
+},
+"Comment": "",
+"Router": {
+"$id": "48",
+"SelectionStates": {
+"$id": "49",
+"$values": [
+{
+"$id": "50",
+"Name": "Default",
+"Targets": {
+"$id": "51",
+"$values": [
+{
+"$id": "52",
+"$type": "Mutation.Mutators.Axes.ArrityTypeAxes.ParseStringToInt, Assembly-CSharp",
+"AxisKey": {
+"$id": "53",
+"AbsoluteKey": "New Param",
+"SchemaSource": 1
+},
+"TargetField": {
+"$id": "54",
+"AbsoluteKey": "New Key"
+},
+"Comment": "",
+"Router": {
+"$id": "55",
+"SelectionStates": {
+"$id": "56",
+"$values": [
+{
+"$id": "57",
+"Name": "Default",
+"Targets": {
+"$id": "58",
+"$values": [
+{
+"$id": "59",
+"$type": "Adapters.GlobalParameters.WriteGlobalValueNode, Assembly-CSharp",
+"Parameter": {
+"$id": "60",
+"AbsoluteKey": "New Key",
+"SchemaSource": 1
+},
+"ParameterName": {
+"$id": "61",
+"LiteralValue": "Number Of Rounds",
+"SchemaSource": 0
+},
+"Comment": "",
+"Router": {
+"$id": "62",
+"SelectionStates": {
+"$id": "63",
+"$values": [
+{
+"$id": "64",
+"Name": "Pass Through",
+"Targets": {
+"$id": "65",
+"$values": []
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+},
+{
+"$ref": "59"
+},
+{
+"$ref": "52"
+},
+{
+"$ref": "29"
+}
+]
+},
+"Comment": ""
+}
+},
+"ChainViewModel": {
+"$id": "66",
+"RootGroupViewModel": {
+"$id": "67",
+"Group": {
+"$ref": "3"
+},
+"Position": {
+"x": 0.0,
+"y": 0.0,
+"z": 0.0
+},
+"RelativePath": "",
+"NodeViewModels": {
+"$id": "68",
+"$values": [
+{
+"$id": "69",
+"ChainNode": {
+"$ref": "6"
+},
+"Position": {
+"x": 50.0,
+"y": -50.0,
+"z": 0.0
+}
+},
+{
+"$id": "70",
+"ChainNode": {
+"$ref": "12"
+},
+"Position": {
+"x": 450.0,
+"y": -50.0,
+"z": 0.0
+}
+},
+{
+"$id": "71",
+"ChainNode": {
+"$ref": "20"
+},
+"Position": {
+"x": 850.0,
+"y": -50.0,
+"z": 0.0
+}
+},
+{
+"$id": "72",
+"ChainNode": {
+"$ref": "36"
+},
+"Position": {
+"x": 850.0,
+"y": -500.0,
+"z": 0.0
+}
+},
+{
+"$id": "73",
+"ChainNode": {
+"$ref": "44"
+},
+"Position": {
+"x": 50.0,
+"y": -350.0,
+"z": 0.0
+}
+},
+{
+"$id": "74",
+"ChainNode": {
+"$ref": "59"
+},
+"Position": {
+"x": 50.0,
+"y": -750.0,
+"z": 0.0
+}
+},
+{
+"$id": "75",
+"ChainNode": {
+"$ref": "52"
+},
+"Position": {
+"x": 50.0,
+"y": -550.0,
+"z": 0.0
+}
+},
+{
+"$id": "76",
+"ChainNode": {
+"$ref": "29"
+},
+"Position": {
+"x": 850.0,
+"y": -300.0,
+"z": 0.0
+}
+}
+]
+},
+"GroupViewModels": {
+"$id": "77",
+"$values": []
+}
+},
+"NodeViewModels": null
+},
+"Choreography": {
+"$id": "78",
+"Timeline": {
+"$id": "79",
+"StartStep": {
+"$id": "80",
+"$type": "Choreography.Steps.Timeline.TimelineStartStep, Assembly-CSharp",
+"Delay": 0.0,
+"Note": "",
+"Router": {
+"$id": "81",
+"Events": {
+"$id": "82",
+"$values": [
+{
+"$id": "83",
+"Name": "Start",
+"Targets": {
+"$id": "84",
+"$values": []
+}
+}
+]
+}
+},
+"NameOverride": null
+}
+}
+}
+}

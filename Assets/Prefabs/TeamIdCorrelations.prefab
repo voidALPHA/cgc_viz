@@ -1,0 +1,145 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &147166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 483440}
+  - 114: {fileID: 11484142}
+  - 114: {fileID: 11401126}
+  - 114: {fileID: 11459246}
+  - 114: {fileID: 11471428}
+  - 114: {fileID: 11401440}
+  m_Layer: 0
+  m_Name: TeamIdCorrelations
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &483440
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147166}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11401126
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aca23ab0b015f0041bc3a8d138ebcf41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ColorsList:
+  - {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  - {r: 0.1764706, g: 0.25882354, b: 0.89019614, a: 1}
+  - {r: 0.9294118, g: 0.70980394, b: 0.14117648, a: 1}
+  - {r: 0.6117647, g: 0.09411766, b: 0.20000002, a: 1}
+  - {r: 0.121568635, g: 0.69803923, b: 0.3529412, a: 1}
+  - {r: 0.98823535, g: 0.48235297, b: 0.043137256, a: 1}
+  - {r: 0.54901963, g: 0.43137258, b: 0.87843144, a: 1}
+  - {r: 0.09019608, g: 0.78823537, b: 0.8196079, a: 1}
+  - {r: 0.29411763, g: 0.27028397, b: 0.25735292, a: 1}
+--- !u!114 &11401440
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43bddb4d0c8c4c247a67600dcd35e0c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Anonymize: 0
+  m_LogoMaterials:
+  - {fileID: 2100000, guid: 9eb97e50798ecdf44ac91c7df4b73e0c, type: 2}
+  - {fileID: 2100000, guid: 7393cbce97cbcd544964abc862fecd15, type: 2}
+  - {fileID: 2100000, guid: 21ad433141a88c84e9c7a8cf32d134a0, type: 2}
+  - {fileID: 2100000, guid: 5f29241a0bb593f4ab7ea7cd7c6598da, type: 2}
+  - {fileID: 2100000, guid: ca560e4f6975dee438f2968bfceb52ec, type: 2}
+  - {fileID: 2100000, guid: 1ddc22ccf84569c4cb43ee0a204ae844, type: 2}
+  - {fileID: 2100000, guid: e5c1f6abab6793c4dbb38f7aca5efcc1, type: 2}
+  - {fileID: 2100000, guid: 81f53976b41cb8a40a87320ec23920bc, type: 2}
+  - {fileID: 2100000, guid: 89c49b662481df942973608b43c82344, type: 2}
+--- !u!114 &11459246
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abcd701e322543c488f127c67051800b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Anonymize: 0
+  m_TeamStageOrders: 000000000100000002000000030000000400000007000000060000000500000008000000
+--- !u!114 &11471428
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecffd905d892fdd43b98817d8e49b716, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Anonymize: 0
+  m_CrsNames:
+  - NONE
+  - GALACTICA
+  - JIMA
+  - RUBEUS
+  - CRSPY
+  - MAYHEM
+  - MECHAPHISH
+  - XANDRA
+  - SPARE
+--- !u!114 &11484142
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f5d4191952b9244db2ecae131a1b9e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Anonymize: 0
+  m_TeamNames:
+  - NONE
+  - CODEJITSU
+  - CSDS
+  - DEEP RED
+  - DISEKT
+  - FORALLSECURE
+  - SHELLPHISH
+  - TECHX
+  - SPARE
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 147166}
+  m_IsPrefabParent: 1

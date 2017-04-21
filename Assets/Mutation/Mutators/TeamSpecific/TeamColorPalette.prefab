@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &181198
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 434370}
+  - 114: {fileID: 11476706}
+  m_Layer: 0
+  m_Name: TeamColorPalette
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &434370
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 181198}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11476706
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 181198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aca23ab0b015f0041bc3a8d138ebcf41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ColorsList:
+  - {r: 0, g: 0, b: 0, a: 1}
+  - {r: .929411829, g: .709803939, b: .141176477, a: 1}
+  - {r: .611764729, g: .0941176564, b: .200000018, a: 1}
+  - {r: .176470593, g: .258823544, b: .890196145, a: 1}
+  - {r: .988235354, g: .482352972, b: .0431372561, a: 1}
+  - {r: .121568635, g: .698039234, b: .352941185, a: 1}
+  - {r: .0901960805, g: .788235366, b: .819607913, a: 1}
+  - {r: .549019635, g: .431372583, b: .878431439, a: 1}
+  - {r: .678431392, g: .709803939, b: .749019623, a: 1}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 181198}
+  m_IsPrefabParent: 1

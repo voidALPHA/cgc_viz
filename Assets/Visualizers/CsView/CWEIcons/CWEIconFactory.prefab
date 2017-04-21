@@ -1,0 +1,341 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &163552
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 449786}
+  - 114: {fileID: 11407022}
+  m_Layer: 0
+  m_Name: CWEIconFactory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &449786
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 163552}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11407022
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 163552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 836d44917a03db2479ca29e61c4cc578, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Icons:
+  - m_Texture: {fileID: 2800000, guid: c12d597ba1fe1304a858a0d72f95be40, type: 3}
+    m_Name: 20
+    m_Description: Improper Input Validation
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 22
+    m_Description: Improper Limitation of a Pathname
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 59
+    m_Description: Improper Link Resolution Before File Access
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 61
+    m_Description: UNIX Symbolic Link (Symlink) Following
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 118
+    m_Description: Improper Access of Indexable Resource
+  - m_Texture: {fileID: 2800000, guid: f082e20f1b1a523458bf730e7c224c44, type: 3}
+    m_Name: 120
+    m_Description: Buffer Overflow from Buffer Copy
+  - m_Texture: {fileID: 2800000, guid: d9906cfdec8c0d14786fee29060c5f9e, type: 3}
+    m_Name: 121
+    m_Description: Stack-based Buffer Overflow
+  - m_Texture: {fileID: 2800000, guid: 637f90f07658bd7449391bb340376308, type: 3}
+    m_Name: 122
+    m_Description: Heap-based Buffer Overflow
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 123
+    m_Description: Write-what-where Condition
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 124
+    m_Description: Buffer Underwrite ('Buffer Underflow')
+  - m_Texture: {fileID: 2800000, guid: 0f850fd33e125874fa9d7636bbe70eab, type: 3}
+    m_Name: 125
+    m_Description: Out-of-bounds Read
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 126
+    m_Description: Buffer Over-read
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 127
+    m_Description: Buffer Under-read
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 128
+    m_Description: Wrap-around Error
+  - m_Texture: {fileID: 2800000, guid: 2cb3c4f6612cd2040a2ca1c32f6e6528, type: 3}
+    m_Name: 129
+    m_Description: Improper Validation of Array Index
+  - m_Texture: {fileID: 2800000, guid: 4433d2af0d72c1c46afd4d95c0f84385, type: 3}
+    m_Name: 131
+    m_Description: Incorrect Calculation of Buffer Size
+  - m_Texture: {fileID: 2800000, guid: f21b40be6ecf52044b6e95dcfda8365c, type: 3}
+    m_Name: 134
+    m_Description: Use of External Format String
+  - m_Texture: {fileID: 2800000, guid: 29dd9be20bd4c734d9322e0e66f64bb2, type: 3}
+    m_Name: 135
+    m_Description: Miscalculation of Multi-Byte String Length
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 170
+    m_Description: Improper Null Termination
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 176
+    m_Description: Improper Handling of Unicode Encoding
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 187
+    m_Description: Partial Comparison
+  - m_Texture: {fileID: 2800000, guid: 11a677468f5e25f4bba51745dbf8a105, type: 3}
+    m_Name: 190
+    m_Description: Integer Overflow or Wraparound
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 191
+    m_Description: Integer Underflow (Wrap or Wraparound)
+  - m_Texture: {fileID: 2800000, guid: 1dc6e9d9279ea8142bb920f6c5bd0355, type: 3}
+    m_Name: 193
+    m_Description: Off-by-one Error
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 194
+    m_Description: Unexpected Sign Extension
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 195
+    m_Description: Signed to Unsigned Conversion Error
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 196
+    m_Description: Unsigned to Signed Conversion Error
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 199
+    m_Description: Information Management Errors
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 200
+    m_Description: Information Exposure
+  - m_Texture: {fileID: 2800000, guid: f46ac26e735e407448e8cc51ed23effe, type: 3}
+    m_Name: 201
+    m_Description: Information Exposure Through Sent Data
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 209
+    m_Description: Information Exposure Through Error Message
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 215
+    m_Description: Information Exposure Through Debug Info
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 226
+    m_Description: Sensitive Info Uncleared Before Release
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 252
+    m_Description: Unchecked Return Value
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 275
+    m_Description: Permission Issues
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 287
+    m_Description: Improper Authentication
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 300
+    m_Description: Channel Accessible by Man in the Middle
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 310
+    m_Description: Cryptographic Issues
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 316
+    m_Description: Cleartext Storage of Sensitive Info
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 326
+    m_Description: Inadequate Encryption Strength
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 327
+    m_Description: Use of a Broken/Risky Crypto Algorithm
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 328
+    m_Description: Reversible One-Way Hash
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 347
+    m_Description: Improper Verification of Cryptographic Signature
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 367
+    m_Description: Time-of-check Time-of-use (TOCTOU) Race Condition
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 369
+    m_Description: Divide By Zero
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 388
+    m_Description: Error Handling
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 393
+    m_Description: Return of Wrong Status Code
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 398
+    m_Description: Indicator of Poor Code Quality
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 400
+    m_Description: Uncontrolled Resource Consumption
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 415
+    m_Description: Double Free
+  - m_Texture: {fileID: 2800000, guid: 520310e02278a454bbb7eeb11f083440, type: 3}
+    m_Name: 416
+    m_Description: Use After Free
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 434
+    m_Description: Allow Upload of File with Dangerous Type
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 456
+    m_Description: Missing Initialization of a Variable
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 457
+    m_Description: Use of Uninitialized Variable
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 458
+    m_Description: Incorrect Initialization
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 465
+    m_Description: Pointer Issues
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 466
+    m_Description: Return of Pointer Value Beyond Range
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 467
+    m_Description: Use of sizeof() on a Pointer Type
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 468
+    m_Description: Incorrect Pointer Scaling
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 469
+    m_Description: Use of Pointer Subtraction to Get Size
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 471
+    m_Description: Modification of Assumed-Immutable Data
+  - m_Texture: {fileID: 2800000, guid: 5498ad2c0943e434a918d9114e21f422, type: 3}
+    m_Name: 476
+    m_Description: NULL Pointer Dereference
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 502
+    m_Description: Deserialization of Untrusted Data
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 514
+    m_Description: Covert Channel
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 515
+    m_Description: Covert Storage Channel
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 521
+    m_Description: Weak Password Requirements
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 561
+    m_Description: Dead Code
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 562
+    m_Description: Return of Stack Variable Address
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 592
+    m_Description: Authentication Bypass Issues
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 665
+    m_Description: Improper Initialization
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 674
+    m_Description: Uncontrolled Recursion
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 680
+    m_Description: Integer Overflow to Buffer Overflow
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 681
+    m_Description: Incorrect Conversion between Numeric Types
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 682
+    m_Description: Incorrect Calculation
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 690
+    m_Description: Unchecked Return Value to NULL Ptr. Dereference
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 703
+    m_Description: Improper Check or Handling of Exceptions
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 704
+    m_Description: Incorrect Type Conversion or Cast
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 763
+    m_Description: Release of Invalid Pointer or Reference
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 783
+    m_Description: Operator Precedence Logic Error
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 785
+    m_Description: Path Manipulation Function w/o Buffer Size
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 786
+    m_Description: Access of Memory Before Start of Buffer
+  - m_Texture: {fileID: 2800000, guid: 9aa53190e3796a349b4bffd449a5c64c, type: 3}
+    m_Name: 787
+    m_Description: Out-of-bounds Write
+  - m_Texture: {fileID: 2800000, guid: 3a1950c34012bda46b0c4f0225730da4, type: 3}
+    m_Name: 788
+    m_Description: Access of Memory After End of Buffer
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 798
+    m_Description: Use of Hard-coded Credentials
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 805
+    m_Description: Buffer Access with Incorrect Length Value
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 806
+    m_Description: Buffer Access w/ Size of Source Buffer
+  - m_Texture: {fileID: 2800000, guid: ecc4db2e6b2f1fa41ac5459fe534c881, type: 3}
+    m_Name: 822
+    m_Description: Untrusted Pointer Dereference
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 823
+    m_Description: Use of Out-of-range Pointer Offset
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 824
+    m_Description: Access of Uninitialized Pointer
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 825
+    m_Description: Expired Pointer Dereference
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 839
+    m_Description: Numeric Range Comparison w/o Minimum Check
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 840
+    m_Description: Business Logic Errors
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 843
+    m_Description: Access of Resource with Incompatible Type
+  - m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: 908
+    m_Description: Use of Uninitialized Resource
+  m_DefaultIcon:
+    m_Texture: {fileID: 2800000, guid: 395bab6e56df2554eb88573c54598136, type: 3}
+    m_Name: Other
+    m_Description: Other CWE
+  m_IconMaterialTemplate: {fileID: 2100000, guid: d9ce5e81a6b034847892d0f59af42b23,
+    type: 2}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 163552}
+  m_IsPrefabParent: 1

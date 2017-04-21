@@ -1,0 +1,131 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &183032
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 499236}
+  - component: {fileID: 11499686}
+  - component: {fileID: 11473630}
+  - component: {fileID: 11483746}
+  - component: {fileID: 11436592}
+  - component: {fileID: 11462628}
+  m_Layer: 0
+  m_Name: VisualizerFactory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &499236
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 183032}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11436592
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 183032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8acd1ebd34c71542b0ec9ec297266db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_DoCommandWaitOnPlay: 1
+--- !u!114 &11462628
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 183032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94e8d9d806e412545ad0d577b1466072, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ChainView: {fileID: 0}
+--- !u!114 &11473630
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 183032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a0db64cbc4136468abc682e5797adb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11483746
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 183032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e73d3aa3aca05b40a7bd0b960c7af6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11499686
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 183032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da6c8fd5c9f8f24ba75bca79aed3f13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsoGridPrefab: {fileID: 11411796, guid: 324343df1c2cc324884b6de39cafd9f0, type: 2}
+  m_RectangularVolumePrefab: {fileID: 11402204, guid: 10208a648715c9444b317f445c306d3b,
+    type: 2}
+  m_ScatterPlotPrefab: {fileID: 11434158, guid: 807bc8c60043c3c4d87fa7aaa59e44a0,
+    type: 2}
+  m_LineGraphPrefab: {fileID: 11485308, guid: 9ea1333b8aa08474286e28d934d53d5d, type: 2}
+  m_FilledGraphPrefab: {fileID: 11489398, guid: 92cc2e102dbf48142a5bc3289b6af838,
+    type: 2}
+  m_DisassemblyWindowPrefab: {fileID: 11418574, guid: 16b55d881fad38c4e8e464adc5aef2b2,
+    type: 2}
+  m_CommsEntryPrefab: {fileID: 11458750, guid: dc84b06342432f54b8c96d21011f0861, type: 2}
+  m_DisasmEntryPrefab: {fileID: 11470802, guid: fef91549d6407af4db9ec61d1f63f55e,
+    type: 2}
+  m_LabelVisualizerPrefab: {fileID: 11490638, guid: c44fc0a4bacc52d48a4efdd6b5c9ab22,
+    type: 2}
+  m_DataSharedTooltipVisualizerPrefab: {fileID: 11422658, guid: 12f457f645bb88847ba4c6f5c40f612d,
+    type: 2}
+  m_DisassemblyGroupPrefab: {fileID: 11440804, guid: 4326c383f5c346341987acd50314ec17,
+    type: 2}
+  RenderingCanvas: {fileID: 0}
+  m_BoundHighlightPrefab: {fileID: 11466086, guid: fc7912375aa851a4d80401c979d08175,
+    type: 2}
+  m_ChallengeSetVisualizerPrefab: {fileID: 11463994, guid: fc31da7498d58b14182eddb8e9d6d7b8,
+    type: 2}
+  m_ChallengeSetAssembler: {fileID: 11409288, guid: 6e1ca41e33cc68f42b9cf1270fab4db5,
+    type: 2}
+  m_MemoryVisualizerPrefab: {fileID: 11479260, guid: 2e06d628c07127740adc99c8c22ee455,
+    type: 2}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 183032}
+  m_IsPrefabParent: 1

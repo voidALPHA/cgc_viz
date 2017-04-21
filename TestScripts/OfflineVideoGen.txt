@@ -1,0 +1,14 @@
+### -isVGSJob
+
+chainview -loadFromCmdLineArg HPName
+
+movie -realtimeOff -frameRate Thirty -downScale Original
+
+input -mouseCursorOff
+chainview -off
+choreography -timelineOff
+jm -busyIndicatorOff
+
+choreography -startPlayback
+
+quit -kill          # Quit, and do so by killing our own Haxxis process rather than calling Application.Quit (suicide, really)

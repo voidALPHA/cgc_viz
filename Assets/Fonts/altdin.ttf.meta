@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: c54faed92c888e44c8098d084a85e747
+timeCreated: 1492446764
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Alte DIN 1451 Mittelschrift
+  fontNames:
+  - Alte DIN 1451 Mittelschrift
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

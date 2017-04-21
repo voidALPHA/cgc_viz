@@ -1,0 +1,511 @@
+{
+"$id": "1",
+"Chain": {
+"$id": "2",
+"RootGroup": {
+"$id": "3",
+"Groups": {
+"$id": "4",
+"$values": []
+},
+"Nodes": {
+"$id": "5",
+"$values": [
+{
+"$id": "6",
+"$type": "Experimental.ExperimentalArrayOfIntsNode, Assembly-CSharp",
+"NumberOfInts": {
+"$id": "7",
+"LiteralValue": 5000,
+"SchemaSource": 0
+},
+"Comment": "",
+"Router": {
+"$id": "8",
+"SelectionStates": {
+"$id": "9",
+"$values": [
+{
+"$id": "10",
+"Name": "Default",
+"Targets": {
+"$id": "11",
+"$values": [
+{
+"$id": "12",
+"$type": "Experimental.RandomValueMutator, Assembly-CSharp",
+"RandMin": {
+"$id": "13",
+"LiteralValue": 0.0,
+"SchemaSource": 0
+},
+"RandMax": {
+"$id": "14",
+"LiteralValue": 10.0,
+"SchemaSource": 0
+},
+"RandomTarget": {
+"$id": "15",
+"AbsoluteKey": "IntsList.Random X"
+},
+"Seed": {
+"$id": "16",
+"LiteralValue": 1337,
+"SchemaSource": 0
+},
+"Comment": "",
+"Router": {
+"$id": "17",
+"SelectionStates": {
+"$id": "18",
+"$values": [
+{
+"$id": "19",
+"Name": "Default",
+"Targets": {
+"$id": "20",
+"$values": [
+{
+"$id": "21",
+"$type": "Experimental.RandomValueMutator, Assembly-CSharp",
+"RandMin": {
+"$id": "22",
+"LiteralValue": 0.0,
+"SchemaSource": 0
+},
+"RandMax": {
+"$id": "23",
+"LiteralValue": 10.0,
+"SchemaSource": 0
+},
+"RandomTarget": {
+"$id": "24",
+"AbsoluteKey": "IntsList.Random Y"
+},
+"Seed": {
+"$id": "25",
+"LiteralValue": 1337,
+"SchemaSource": 0
+},
+"Comment": "",
+"Router": {
+"$id": "26",
+"SelectionStates": {
+"$id": "27",
+"$values": [
+{
+"$id": "28",
+"Name": "Default",
+"Targets": {
+"$id": "29",
+"$values": [
+{
+"$id": "30",
+"$type": "Experimental.RandomValueMutator, Assembly-CSharp",
+"RandMin": {
+"$id": "31",
+"LiteralValue": 0.0,
+"SchemaSource": 0
+},
+"RandMax": {
+"$id": "32",
+"LiteralValue": 10.0,
+"SchemaSource": 0
+},
+"RandomTarget": {
+"$id": "33",
+"AbsoluteKey": "IntsList.Random Z"
+},
+"Seed": {
+"$id": "34",
+"LiteralValue": 1337,
+"SchemaSource": 0
+},
+"Comment": "",
+"Router": {
+"$id": "35",
+"SelectionStates": {
+"$id": "36",
+"$values": [
+{
+"$id": "37",
+"Name": "Default",
+"Targets": {
+"$id": "38",
+"$values": [
+{
+"$id": "39",
+"$type": "Visualizers.LineGraph.LineGraphController, Assembly-CSharp",
+"EntryField": {
+"$id": "40",
+"AbsoluteKey": "IntsList",
+"SchemaSource": 1
+},
+"XAxis": {
+"$id": "41",
+"AbsoluteKey": "IntsList.Random X",
+"SchemaSource": 1
+},
+"YAxis": {
+"$id": "42",
+"AbsoluteKey": "IntsList.Random Y",
+"SchemaSource": 1
+},
+"ZAxis": {
+"$id": "43",
+"AbsoluteKey": "IntsList.Random Z",
+"SchemaSource": 1
+},
+"LineWidth": {
+"$id": "44",
+"LiteralValue": 0.085,
+"SchemaSource": 0
+},
+"PulseLine": {
+"$id": "45",
+"LiteralValue": false,
+"SchemaSource": 0
+},
+"PulseWidth": {
+"$id": "46",
+"LiteralValue": 0.085,
+"SchemaSource": 0
+},
+"MainColor": {
+"$id": "47",
+"LiteralValue": {
+"r": 1.0,
+"g": 0.0,
+"b": 0.0,
+"a": 1.0
+},
+"SchemaSource": 0
+},
+"EdgeWidth": {
+"$id": "48",
+"LiteralValue": 0.085,
+"SchemaSource": 0
+},
+"EdgeColor": {
+"$id": "49",
+"LiteralValue": {
+"r": 0.0,
+"g": 0.0,
+"b": 0.0,
+"a": 1.0
+},
+"SchemaSource": 0
+},
+"PointColor": {
+"$id": "50",
+"LiteralValue": {
+"r": 1.0,
+"g": 1.0,
+"b": 1.0,
+"a": 1.0
+},
+"SchemaSource": 0
+},
+"PointWidth": {
+"$id": "51",
+"LiteralValue": 0.01,
+"SchemaSource": 0
+},
+"Comment": "",
+"Router": {
+"$id": "52",
+"SelectionStates": {
+"$id": "53",
+"$values": []
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+},
+{
+"$ref": "12"
+},
+{
+"$ref": "21"
+},
+{
+"$ref": "30"
+},
+{
+"$ref": "39"
+}
+]
+},
+"Comment": ""
+}
+},
+"ChainViewModel": {
+"$id": "54",
+"RootGroupViewModel": {
+"$id": "55",
+"Group": {
+"$ref": "3"
+},
+"Position": {
+"x": 0.0,
+"y": 0.0,
+"z": 0.0
+},
+"RelativePath": "",
+"NodeViewModels": {
+"$id": "56",
+"$values": [
+{
+"$id": "57",
+"ChainNode": {
+"$ref": "6"
+},
+"Position": {
+"x": 147.0,
+"y": -85.0,
+"z": 0.0
+},
+"Expanded": true
+},
+{
+"$id": "58",
+"ChainNode": {
+"$ref": "12"
+},
+"Position": {
+"x": 360.0,
+"y": -220.0,
+"z": 0.0
+},
+"Expanded": true
+},
+{
+"$id": "59",
+"ChainNode": {
+"$ref": "21"
+},
+"Position": {
+"x": 360.0,
+"y": -370.0,
+"z": 0.0
+},
+"Expanded": true
+},
+{
+"$id": "60",
+"ChainNode": {
+"$ref": "30"
+},
+"Position": {
+"x": 360.0,
+"y": -520.0,
+"z": 0.0
+},
+"Expanded": true
+},
+{
+"$id": "61",
+"ChainNode": {
+"$ref": "39"
+},
+"Position": {
+"x": 800.0,
+"y": -220.0,
+"z": 0.0
+},
+"Expanded": true
+}
+]
+},
+"GroupViewModels": {
+"$id": "62",
+"$values": []
+}
+},
+"NodeViewModels": null
+},
+"Choreography": {
+"$id": "63",
+"Timeline": {
+"$id": "64",
+"StartStep": {
+"$id": "65",
+"$type": "Choreography.Steps.Timeline.TimelineStartStep, Assembly-CSharp",
+"Delay": 0.0,
+"Note": "",
+"Router": {
+"$id": "66",
+"Events": {
+"$id": "67",
+"$values": [
+{
+"$id": "68",
+"Name": "Start",
+"Targets": {
+"$id": "69",
+"$values": [
+{
+"$id": "70",
+"$type": "Choreography.Steps.SplineCameraTransforms.MoveToPositionAndFacingStep, Assembly-CSharp",
+"TargetPosition": {
+"x": -10.9667034,
+"y": 4.91127062,
+"z": 21.5957813
+},
+"TargetFacing": {
+"x": 0.769768059,
+"y": -0.110160857,
+"z": -0.628746152
+},
+"SplineType": 0,
+"FocusType": 1,
+"TimeCurve": "Linear",
+"Duration": 0.001,
+"Delay": 0.0,
+"Note": "",
+"Router": {
+"$id": "71",
+"Events": {
+"$id": "72",
+"$values": [
+{
+"$id": "73",
+"Name": "EndMovement",
+"Targets": {
+"$id": "74",
+"$values": [
+{
+"$id": "75",
+"$type": "Choreography.Steps.Recording.StartRecordingStep, Assembly-CSharp",
+"Delay": 0.0,
+"Note": "",
+"Router": {
+"$id": "76",
+"Events": {
+"$id": "77",
+"$values": [
+{
+"$id": "78",
+"Name": "End",
+"Targets": {
+"$id": "79",
+"$values": [
+{
+"$id": "80",
+"$type": "Choreography.Steps.SplineCameraTransforms.MoveToPositionAndFacingStep, Assembly-CSharp",
+"TargetPosition": {
+"x": 10.96483,
+"y": 4.528515,
+"z": -0.26513
+},
+"TargetFacing": {
+"x": 0.7697678,
+"y": -0.110160828,
+"z": -0.6287465
+},
+"SplineType": 0,
+"FocusType": 1,
+"TimeCurve": "linear",
+"Duration": 30.0,
+"Delay": 0.0,
+"Note": "",
+"Router": {
+"$id": "81",
+"Events": {
+"$id": "82",
+"$values": [
+{
+"$id": "83",
+"Name": "EndMovement",
+"Targets": {
+"$id": "84",
+"$values": [
+{
+"$id": "85",
+"$type": "Choreography.Steps.Recording.StopRecordingStep, Assembly-CSharp",
+"Delay": 1.0,
+"Note": "",
+"Router": {
+"$id": "86",
+"Events": {
+"$id": "87",
+"$values": [
+{
+"$id": "88",
+"Name": "End",
+"Targets": {
+"$id": "89",
+"$values": []
+}
+}
+]
+}
+},
+"NameOverride": null
+}
+]
+}
+}
+]
+}
+},
+"NameOverride": null
+}
+]
+}
+}
+]
+}
+},
+"NameOverride": null
+}
+]
+}
+}
+]
+}
+},
+"NameOverride": null
+}
+]
+}
+}
+]
+}
+},
+"NameOverride": null
+}
+}
+}
+}

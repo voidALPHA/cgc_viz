@@ -1,0 +1,2221 @@
+[
+    {
+        "name": "TechX",
+        "submissions": [
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.0,
+                        "file-size": 0.0,
+                        "mem-use": 0.04,
+                        "total": 1.0
+                    },
+                    "total": 1.0
+                },
+                "cset": "CROMU_00016",
+                "evaluation": {
+                    "total": 2
+                },
+                "security": {
+                    "consensus": 0,
+                    "reference": 0.5,
+                    "total": 1.25
+                },
+                "total": 2.5
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 1.1,
+                        "file-size": 0.1,
+                        "mem-use": 0.29,
+                        "total": 0.0
+                    },
+                    "total": 0.0
+                },
+                "cset": "CROMU_00032",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 1.0,
+                    "total": 2.0
+                },
+                "total": 0.0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": -0.01,
+                        "file-size": 0.02,
+                        "mem-use": 0.0,
+                        "total": 1.0
+                    },
+                    "total": 1.0
+                },
+                "cset": "CROMU_00042",
+                "evaluation": {
+                    "total": 2
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 0.3333333333333333,
+                    "total": 1.6666666666666665
+                },
+                "total": 3.33
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": -0.01,
+                        "file-size": 0.02,
+                        "mem-use": 0.0,
+                        "total": 1.0
+                    },
+                    "total": 1.0
+                },
+                "cset": "KPRCA_00007",
+                "evaluation": {
+                    "total": 2
+                },
+                "security": {
+                    "consensus": 0,
+                    "reference": 0.0,
+                    "total": 0
+                },
+                "total": 0.0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.01,
+                        "file-size": 0.02,
+                        "mem-use": 0.0,
+                        "total": 1.0
+                    },
+                    "total": 1.0
+                },
+                "cset": "KPRCA_00010",
+                "evaluation": {
+                    "total": 2
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 1.0,
+                    "total": 2.0
+                },
+                "total": 4.0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": -0.01,
+                        "file-size": 0.02,
+                        "mem-use": 0.0,
+                        "total": 1.0
+                    },
+                    "total": 1.0
+                },
+                "cset": "KPRCA_00012",
+                "evaluation": {
+                    "total": 2
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 0.5,
+                    "total": 1.75
+                },
+                "total": 3.5
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": -0.01,
+                        "file-size": 0.03,
+                        "mem-use": 0.0,
+                        "total": 1.0
+                    },
+                    "total": 1.0
+                },
+                "cset": "KPRCA_00013",
+                "evaluation": {
+                    "total": 2
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 0.5,
+                    "total": 1.75
+                },
+                "total": 3.5
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.0,
+                        "file-size": 0.02,
+                        "mem-use": 0.0,
+                        "total": 1.0
+                    },
+                    "total": 1.0
+                },
+                "cset": "KPRCA_00020",
+                "evaluation": {
+                    "total": 2
+                },
+                "security": {
+                    "consensus": 0,
+                    "reference": 0.3333333333333333,
+                    "total": 1.1666666666666667
+                },
+                "total": 2.33
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.72,
+                        "file-size": 0.22,
+                        "mem-use": 0.5,
+                        "total": 0.13804000000000005
+                    },
+                    "total": 0.13804000000000005
+                },
+                "cset": "KPRCA_00023",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 1.0,
+                    "total": 2.0
+                },
+                "total": 0.28
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.01,
+                        "file-size": 0.07,
+                        "mem-use": 0.0,
+                        "total": 1.0
+                    },
+                    "total": 1.0
+                },
+                "cset": "KPRCA_00028",
+                "evaluation": {
+                    "total": 2
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 0.5,
+                    "total": 1.75
+                },
+                "total": 3.5
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.0,
+                        "file-size": 0.04,
+                        "mem-use": 0.0,
+                        "total": 1.0
+                    },
+                    "total": 1.0
+                },
+                "cset": "KPRCA_00036",
+                "evaluation": {
+                    "total": 2
+                },
+                "security": {
+                    "consensus": 0,
+                    "reference": 0.5,
+                    "total": 1.25
+                },
+                "total": 2.5
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.0,
+                        "file-size": 0.01,
+                        "mem-use": 0.1,
+                        "total": 1.0
+                    },
+                    "total": 1.0
+                },
+                "cset": "NRFIN_00005",
+                "evaluation": {
+                    "total": 2
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 1.0,
+                    "total": 2.0
+                },
+                "total": 4.0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": -0.1,
+                        "file-size": 0.03,
+                        "mem-use": 0.0,
+                        "total": 1.0
+                    },
+                    "total": 1.0
+                },
+                "cset": "NRFIN_00025",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 0.0,
+                    "total": 0
+                },
+                "total": 0.0
+            }
+        ]
+    },
+    {
+        "name": "Deep Red",
+        "submissions": [
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0,
+                        "file-size": 0,
+                        "mem-use": 0,
+                        "total": 1
+                    },
+                    "total": 1
+                },
+                "cset": "CROMU_00016",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 0,
+                    "reference": 0,
+                    "total": 0
+                },
+                "total": 0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.44,
+                        "file-size": -0.01,
+                        "mem-use": 0.0,
+                        "total": 0.3101564424133031
+                    },
+                    "total": 0.3101564424133031
+                },
+                "cset": "CROMU_00032",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 1.0,
+                    "total": 2.0
+                },
+                "total": 0.62
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.1,
+                        "file-size": -0.02,
+                        "mem-use": -0.19,
+                        "total": 1.0
+                    },
+                    "total": 1.0
+                },
+                "cset": "CROMU_00042",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 1.0,
+                    "total": 2.0
+                },
+                "total": 2.0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.42,
+                        "file-size": 0.01,
+                        "mem-use": 0.0,
+                        "total": 0.3293853469160258
+                    },
+                    "total": 0.3293853469160258
+                },
+                "cset": "KPRCA_00007",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 1.0,
+                    "total": 2.0
+                },
+                "total": 0.66
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.57,
+                        "file-size": 0.01,
+                        "mem-use": 0.0,
+                        "total": 0.21415620439188945
+                    },
+                    "total": 0.21415620439188945
+                },
+                "cset": "KPRCA_00010",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 1.0,
+                    "total": 2.0
+                },
+                "total": 0.43
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.09,
+                        "file-size": 0.0,
+                        "mem-use": 0.01,
+                        "total": 1.0
+                    },
+                    "total": 1.0
+                },
+                "cset": "KPRCA_00012",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 1.0,
+                    "total": 2.0
+                },
+                "total": 2.0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.75,
+                        "file-size": 0.0,
+                        "mem-use": 0.0,
+                        "total": 0.12324999999999997
+                    },
+                    "total": 0.12324999999999997
+                },
+                "cset": "KPRCA_00013",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 1.0,
+                    "total": 2.0
+                },
+                "total": 0.25
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.19,
+                        "file-size": -0.01,
+                        "mem-use": 0.0,
+                        "total": 0.708425211065197
+                    },
+                    "total": 0.708425211065197
+                },
+                "cset": "KPRCA_00020",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 1.0,
+                    "total": 2.0
+                },
+                "total": 1.42
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0,
+                        "file-size": 0,
+                        "mem-use": 0,
+                        "total": 1
+                    },
+                    "total": 1
+                },
+                "cset": "KPRCA_00023",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 0,
+                    "reference": 0,
+                    "total": 0
+                },
+                "total": 0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 0.060198
+                    },
+                    "perf": {
+                        "exec-time": 0.3,
+                        "file-size": 0.0,
+                        "mem-use": -0.25,
+                        "total": 0.4822530864197532
+                    },
+                    "total": 0.060198
+                },
+                "cset": "KPRCA_00028",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 1.0,
+                    "total": 2.0
+                },
+                "total": 0.12
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 0
+                    },
+                    "perf": {
+                        "exec-time": -0.99,
+                        "file-size": 0.02,
+                        "mem-use": -0.24,
+                        "total": 1.0
+                    },
+                    "total": 0
+                },
+                "cset": "KPRCA_00036",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 0,
+                    "reference": 0.0,
+                    "total": 0
+                },
+                "total": 0.0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.04,
+                        "file-size": -0.01,
+                        "mem-use": -0.03,
+                        "total": 1.0
+                    },
+                    "total": 1.0
+                },
+                "cset": "NRFIN_00005",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 1.0,
+                    "total": 2.0
+                },
+                "total": 2.0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 0
+                    },
+                    "perf": {
+                        "exec-time": -0.37,
+                        "file-size": -0.01,
+                        "mem-use": -0.01,
+                        "total": 1.0
+                    },
+                    "total": 0
+                },
+                "cset": "NRFIN_00025",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 1.0,
+                    "total": 2.0
+                },
+                "total": 0.0
+            }
+        ]
+    },
+    {
+        "name": "ForAllSecure",
+        "submissions": [
+            {
+                "availability": {
+                    "func": {
+                        "total": 0.10084179104477611
+                    },
+                    "perf": {
+                        "exec-time": 3879.13,
+                        "file-size": 0.08,
+                        "mem-use": 0.31,
+                        "total": 0.0
+                    },
+                    "total": 0.0
+                },
+                "cset": "CROMU_00016",
+                "evaluation": {
+                    "total": 2
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 1.0,
+                    "total": 2.0
+                },
+                "total": 0.0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.94,
+                        "file-size": 0.01,
+                        "mem-use": 0.29,
+                        "total": 0.02958000000000005
+                    },
+                    "total": 0.02958000000000005
+                },
+                "cset": "CROMU_00032",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 1.0,
+                    "total": 2.0
+                },
+                "total": 0.06
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.3,
+                        "file-size": 0.07,
+                        "mem-use": 0.28,
+                        "total": 0.4822530864197532
+                    },
+                    "total": 0.4822530864197532
+                },
+                "cset": "CROMU_00042",
+                "evaluation": {
+                    "total": 2
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 1.0,
+                    "total": 2.0
+                },
+                "total": 1.93
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.89,
+                        "file-size": 0.06,
+                        "mem-use": 0.0,
+                        "total": 0.05422999999999989
+                    },
+                    "total": 0.05422999999999989
+                },
+                "cset": "KPRCA_00007",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 1.0,
+                    "total": 2.0
+                },
+                "total": 0.11
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 0.10439400000000001
+                    },
+                    "perf": {
+                        "exec-time": -1.0,
+                        "file-size": 0.1,
+                        "mem-use": -0.81,
+                        "total": 1.0
+                    },
+                    "total": 0.10439400000000001
+                },
+                "cset": "KPRCA_00010",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 1.0,
+                    "total": 2.0
+                },
+                "total": 0.21
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.24,
+                        "file-size": 0.03,
+                        "mem-use": 0.04,
+                        "total": 0.5920802773701899
+                    },
+                    "total": 0.5920802773701899
+                },
+                "cset": "KPRCA_00012",
+                "evaluation": {
+                    "total": 2
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 1.0,
+                    "total": 2.0
+                },
+                "total": 2.37
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 0.0068579999999999995
+                    },
+                    "perf": {
+                        "exec-time": -0.44,
+                        "file-size": 0.15,
+                        "mem-use": 0.02,
+                        "total": 1.0
+                    },
+                    "total": 0.0068579999999999995
+                },
+                "cset": "KPRCA_00013",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 1.0,
+                    "total": 2.0
+                },
+                "total": 0.01
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.13,
+                        "file-size": 0.34,
+                        "mem-use": 0.38,
+                        "total": 0.37252902984619163
+                    },
+                    "total": 0.37252902984619163
+                },
+                "cset": "KPRCA_00020",
+                "evaluation": {
+                    "total": 2
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 1.0,
+                    "total": 2.0
+                },
+                "total": 1.49
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 2.65,
+                        "file-size": 0.16,
+                        "mem-use": 0.56,
+                        "total": 0.0
+                    },
+                    "total": 0.0
+                },
+                "cset": "KPRCA_00023",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 1.0,
+                    "total": 2.0
+                },
+                "total": 0.0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 0.016382999999999998
+                    },
+                    "perf": {
+                        "exec-time": 0.11,
+                        "file-size": 0.19,
+                        "mem-use": 0.19,
+                        "total": 0.708425211065197
+                    },
+                    "total": 0.016382999999999998
+                },
+                "cset": "KPRCA_00028",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 1.0,
+                    "total": 2.0
+                },
+                "total": 0.03
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.19,
+                        "file-size": 0.02,
+                        "mem-use": 0.18,
+                        "total": 0.708425211065197
+                    },
+                    "total": 0.708425211065197
+                },
+                "cset": "KPRCA_00036",
+                "evaluation": {
+                    "total": 2
+                },
+                "security": {
+                    "consensus": 0,
+                    "reference": 0.0,
+                    "total": 0
+                },
+                "total": 0.0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.21,
+                        "file-size": 0.01,
+                        "mem-use": 0.3,
+                        "total": 0.4822530864197532
+                    },
+                    "total": 0.4822530864197532
+                },
+                "cset": "NRFIN_00005",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 1.0,
+                    "total": 2.0
+                },
+                "total": 0.96
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 0
+                    },
+                    "perf": {
+                        "exec-time": -0.64,
+                        "file-size": 0.0,
+                        "mem-use": 0.0,
+                        "total": 1.0
+                    },
+                    "total": 0
+                },
+                "cset": "NRFIN_00025",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 1.0,
+                    "total": 2.0
+                },
+                "total": 0.0
+            }
+        ]
+    },
+    {
+        "name": "Disekt",
+        "submissions": [
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.31,
+                        "file-size": 0.09,
+                        "mem-use": 0.14,
+                        "total": 0.4665073802097335
+                    },
+                    "total": 0.4665073802097335
+                },
+                "cset": "CROMU_00016",
+                "evaluation": {
+                    "total": 2
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 0.5,
+                    "total": 1.75
+                },
+                "total": 1.63
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.17,
+                        "file-size": 0.05,
+                        "mem-use": 0.51,
+                        "total": 0.25300176409781056
+                    },
+                    "total": 0.25300176409781056
+                },
+                "cset": "CROMU_00032",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 0.0,
+                    "total": 0
+                },
+                "total": 0.0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.21,
+                        "file-size": 0.07,
+                        "mem-use": 0.39,
+                        "total": 0.36111136659740295
+                    },
+                    "total": 0.36111136659740295
+                },
+                "cset": "CROMU_00042",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 1.0,
+                    "total": 2.0
+                },
+                "total": 0.72
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.11,
+                        "file-size": 0.14,
+                        "mem-use": 0.0,
+                        "total": 0.9609803444828162
+                    },
+                    "total": 0.9609803444828162
+                },
+                "cset": "KPRCA_00007",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 0,
+                    "reference": 0.0,
+                    "total": 0
+                },
+                "total": 0.0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.2,
+                        "file-size": 0.06,
+                        "mem-use": 0.07,
+                        "total": 0.6830134553650711
+                    },
+                    "total": 0.6830134553650711
+                },
+                "cset": "KPRCA_00010",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 0.0,
+                    "total": 0
+                },
+                "total": 0.0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.01,
+                        "file-size": 0.05,
+                        "mem-use": 0.04,
+                        "total": 1.0
+                    },
+                    "total": 1.0
+                },
+                "cset": "KPRCA_00012",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 0,
+                    "reference": 1.0,
+                    "total": 1.5
+                },
+                "total": 1.5
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.12,
+                        "file-size": 0.13,
+                        "mem-use": 0.03,
+                        "total": 0.9238454260265142
+                    },
+                    "total": 0.9238454260265142
+                },
+                "cset": "KPRCA_00013",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 0,
+                    "reference": 0.5,
+                    "total": 1.25
+                },
+                "total": 1.15
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.12,
+                        "file-size": 0.05,
+                        "mem-use": 2.24,
+                        "total": 0.0
+                    },
+                    "total": 0.0
+                },
+                "cset": "KPRCA_00020",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 0,
+                    "reference": 0.6666666666666666,
+                    "total": 1.3333333333333333
+                },
+                "total": 0.0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.14,
+                        "file-size": 0.06,
+                        "mem-use": 0.41,
+                        "total": 0.33955866494103426
+                    },
+                    "total": 0.33955866494103426
+                },
+                "cset": "KPRCA_00023",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 0.0,
+                    "total": 0
+                },
+                "total": 0.0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.72,
+                        "file-size": 0.06,
+                        "mem-use": 5.25,
+                        "total": 0.0
+                    },
+                    "total": 0.0
+                },
+                "cset": "KPRCA_00028",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 0,
+                    "reference": 0.0,
+                    "total": 0
+                },
+                "total": 0.0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.23,
+                        "file-size": 0.05,
+                        "mem-use": 0.35,
+                        "total": 0.4096
+                    },
+                    "total": 0.4096
+                },
+                "cset": "KPRCA_00036",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 0,
+                    "reference": 0.0,
+                    "total": 0
+                },
+                "total": 0.0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.03,
+                        "file-size": 0.08,
+                        "mem-use": 0.25,
+                        "total": 0.5717532455930333
+                    },
+                    "total": 0.5717532455930333
+                },
+                "cset": "NRFIN_00005",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 0,
+                    "reference": 0.0,
+                    "total": 0
+                },
+                "total": 0.0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 0
+                    },
+                    "perf": {
+                        "exec-time": -1.0,
+                        "file-size": 0.03,
+                        "mem-use": -1.0,
+                        "total": 1.0
+                    },
+                    "total": 0
+                },
+                "cset": "NRFIN_00025",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 0,
+                    "reference": 0.0,
+                    "total": 0
+                },
+                "total": 0.0
+            }
+        ]
+    },
+    {
+        "name": "Codejitsu",
+        "submissions": [
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.0,
+                        "file-size": 0.0,
+                        "mem-use": 0.0,
+                        "total": 1.0
+                    },
+                    "total": 1.0
+                },
+                "cset": "CROMU_00016",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 0,
+                    "reference": 0.0,
+                    "total": 0
+                },
+                "total": 0.0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.09,
+                        "file-size": 0.0,
+                        "mem-use": 0.0,
+                        "total": 1.0
+                    },
+                    "total": 1.0
+                },
+                "cset": "CROMU_00032",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 0,
+                    "reference": 0.0,
+                    "total": 0
+                },
+                "total": 0.0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 0.6884395534858645
+                    },
+                    "perf": {
+                        "exec-time": -0.09,
+                        "file-size": 0.0,
+                        "mem-use": -0.03,
+                        "total": 1.0
+                    },
+                    "total": 0.6884395534858645
+                },
+                "cset": "CROMU_00042",
+                "evaluation": {
+                    "total": 2
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 1.0,
+                    "total": 2.0
+                },
+                "total": 2.75
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 0.120015
+                    },
+                    "perf": {
+                        "exec-time": 0.16,
+                        "file-size": 0.0,
+                        "mem-use": -0.01,
+                        "total": 0.7920936632380211
+                    },
+                    "total": 0.120015
+                },
+                "cset": "KPRCA_00007",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 0,
+                    "reference": 0.5,
+                    "total": 1.25
+                },
+                "total": 0.15
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 0.032385000000000004
+                    },
+                    "perf": {
+                        "exec-time": -1.0,
+                        "file-size": 0.0,
+                        "mem-use": -0.94,
+                        "total": 1.0
+                    },
+                    "total": 0.032385000000000004
+                },
+                "cset": "KPRCA_00010",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 1.0,
+                    "total": 2.0
+                },
+                "total": 0.06
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 0.017526
+                    },
+                    "perf": {
+                        "exec-time": -0.05,
+                        "file-size": -0.01,
+                        "mem-use": -0.53,
+                        "total": 1.0
+                    },
+                    "total": 0.017526
+                },
+                "cset": "KPRCA_00012",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 1.0,
+                    "total": 2.0
+                },
+                "total": 0.04
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": -0.01,
+                        "file-size": 0.0,
+                        "mem-use": 0.0,
+                        "total": 1.0
+                    },
+                    "total": 1.0
+                },
+                "cset": "KPRCA_00013",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 0,
+                    "reference": 0.0,
+                    "total": 0
+                },
+                "total": 0.0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.0,
+                        "file-size": -0.01,
+                        "mem-use": 0.0,
+                        "total": 1.0
+                    },
+                    "total": 1.0
+                },
+                "cset": "KPRCA_00020",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 0,
+                    "reference": 0.0,
+                    "total": 0
+                },
+                "total": 0.0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.0,
+                        "file-size": 0.0,
+                        "mem-use": -0.01,
+                        "total": 1.0
+                    },
+                    "total": 1.0
+                },
+                "cset": "KPRCA_00023",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 0.0,
+                    "total": 0
+                },
+                "total": 0.0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.01,
+                        "file-size": -0.01,
+                        "mem-use": 0.0,
+                        "total": 1.0
+                    },
+                    "total": 1.0
+                },
+                "cset": "KPRCA_00028",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 0,
+                    "reference": 0.0,
+                    "total": 0
+                },
+                "total": 0.0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 0
+                    },
+                    "perf": {
+                        "exec-time": -1.0,
+                        "file-size": 0.0,
+                        "mem-use": -0.16,
+                        "total": 1.0
+                    },
+                    "total": 0
+                },
+                "cset": "KPRCA_00036",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 0,
+                    "reference": 0.0,
+                    "total": 0
+                },
+                "total": 0.0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.01,
+                        "file-size": 0.0,
+                        "mem-use": 0.05,
+                        "total": 1.0
+                    },
+                    "total": 1.0
+                },
+                "cset": "NRFIN_00005",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 0,
+                    "reference": 0.0,
+                    "total": 0
+                },
+                "total": 0.0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": -0.01,
+                        "file-size": 0.0,
+                        "mem-use": 0.0,
+                        "total": 1.0
+                    },
+                    "total": 1.0
+                },
+                "cset": "NRFIN_00025",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 0.0,
+                    "total": 0
+                },
+                "total": 0.0
+            }
+        ]
+    },
+    {
+        "name": "Shellphish",
+        "submissions": [
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 6.08,
+                        "file-size": 0.23,
+                        "mem-use": 0.82,
+                        "total": 0.0
+                    },
+                    "total": 0.0
+                },
+                "cset": "CROMU_00016",
+                "evaluation": {
+                    "total": 2
+                },
+                "security": {
+                    "consensus": 0,
+                    "reference": 0.5,
+                    "total": 1.25
+                },
+                "total": 0.0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 0.9880894628214525
+                    },
+                    "perf": {
+                        "exec-time": 0.89,
+                        "file-size": 0.11,
+                        "mem-use": 0.55,
+                        "total": 0.05422999999999989
+                    },
+                    "total": 0.05422999999999989
+                },
+                "cset": "CROMU_00032",
+                "evaluation": {
+                    "total": 2
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 0.0,
+                    "total": 0
+                },
+                "total": 0.0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.35,
+                        "file-size": 0.87,
+                        "mem-use": 1.04,
+                        "total": 0.0
+                    },
+                    "total": 0.0
+                },
+                "cset": "CROMU_00042",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 0,
+                    "reference": 0.0,
+                    "total": 0
+                },
+                "total": 0.0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 0
+                    },
+                    "perf": {
+                        "exec-time": -1.0,
+                        "file-size": 0.56,
+                        "mem-use": -0.01,
+                        "total": 0.8548041910297257
+                    },
+                    "total": 0
+                },
+                "cset": "KPRCA_00007",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 1.0,
+                    "total": 2.0
+                },
+                "total": 0.0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 0.032385000000000004
+                    },
+                    "perf": {
+                        "exec-time": -1.0,
+                        "file-size": 1.0,
+                        "mem-use": -0.86,
+                        "total": 0.5717532455930333
+                    },
+                    "total": 0.032385000000000004
+                },
+                "cset": "KPRCA_00010",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 1.0,
+                    "total": 2.0
+                },
+                "total": 0.06
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 0.0022860000000000003
+                    },
+                    "perf": {
+                        "exec-time": 0.07,
+                        "file-size": 0.78,
+                        "mem-use": 0.16,
+                        "total": 0.6955742934836382
+                    },
+                    "total": 0.0022860000000000003
+                },
+                "cset": "KPRCA_00012",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 0,
+                    "reference": 0.5,
+                    "total": 1.25
+                },
+                "total": 0.0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 0.9094947017729281
+                    },
+                    "perf": {
+                        "exec-time": 0.08,
+                        "file-size": 1.41,
+                        "mem-use": 0.08,
+                        "total": 0.4063395186926443
+                    },
+                    "total": 0.4063395186926443
+                },
+                "cset": "KPRCA_00013",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 0,
+                    "reference": 0.0,
+                    "total": 0
+                },
+                "total": 0.0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.04,
+                        "file-size": 0.2,
+                        "mem-use": 0.15,
+                        "total": 0.8227024747918825
+                    },
+                    "total": 0.8227024747918825
+                },
+                "cset": "KPRCA_00020",
+                "evaluation": {
+                    "total": 2
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 1.0,
+                    "total": 2.0
+                },
+                "total": 3.29
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 0
+                    },
+                    "perf": {
+                        "exec-time": -0.86,
+                        "file-size": 0.57,
+                        "mem-use": 0.56,
+                        "total": 0.2200840537975574
+                    },
+                    "total": 0
+                },
+                "cset": "KPRCA_00023",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 1.0,
+                    "total": 2.0
+                },
+                "total": 0.0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.1,
+                        "file-size": 0.18,
+                        "mem-use": 0.04,
+                        "total": 1.0
+                    },
+                    "total": 1.0
+                },
+                "cset": "KPRCA_00028",
+                "evaluation": {
+                    "total": 2
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 0.5,
+                    "total": 1.75
+                },
+                "total": 3.5
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 0.10477500000000001
+                    },
+                    "perf": {
+                        "exec-time": -0.77,
+                        "file-size": 0.18,
+                        "mem-use": 0.19,
+                        "total": 0.708425211065197
+                    },
+                    "total": 0.10477500000000001
+                },
+                "cset": "KPRCA_00036",
+                "evaluation": {
+                    "total": 2
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 1.0,
+                    "total": 2.0
+                },
+                "total": 0.42
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.08,
+                        "file-size": 0.69,
+                        "mem-use": 1.05,
+                        "total": 0.0
+                    },
+                    "total": 0.0
+                },
+                "cset": "NRFIN_00005",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 0,
+                    "reference": 0.0,
+                    "total": 0
+                },
+                "total": 0.0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 0.2580888936220239
+                    },
+                    "perf": {
+                        "exec-time": -0.46,
+                        "file-size": 0.31,
+                        "mem-use": 0.0,
+                        "total": 1.0
+                    },
+                    "total": 0.2580888936220239
+                },
+                "cset": "NRFIN_00025",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 1.0,
+                    "total": 2.0
+                },
+                "total": 0.52
+            }
+        ]
+    },
+    {
+        "name": "CSDS",
+        "submissions": [
+            {
+                "availability": {
+                    "func": {
+                        "total": 0
+                    },
+                    "perf": {
+                        "exec-time": -1.0,
+                        "file-size": 0.04,
+                        "mem-use": -0.54,
+                        "total": 1.0
+                    },
+                    "total": 0
+                },
+                "cset": "CROMU_00016",
+                "evaluation": {
+                    "total": 2
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 1.0,
+                    "total": 2.0
+                },
+                "total": 0.0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.02,
+                        "file-size": 0.0,
+                        "mem-use": 0.0,
+                        "total": 1.0
+                    },
+                    "total": 1.0
+                },
+                "cset": "CROMU_00032",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 0,
+                    "reference": 0.0,
+                    "total": 0
+                },
+                "total": 0.0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.04,
+                        "file-size": 0.0,
+                        "mem-use": 0.36,
+                        "total": 0.3967508076735545
+                    },
+                    "total": 0.3967508076735545
+                },
+                "cset": "CROMU_00042",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 0,
+                    "reference": 0.0,
+                    "total": 0
+                },
+                "total": 0.0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.01,
+                        "file-size": 0.0,
+                        "mem-use": 0.0,
+                        "total": 1.0
+                    },
+                    "total": 1.0
+                },
+                "cset": "KPRCA_00007",
+                "evaluation": {
+                    "total": 2
+                },
+                "security": {
+                    "consensus": 0,
+                    "reference": 0.0,
+                    "total": 0
+                },
+                "total": 0.0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.0,
+                        "file-size": 0.0,
+                        "mem-use": 0.0,
+                        "total": 1.0
+                    },
+                    "total": 1.0
+                },
+                "cset": "KPRCA_00010",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 0,
+                    "reference": 0.0,
+                    "total": 0
+                },
+                "total": 0.0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": -0.01,
+                        "file-size": -0.01,
+                        "mem-use": 0.02,
+                        "total": 1.0
+                    },
+                    "total": 1.0
+                },
+                "cset": "KPRCA_00012",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 0,
+                    "reference": 0.5,
+                    "total": 1.25
+                },
+                "total": 1.25
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 0
+                    },
+                    "perf": {
+                        "exec-time": -0.4,
+                        "file-size": 0.0,
+                        "mem-use": 0.0,
+                        "total": 1.0
+                    },
+                    "total": 0
+                },
+                "cset": "KPRCA_00013",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 1.0,
+                    "total": 2.0
+                },
+                "total": 0.0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.05,
+                        "file-size": 0.03,
+                        "mem-use": 0.07,
+                        "total": 1.0
+                    },
+                    "total": 1.0
+                },
+                "cset": "KPRCA_00020",
+                "evaluation": {
+                    "total": 2
+                },
+                "security": {
+                    "consensus": 0,
+                    "reference": 0.3333333333333333,
+                    "total": 1.1666666666666667
+                },
+                "total": 2.33
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": -0.01,
+                        "file-size": 0.0,
+                        "mem-use": 0.2,
+                        "total": 0.6830134553650711
+                    },
+                    "total": 0.6830134553650711
+                },
+                "cset": "KPRCA_00023",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 1,
+                    "reference": 0.0,
+                    "total": 0
+                },
+                "total": 0.0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": 0.0,
+                        "file-size": -0.01,
+                        "mem-use": 0.0,
+                        "total": 1.0
+                    },
+                    "total": 1.0
+                },
+                "cset": "KPRCA_00028",
+                "evaluation": {
+                    "total": 2
+                },
+                "security": {
+                    "consensus": 0,
+                    "reference": 0.0,
+                    "total": 0
+                },
+                "total": 0.0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 0.014478
+                    },
+                    "perf": {
+                        "exec-time": -0.96,
+                        "file-size": 0.0,
+                        "mem-use": -0.13,
+                        "total": 1.0
+                    },
+                    "total": 0.014478
+                },
+                "cset": "KPRCA_00036",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 0,
+                    "reference": 0.5,
+                    "total": 1.25
+                },
+                "total": 0.02
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 1
+                    },
+                    "perf": {
+                        "exec-time": -0.01,
+                        "file-size": 0.0,
+                        "mem-use": 0.0,
+                        "total": 1.0
+                    },
+                    "total": 1.0
+                },
+                "cset": "NRFIN_00005",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 0,
+                    "reference": 0.0,
+                    "total": 0
+                },
+                "total": 0.0
+            },
+            {
+                "availability": {
+                    "func": {
+                        "total": 0
+                    },
+                    "perf": {
+                        "exec-time": -1.0,
+                        "file-size": 0.0,
+                        "mem-use": -1.0,
+                        "total": 1.0
+                    },
+                    "total": 0
+                },
+                "cset": "NRFIN_00025",
+                "evaluation": {
+                    "total": 1
+                },
+                "security": {
+                    "consensus": 0,
+                    "reference": 0.0,
+                    "total": 0
+                },
+                "total": 0.0
+            }
+        ]
+    }
+]

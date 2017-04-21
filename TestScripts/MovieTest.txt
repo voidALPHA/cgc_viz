@@ -1,0 +1,33 @@
+Log "Starting movie test"
+
+#movie -start
+stats -displayOn
+
+isogrid -isogridindex 0
+
+#isogrid -destroy
+#wait .25
+#isogrid -render
+#wait .5
+#isogrid -destroy
+#wait .25
+#isogrid -render
+#wait .5
+#isogrid -destroy
+#wait .25
+#isogrid -render
+#wait .5
+#
+#movie -stop
+
+wait 5
+
+Log "starting a 30-second record..."
+### NOTE:  In Unity in the AVProMovieCameraFromCamera module, set 'is real time' to 0 (off)
+movie -start
+wait 30
+movie -stop
+Log "ending the 30-second record"
+
+Log "movie test completed."
+quit

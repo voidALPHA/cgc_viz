@@ -1,0 +1,4 @@
+log "Waittime test script"
+log "Second line"
+wait 5.0
+log "After the wait"

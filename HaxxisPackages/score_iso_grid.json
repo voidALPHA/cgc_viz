@@ -1,0 +1,1632 @@
+{
+"$id": "1",
+"Chain": {
+"$id": "2",
+"RootGroup": {
+"$id": "3",
+"Groups": {
+"$id": "4",
+"$values": []
+},
+"Nodes": {
+"$id": "5",
+"$values": [
+{
+"$id": "6",
+"$type": "Adapters.ScoreFromJSONAdapter, Assembly-CSharp",
+"FilePath": {
+"$id": "7",
+"LiteralValue": "ScoreData\\scores.json",
+"SchemaSource": 0
+},
+"ScoreTarget": {
+"$id": "8",
+"AbsoluteKey": "Scores"
+},
+"GroupId": {
+"$id": "9",
+"LiteralValue": "",
+"SchemaSource": 0
+},
+"IndexField": {
+"$id": "10",
+"AbsoluteKey": "Score File Index"
+},
+"Comment": "",
+"Router": {
+"$id": "11",
+"SelectionStates": {
+"$id": "12",
+"$values": [
+{
+"$id": "13",
+"Name": "Default",
+"Targets": {
+"$id": "14",
+"$values": [
+{
+"$id": "15",
+"$type": "Mutation.Mutators.Axes.DistinctValueAxes.DistinctStringToIndexAxis, Assembly-CSharp",
+"AxisKey": {
+"$id": "16",
+"AbsoluteKey": "Scores.Team Name",
+"SchemaSource": 1
+},
+"IndexAxis": {
+"$id": "17",
+"AbsoluteKey": "Scores.X Axis"
+},
+"GroupId": {
+"$id": "18",
+"LiteralValue": "",
+"SchemaSource": 0
+},
+"Comment": "",
+"Router": {
+"$id": "19",
+"SelectionStates": {
+"$id": "20",
+"$values": [
+{
+"$id": "21",
+"Name": "Default",
+"Targets": {
+"$id": "22",
+"$values": [
+{
+"$id": "23",
+"$type": "Mutation.Mutators.Axes.DistinctValueAxes.DistinctStringToIndexAxis, Assembly-CSharp",
+"AxisKey": {
+"$id": "24",
+"AbsoluteKey": "Scores.Challenge Set",
+"SchemaSource": 1
+},
+"IndexAxis": {
+"$id": "25",
+"AbsoluteKey": "Scores.Z Axis"
+},
+"GroupId": {
+"$id": "26",
+"LiteralValue": "",
+"SchemaSource": 0
+},
+"Comment": "",
+"Router": {
+"$id": "27",
+"SelectionStates": {
+"$id": "28",
+"$values": [
+{
+"$id": "29",
+"Name": "Default",
+"Targets": {
+"$id": "30",
+"$values": [
+{
+"$id": "31",
+"$type": "Mutation.Mutators.ColorMutators.RGBLerpMutator, Assembly-CSharp",
+"ColorScope": {
+"$id": "32",
+"AbsoluteKey": "Scores"
+},
+"DoApplyColorField": {
+"$id": "33",
+"LiteralValue": false,
+"SchemaSource": 0
+},
+"UsePreciseLerp": {
+"$id": "34",
+"LiteralValue": false,
+"SchemaSource": 0
+},
+"FromColor": {
+"$id": "35",
+"LiteralValue": {
+"r": 0.5,
+"g": 0.5,
+"b": 0.5,
+"a": 0.0
+},
+"SchemaSource": 0
+},
+"ToColor": {
+"$id": "36",
+"AbsoluteKey": "Scores.Team Color",
+"SchemaSource": 1
+},
+"Proportion": {
+"$id": "37",
+"LiteralValue": 0.5,
+"SchemaSource": 0
+},
+"DoApplyAlphaField": {
+"$id": "38",
+"LiteralValue": true,
+"SchemaSource": 0
+},
+"ColorTarget": {
+"$id": "39",
+"AbsoluteKey": "Scores.Alpha Team Color"
+},
+"Comment": "",
+"Router": {
+"$id": "40",
+"SelectionStates": {
+"$id": "41",
+"$values": [
+{
+"$id": "42",
+"Name": "Default",
+"Targets": {
+"$id": "43",
+"$values": [
+{
+"$id": "44",
+"$type": "Mutation.Mutators.BoundManipulationMutators.TransformBoundMutator, Assembly-CSharp",
+"ScaleMultiplier": {
+"$id": "45",
+"LiteralValue": {
+"x": 1.0,
+"y": 1.0,
+"z": 1.0
+},
+"SchemaSource": 0
+},
+"RotationMultiplier": {
+"$id": "46",
+"LiteralValue": {
+"x": 1.0,
+"y": 1.0,
+"z": 0.0,
+"w": 0.0
+},
+"SchemaSource": 0
+},
+"TranslationOffset": {
+"$id": "47",
+"LiteralValue": {
+"x": 0.0,
+"y": 0.0,
+"z": 0.0
+},
+"SchemaSource": 0
+},
+"PostOperation": {
+"$id": "48",
+"LiteralValue": true,
+"SchemaSource": 0
+},
+"LocalSpace": {
+"$id": "49",
+"LiteralValue": false,
+"SchemaSource": 0
+},
+"Comment": "",
+"Router": {
+"$id": "50",
+"SelectionStates": {
+"$id": "51",
+"$values": [
+{
+"$id": "52",
+"Name": "Default",
+"Targets": {
+"$id": "53",
+"$values": [
+{
+"$id": "54",
+"$type": "Visualizers.IsoGrid.IsoGridController, Assembly-CSharp",
+"EntryField": {
+"$id": "55",
+"AbsoluteKey": "Scores",
+"SchemaSource": 1
+},
+"XAxis": {
+"$id": "56",
+"AbsoluteKey": "Scores.X Axis",
+"SchemaSource": 1
+},
+"ZAxis": {
+"$id": "57",
+"AbsoluteKey": "Scores.Z Axis",
+"SchemaSource": 1
+},
+"YAxis": {
+"$id": "58",
+"AbsoluteKey": "Scores.Total Score",
+"SchemaSource": 1
+},
+"ShowBackgrounds": {
+"$id": "59",
+"LiteralValue": true,
+"SchemaSource": 0
+},
+"AllowSlicerField": {
+"$id": "60",
+"LiteralValue": false,
+"SchemaSource": 0
+},
+"LabelSystem": {
+"$id": "61",
+"$type": "LabelSystem.AxialLabelSystem, Assembly-CSharp",
+"Axes": {
+"$id": "62",
+"$values": [
+{
+"$id": "63",
+"ShowAxisLabel": {
+"$id": "64",
+"LiteralValue": false,
+"SchemaSource": 0
+},
+"AxisLabelText": {
+"$id": "65",
+"LiteralValue": "",
+"SchemaSource": 0
+},
+"AxisLabelOffset": {
+"$id": "66",
+"LiteralValue": {
+"x": 0.0,
+"y": 0.0,
+"z": 0.0
+},
+"SchemaSource": 0
+},
+"AxisLabelOrientation": {
+"$id": "67",
+"LiteralValue": 5,
+"SchemaSource": 0
+},
+"StartingOffset": {
+"$id": "68",
+"LiteralValue": {
+"x": 15.0,
+"y": 0.0,
+"z": 0.0
+},
+"SchemaSource": 0
+},
+"AxisOrientation": {
+"$id": "69",
+"LiteralValue": {
+"x": 0.0,
+"y": 0.0,
+"z": 1.0
+},
+"SchemaSource": 0
+},
+"ItemLabelOrientation": {
+"$id": "70",
+"LiteralValue": 6,
+"SchemaSource": 0
+},
+"AxisMode": {
+"$id": "71",
+"LiteralValue": 0,
+"SchemaSource": 0
+},
+"SizePeriod": {
+"$id": "72",
+"LiteralValue": 1.0,
+"SchemaSource": 0
+},
+"ItemText": {
+"$id": "73",
+"LiteralValue": "",
+"SchemaSource": 0
+},
+"AxisIndexVariable": {
+"$id": "74",
+"LiteralValue": 0,
+"SchemaSource": 0
+},
+"AxisLength": {
+"$id": "75",
+"LiteralValue": 30.0,
+"SchemaSource": 0
+},
+"LabelCount": {
+"$id": "76",
+"LiteralValue": 5,
+"SchemaSource": 0
+},
+"ComparisonValue": {
+"$id": "77",
+"LiteralValue": 0.0,
+"SchemaSource": 0
+},
+"MaxValue": {
+"$id": "78",
+"LiteralValue": 30.0,
+"SchemaSource": 0
+},
+"MinValue": {
+"$id": "79",
+"LiteralValue": 0.0,
+"SchemaSource": 0
+},
+"ChainNode": {
+"$ref": "54"
+}
+}
+]
+},
+"ShowChartTitle": {
+"$id": "80",
+"LiteralValue": false,
+"SchemaSource": 0
+},
+"ChartTitleText": {
+"$id": "81",
+"LiteralValue": "",
+"SchemaSource": 0
+},
+"ChartTitleOffset": {
+"$id": "82",
+"LiteralValue": {
+"x": 0.0,
+"y": 0.0,
+"z": 0.0
+},
+"SchemaSource": 0
+},
+"ChartTitleOrientation": {
+"$id": "83",
+"LiteralValue": 0,
+"SchemaSource": 0
+},
+"ChainNode": {
+"$ref": "54"
+}
+},
+"Comment": "",
+"Router": {
+"$id": "84",
+"SelectionStates": {
+"$id": "85",
+"$values": [
+{
+"$id": "86",
+"Name": "Normal",
+"Targets": {
+"$id": "87",
+"$values": [
+{
+"$id": "88",
+"$type": "Mutation.Mutators.SpatialMutators.InsertVector3Mutator, Assembly-CSharp",
+"VectorScope": {
+"$id": "89",
+"AbsoluteKey": ""
+},
+"XValue": {
+"$id": "90",
+"LiteralValue": 1.0,
+"SchemaSource": 0
+},
+"YValue": {
+"$id": "91",
+"AbsoluteKey": "Total Score",
+"SchemaSource": 1
+},
+"ZValue": {
+"$id": "92",
+"LiteralValue": 1.0,
+"SchemaSource": 0
+},
+"Vector3Target": {
+"$id": "93",
+"AbsoluteKey": "Vector"
+},
+"Comment": "",
+"Router": {
+"$id": "94",
+"SelectionStates": {
+"$id": "95",
+"$values": [
+{
+"$id": "96",
+"Name": "Default",
+"Targets": {
+"$id": "97",
+"$values": [
+{
+"$id": "98",
+"$type": "Kinetics.BoundScales.LerpToScale, Assembly-CSharp",
+"StartScale": {
+"$id": "99",
+"AbsoluteKey": "Vector",
+"SchemaSource": 1
+},
+"EndScale": {
+"$id": "100",
+"AbsoluteKey": "Vector",
+"SchemaSource": 1
+},
+"TransitionTime": {
+"$id": "101",
+"LiteralValue": 6.0,
+"SchemaSource": 0
+},
+"KineticCurveName": {
+"$id": "102",
+"LiteralValue": "Linear",
+"SchemaSource": 0
+},
+"Comment": "",
+"Router": {
+"$id": "103",
+"SelectionStates": {
+"$id": "104",
+"$values": [
+{
+"$id": "105",
+"Name": "Started",
+"Targets": {
+"$id": "106",
+"$values": [
+{
+"$id": "107",
+"$type": "Visualizers.RectangularVolume.RectangularVolumeController, Assembly-CSharp",
+"XAxis": {
+"$id": "108",
+"LiteralValue": 0.7,
+"SchemaSource": 0
+},
+"XMax": {
+"$id": "109",
+"LiteralValue": 1.0,
+"SchemaSource": 0
+},
+"YAxis": {
+"$id": "110",
+"LiteralValue": 1.0,
+"SchemaSource": 0
+},
+"YMax": {
+"$id": "111",
+"LiteralValue": 1.0,
+"SchemaSource": 0
+},
+"ZAxis": {
+"$id": "112",
+"LiteralValue": 0.7,
+"SchemaSource": 0
+},
+"ZMax": {
+"$id": "113",
+"LiteralValue": 1.0,
+"SchemaSource": 0
+},
+"UseOpaqueMaterial": {
+"$id": "114",
+"LiteralValue": false,
+"SchemaSource": 0
+},
+"Color": {
+"$id": "115",
+"AbsoluteKey": "Alpha Team Color",
+"SchemaSource": 1
+},
+"Comment": "",
+"Router": {
+"$id": "116",
+"SelectionStates": {
+"$id": "117",
+"$values": [
+{
+"$id": "118",
+"Name": "Default",
+"Targets": {
+"$id": "119",
+"$values": []
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+}
+},
+{
+"$id": "120",
+"Name": "Finished",
+"Targets": {
+"$id": "121",
+"$values": [
+{
+"$id": "122",
+"$type": "Mutation.Mutators.BoundManipulationMutators.GetCurrentPositionMutator, Assembly-CSharp",
+"PositionTarget": {
+"$id": "123",
+"AbsoluteKey": "Position Vector"
+},
+"Comment": "",
+"Router": {
+"$id": "124",
+"SelectionStates": {
+"$id": "125",
+"$values": [
+{
+"$id": "126",
+"Name": "Default",
+"Targets": {
+"$id": "127",
+"$values": [
+{
+"$id": "128",
+"$type": "Mutation.Mutators.ArithmeticOperators.Vector3BinaryOperationsMutator, Assembly-CSharp",
+"PrimaryOperand": {
+"$id": "129",
+"AbsoluteKey": "Position Vector",
+"SchemaSource": 1
+},
+"Operation": {
+"$id": "130",
+"LiteralValue": "Add",
+"SchemaSource": 0
+},
+"SecondaryOperand": {
+"$id": "131",
+"LiteralValue": {
+"x": 1.0,
+"y": 0.0,
+"z": 0.0
+},
+"SchemaSource": 0
+},
+"OutputValue": {
+"$id": "132",
+"AbsoluteKey": "Output Target"
+},
+"Comment": "",
+"Router": {
+"$id": "133",
+"SelectionStates": {
+"$id": "134",
+"$values": [
+{
+"$id": "135",
+"Name": "Default",
+"Targets": {
+"$id": "136",
+"$values": []
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+}
+},
+{
+"$id": "137",
+"Name": "Selected",
+"Targets": {
+"$id": "138",
+"$values": [
+{
+"$id": "139",
+"$type": "Visualizers.RectangularVolume.RectangularVolumeController, Assembly-CSharp",
+"XAxis": {
+"$id": "140",
+"LiteralValue": 0.8,
+"SchemaSource": 0
+},
+"XMax": {
+"$id": "141",
+"LiteralValue": 1.0,
+"SchemaSource": 0
+},
+"YAxis": {
+"$id": "142",
+"LiteralValue": 1.0,
+"SchemaSource": 0
+},
+"YMax": {
+"$id": "143",
+"LiteralValue": 1.0,
+"SchemaSource": 0
+},
+"ZAxis": {
+"$id": "144",
+"LiteralValue": 0.8,
+"SchemaSource": 0
+},
+"ZMax": {
+"$id": "145",
+"LiteralValue": 1.0,
+"SchemaSource": 0
+},
+"UseOpaqueMaterial": {
+"$id": "146",
+"LiteralValue": false,
+"SchemaSource": 0
+},
+"Color": {
+"$id": "147",
+"LiteralValue": {
+"r": 1.0,
+"g": 0.0,
+"b": 1.0,
+"a": 1.0
+},
+"SchemaSource": 0
+},
+"Comment": "",
+"Router": {
+"$id": "148",
+"SelectionStates": {
+"$id": "149",
+"$values": [
+{
+"$id": "150",
+"Name": "Default",
+"Targets": {
+"$id": "151",
+"$values": []
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+}
+},
+{
+"$id": "152",
+"Name": "None Selected",
+"Targets": {
+"$id": "153",
+"$values": [
+{
+"$ref": "88"
+}
+]
+}
+},
+{
+"$id": "154",
+"Name": "Normal (Group)",
+"Targets": {
+"$id": "155",
+"$values": []
+}
+},
+{
+"$id": "156",
+"Name": "Selected (Group)",
+"Targets": {
+"$id": "157",
+"$values": []
+}
+},
+{
+"$id": "158",
+"Name": "None Selected (Group)",
+"Targets": {
+"$id": "159",
+"$values": []
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+},
+{
+"$ref": "15"
+},
+{
+"$ref": "23"
+},
+{
+"$ref": "107"
+},
+{
+"$ref": "31"
+},
+{
+"$ref": "44"
+},
+{
+"$ref": "54"
+},
+{
+"$ref": "139"
+},
+{
+"$ref": "98"
+},
+{
+"$ref": "88"
+},
+{
+"$ref": "122"
+},
+{
+"$ref": "128"
+},
+{
+"$id": "160",
+"$type": "Visualizers.RectangularVolume.RectangularVolumeController, Assembly-CSharp",
+"XAxis": {
+"$id": "161",
+"LiteralValue": 1.0,
+"SchemaSource": 0
+},
+"XMax": {
+"$id": "162",
+"LiteralValue": 1.0,
+"SchemaSource": 0
+},
+"YAxis": {
+"$id": "163",
+"LiteralValue": 1.0,
+"SchemaSource": 0
+},
+"YMax": {
+"$id": "164",
+"LiteralValue": 1.0,
+"SchemaSource": 0
+},
+"ZAxis": {
+"$id": "165",
+"LiteralValue": 1.0,
+"SchemaSource": 0
+},
+"ZMax": {
+"$id": "166",
+"LiteralValue": 1.0,
+"SchemaSource": 0
+},
+"UseOpaqueMaterial": {
+"$id": "167",
+"LiteralValue": false,
+"SchemaSource": 0
+},
+"Color": {
+"$id": "168",
+"LiteralValue": {
+"r": 1.0,
+"g": 0.0,
+"b": 0.0,
+"a": 1.0
+},
+"SchemaSource": 0
+},
+"Comment": "",
+"Router": {
+"$id": "169",
+"SelectionStates": {
+"$id": "170",
+"$values": [
+{
+"$id": "171",
+"Name": "Default",
+"Targets": {
+"$id": "172",
+"$values": []
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+},
+{
+"$id": "173",
+"$type": "Mutation.Mutators.BoundManipulationMutators.TransformBoundMutator, Assembly-CSharp",
+"ScaleMultiplier": {
+"$id": "174",
+"LiteralValue": {
+"x": 1.0,
+"y": 1.0,
+"z": 1.0
+},
+"SchemaSource": 0
+},
+"RotationMultiplier": {
+"$id": "175",
+"LiteralValue": {
+"x": 0.0,
+"y": 0.0,
+"z": 0.0,
+"w": 1.0
+},
+"SchemaSource": 0
+},
+"TranslationOffset": {
+"$id": "176",
+"LiteralValue": {
+"x": 0.0,
+"y": 0.0,
+"z": -134.0
+},
+"SchemaSource": 0
+},
+"PostOperation": {
+"$id": "177",
+"LiteralValue": true,
+"SchemaSource": 0
+},
+"LocalSpace": {
+"$id": "178",
+"LiteralValue": false,
+"SchemaSource": 0
+},
+"Comment": "",
+"Router": {
+"$id": "179",
+"SelectionStates": {
+"$id": "180",
+"$values": [
+{
+"$id": "181",
+"Name": "Default",
+"Targets": {
+"$id": "182",
+"$values": [
+{
+"$ref": "160"
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+},
+{
+"$id": "183",
+"$type": "Visualizers.RectangularVolume.RectangularVolumeController, Assembly-CSharp",
+"XAxis": {
+"$id": "184",
+"LiteralValue": 1.0,
+"SchemaSource": 0
+},
+"XMax": {
+"$id": "185",
+"LiteralValue": 1.0,
+"SchemaSource": 0
+},
+"YAxis": {
+"$id": "186",
+"LiteralValue": 1.0,
+"SchemaSource": 0
+},
+"YMax": {
+"$id": "187",
+"LiteralValue": 1.0,
+"SchemaSource": 0
+},
+"ZAxis": {
+"$id": "188",
+"LiteralValue": 1.0,
+"SchemaSource": 0
+},
+"ZMax": {
+"$id": "189",
+"LiteralValue": 1.0,
+"SchemaSource": 0
+},
+"UseOpaqueMaterial": {
+"$id": "190",
+"LiteralValue": false,
+"SchemaSource": 0
+},
+"Color": {
+"$id": "191",
+"LiteralValue": {
+"r": 0.0,
+"g": 1.0,
+"b": 0.0,
+"a": 1.0
+},
+"SchemaSource": 0
+},
+"Comment": "",
+"Router": {
+"$id": "192",
+"SelectionStates": {
+"$id": "193",
+"$values": [
+{
+"$id": "194",
+"Name": "Default",
+"Targets": {
+"$id": "195",
+"$values": []
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+},
+{
+"$id": "196",
+"$type": "Mutation.Mutators.BoundManipulationMutators.TransformBoundMutator, Assembly-CSharp",
+"ScaleMultiplier": {
+"$id": "197",
+"LiteralValue": {
+"x": 1.0,
+"y": 1.0,
+"z": 1.0
+},
+"SchemaSource": 0
+},
+"RotationMultiplier": {
+"$id": "198",
+"LiteralValue": {
+"x": 0.0,
+"y": 0.0,
+"z": 0.0,
+"w": 1.0
+},
+"SchemaSource": 0
+},
+"TranslationOffset": {
+"$id": "199",
+"LiteralValue": {
+"x": 0.0,
+"y": 0.0,
+"z": -135.0
+},
+"SchemaSource": 0
+},
+"PostOperation": {
+"$id": "200",
+"LiteralValue": true,
+"SchemaSource": 0
+},
+"LocalSpace": {
+"$id": "201",
+"LiteralValue": false,
+"SchemaSource": 0
+},
+"Comment": "",
+"Router": {
+"$id": "202",
+"SelectionStates": {
+"$id": "203",
+"$values": [
+{
+"$id": "204",
+"Name": "Default",
+"Targets": {
+"$id": "205",
+"$values": [
+{
+"$ref": "183"
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+},
+{
+"$id": "206",
+"$type": "Visualizers.RectangularVolume.RectangularVolumeController, Assembly-CSharp",
+"XAxis": {
+"$id": "207",
+"LiteralValue": 1.0,
+"SchemaSource": 0
+},
+"XMax": {
+"$id": "208",
+"LiteralValue": 1.0,
+"SchemaSource": 0
+},
+"YAxis": {
+"$id": "209",
+"LiteralValue": 1.0,
+"SchemaSource": 0
+},
+"YMax": {
+"$id": "210",
+"LiteralValue": 1.0,
+"SchemaSource": 0
+},
+"ZAxis": {
+"$id": "211",
+"LiteralValue": 1.0,
+"SchemaSource": 0
+},
+"ZMax": {
+"$id": "212",
+"LiteralValue": 1.0,
+"SchemaSource": 0
+},
+"UseOpaqueMaterial": {
+"$id": "213",
+"LiteralValue": false,
+"SchemaSource": 0
+},
+"Color": {
+"$id": "214",
+"LiteralValue": {
+"r": 0.0,
+"g": 0.0,
+"b": 1.0,
+"a": 1.0
+},
+"SchemaSource": 0
+},
+"Comment": "",
+"Router": {
+"$id": "215",
+"SelectionStates": {
+"$id": "216",
+"$values": [
+{
+"$id": "217",
+"Name": "Default",
+"Targets": {
+"$id": "218",
+"$values": []
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+},
+{
+"$id": "219",
+"$type": "Mutation.Mutators.BoundManipulationMutators.TransformBoundMutator, Assembly-CSharp",
+"ScaleMultiplier": {
+"$id": "220",
+"LiteralValue": {
+"x": 1.0,
+"y": 1.0,
+"z": 1.0
+},
+"SchemaSource": 0
+},
+"RotationMultiplier": {
+"$id": "221",
+"LiteralValue": {
+"x": 0.0,
+"y": 0.0,
+"z": 0.0,
+"w": 1.0
+},
+"SchemaSource": 0
+},
+"TranslationOffset": {
+"$id": "222",
+"LiteralValue": {
+"x": 0.0,
+"y": 0.0,
+"z": -136.0
+},
+"SchemaSource": 0
+},
+"PostOperation": {
+"$id": "223",
+"LiteralValue": true,
+"SchemaSource": 0
+},
+"LocalSpace": {
+"$id": "224",
+"LiteralValue": false,
+"SchemaSource": 0
+},
+"Comment": "",
+"Router": {
+"$id": "225",
+"SelectionStates": {
+"$id": "226",
+"$values": [
+{
+"$id": "227",
+"Name": "Default",
+"Targets": {
+"$id": "228",
+"$values": [
+{
+"$ref": "206"
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+},
+"Comment": ""
+}
+},
+"ChainViewModel": {
+"$id": "229",
+"RootGroupViewModel": {
+"$id": "230",
+"Group": {
+"$ref": "3"
+},
+"Position": {
+"x": 0.0,
+"y": 0.0,
+"z": 0.0
+},
+"RelativePath": "",
+"NodeViewModels": {
+"$id": "231",
+"$values": [
+{
+"$id": "232",
+"ChainNode": {
+"$ref": "6"
+},
+"Position": {
+"x": 50.0,
+"y": -50.0,
+"z": 0.0
+}
+},
+{
+"$id": "233",
+"ChainNode": {
+"$ref": "15"
+},
+"Position": {
+"x": 380.0,
+"y": -50.0,
+"z": 0.0
+}
+},
+{
+"$id": "234",
+"ChainNode": {
+"$ref": "23"
+},
+"Position": {
+"x": 400.0,
+"y": -250.0,
+"z": 0.0
+}
+},
+{
+"$id": "235",
+"ChainNode": {
+"$ref": "107"
+},
+"Position": {
+"x": 1500.0,
+"y": -850.0,
+"z": 0.0
+}
+},
+{
+"$id": "236",
+"ChainNode": {
+"$ref": "31"
+},
+"Position": {
+"x": 390.0,
+"y": -470.0,
+"z": 0.0
+}
+},
+{
+"$id": "237",
+"ChainNode": {
+"$ref": "44"
+},
+"Position": {
+"x": 400.0,
+"y": -740.0,
+"z": 0.0
+}
+},
+{
+"$id": "238",
+"ChainNode": {
+"$ref": "54"
+},
+"Position": {
+"x": 730.0,
+"y": -280.0,
+"z": 0.0
+}
+},
+{
+"$id": "239",
+"ChainNode": {
+"$ref": "139"
+},
+"Position": {
+"x": 1100.0,
+"y": -550.0,
+"z": 0.0
+}
+},
+{
+"$id": "240",
+"ChainNode": {
+"$ref": "98"
+},
+"Position": {
+"x": 1500.0,
+"y": -600.0,
+"z": 0.0
+}
+},
+{
+"$id": "241",
+"ChainNode": {
+"$ref": "88"
+},
+"Position": {
+"x": 1500.0,
+"y": -350.0,
+"z": 0.0
+}
+},
+{
+"$id": "242",
+"ChainNode": {
+"$ref": "122"
+},
+"Position": {
+"x": 1850.0,
+"y": -300.0,
+"z": 0.0
+}
+},
+{
+"$id": "243",
+"ChainNode": {
+"$ref": "128"
+},
+"Position": {
+"x": 1900.0,
+"y": -450.0,
+"z": 0.0
+}
+},
+{
+"$id": "244",
+"ChainNode": {
+"$ref": "160"
+},
+"Position": {
+"x": 50.0,
+"y": -350.0,
+"z": 0.0
+}
+},
+{
+"$id": "245",
+"ChainNode": {
+"$ref": "173"
+},
+"Position": {
+"x": -300.0,
+"y": -350.0,
+"z": 0.0
+}
+},
+{
+"$id": "246",
+"ChainNode": {
+"$ref": "183"
+},
+"Position": {
+"x": 50.0,
+"y": -600.0,
+"z": 0.0
+}
+},
+{
+"$id": "247",
+"ChainNode": {
+"$ref": "196"
+},
+"Position": {
+"x": -300.0,
+"y": -600.0,
+"z": 0.0
+}
+},
+{
+"$id": "248",
+"ChainNode": {
+"$ref": "206"
+},
+"Position": {
+"x": 100.0,
+"y": -900.0,
+"z": 0.0
+}
+},
+{
+"$id": "249",
+"ChainNode": {
+"$ref": "219"
+},
+"Position": {
+"x": -300.0,
+"y": -850.0,
+"z": 0.0
+}
+}
+]
+},
+"GroupViewModels": {
+"$id": "250",
+"$values": []
+}
+},
+"NodeViewModels": null
+},
+"Choreography": {
+"$id": "251",
+"Timeline": {
+"$id": "252",
+"StartStep": {
+"$id": "253",
+"$type": "Choreography.Steps.Timeline.TimelineStartStep, Assembly-CSharp",
+"Delay": 0.0,
+"Note": "",
+"Router": {
+"$id": "254",
+"Events": {
+"$id": "255",
+"$values": [
+{
+"$id": "256",
+"Name": "Start",
+"Targets": {
+"$id": "257",
+"$values": [
+{
+"$id": "258",
+"$type": "Choreography.Steps.SplineCameraTransforms.MoveToPositionAndFacingStep, Assembly-CSharp",
+"TargetPosition": {
+"x": 17.5382843,
+"y": 13.5289583,
+"z": -139.236038
+},
+"TargetFacing": {
+"x": -0.6603957,
+"y": -0.355548441,
+"z": 0.6614098
+},
+"SplineType": 0,
+"FocusType": 0,
+"TimeCurve": "Linear",
+"Duration": 0.001,
+"Delay": 0.0,
+"Note": "",
+"Router": {
+"$id": "259",
+"Events": {
+"$id": "260",
+"$values": [
+{
+"$id": "261",
+"Name": "EndMovement",
+"Targets": {
+"$id": "262",
+"$values": [
+{
+"$id": "263",
+"$type": "Choreography.Steps.Recording.StartRecordingStep, Assembly-CSharp",
+"Delay": 0.0,
+"Note": "",
+"Router": {
+"$id": "264",
+"Events": {
+"$id": "265",
+"$values": [
+{
+"$id": "266",
+"Name": "End",
+"Targets": {
+"$id": "267",
+"$values": [
+{
+"$id": "268",
+"$type": "Choreography.Steps.SplineCameraTransforms.MoveToPositionAndFacingStep, Assembly-CSharp",
+"TargetPosition": {
+"x": 28.2405167,
+"y": 19.1086922,
+"z": -75.09244
+},
+"TargetFacing": {
+"x": -0.79592514,
+"y": -0.5184313,
+"z": 0.312621534
+},
+"SplineType": 0,
+"FocusType": 1,
+"TimeCurve": "Linear",
+"Duration": 5.0,
+"Delay": 0.0,
+"Note": "",
+"Router": {
+"$id": "269",
+"Events": {
+"$id": "270",
+"$values": [
+{
+"$id": "271",
+"Name": "EndMovement",
+"Targets": {
+"$id": "272",
+"$values": [
+{
+"$id": "273",
+"$type": "Choreography.Steps.SplineCameraTransforms.MoveToPositionAndFacingStep, Assembly-CSharp",
+"TargetPosition": {
+"x": 23.7188034,
+"y": 17.8113,
+"z": -4.74705935
+},
+"TargetFacing": {
+"x": -0.823221266,
+"y": -0.517684758,
+"z": -0.233044043
+},
+"SplineType": 0,
+"FocusType": 1,
+"TimeCurve": "Linear",
+"Duration": 6.0,
+"Delay": 0.0,
+"Note": "",
+"Router": {
+"$id": "274",
+"Events": {
+"$id": "275",
+"$values": [
+{
+"$id": "276",
+"Name": "EndMovement",
+"Targets": {
+"$id": "277",
+"$values": [
+{
+"$id": "278",
+"$type": "Choreography.Steps.Recording.StopRecordingStep, Assembly-CSharp",
+"Delay": 0.0,
+"Note": "",
+"Router": {
+"$id": "279",
+"Events": {
+"$id": "280",
+"$values": [
+{
+"$id": "281",
+"Name": "End",
+"Targets": {
+"$id": "282",
+"$values": []
+}
+}
+]
+}
+},
+"NameOverride": null
+}
+]
+}
+}
+]
+}
+},
+"NameOverride": null
+}
+]
+}
+}
+]
+}
+},
+"NameOverride": null
+}
+]
+}
+}
+]
+}
+},
+"NameOverride": null
+}
+]
+}
+}
+]
+}
+},
+"NameOverride": null
+}
+]
+}
+}
+]
+}
+},
+"NameOverride": null
+}
+}
+}
+}

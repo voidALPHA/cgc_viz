@@ -1,0 +1,30 @@
+log "Haxxis launched for Story Finder filament view"
+Log ""
+Log "Command line arguments:"
+cla -dump
+
+# Set some defaults first, then set from command line arguments which may or may not be present
+# screen -fullscreenoff
+screen -fullScreenFromCmdLineArg fullScreen
+screen -resolution 1920x1080
+screen -resolutionFromCmdLineArg screenRes
+
+screen -dump
+
+log "Loading filament view..."
+chainview -load FilamentView/FilamentViewFromFile.json
+
+# Set some defaults first, then set from command line arguments which may or may not be present
+#movie -realTimeOff -frameRate Thirty -downScale Original
+#movie -setVCFromCmdLineArg videoCodec -realTimeFromCmdLineArg realTime -frameRateFromCmdLineArg frameRate -downScaleFromCmdLineArg downScale
+
+chainview -off
+choreography -timelineOff
+#jm -busyIndicatorOff
+#network -waitingIndicatorOff
+
+chainview -eval
+
+#choreography -startPlayback
+
+# quit -kill          # Quit, and do so by killing our own Haxxis process rather than calling Application.Quit (suicide, really)

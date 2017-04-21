@@ -1,0 +1,1091 @@
+{
+"$id": "1",
+"Chain": {
+"$id": "2",
+"RootGroup": {
+"$id": "3",
+"Groups": {
+"$id": "4",
+"$values": []
+},
+"Nodes": {
+"$id": "5",
+"$values": [
+{
+"$id": "6",
+"$type": "Mutation.Mutators.FormatStringMutator, Assembly-CSharp",
+"FormatString": {
+"$id": "7",
+"LiteralValue": "StartVideoGen/FilamentView\\FilamentView.json/26/-1/-1/MassFilament{0}_{1}/-binaryIds={1} -requestIds={0}",
+"SchemaSource": 0
+},
+"PrimaryArgument": {
+"$id": "8",
+"AbsoluteKey": "RequestId",
+"SchemaSource": 1
+},
+"SecondaryArgument": {
+"$id": "9",
+"AbsoluteKey": "BinaryId",
+"SchemaSource": 1
+},
+"TargetString": {
+"$id": "10",
+"AbsoluteKey": "NetRequest"
+},
+"Comment": "",
+"Router": {
+"$id": "11",
+"SelectionStates": {
+"$id": "12",
+"$values": [
+{
+"$id": "13",
+"Name": "Default",
+"Targets": {
+"$id": "14",
+"$values": [
+{
+"$id": "15",
+"$type": "Mutation.Mutators.FormatStringMutator, Assembly-CSharp",
+"FormatString": {
+"$id": "16",
+"LiteralValue": "{0} -IdsIds={1}",
+"SchemaSource": 0
+},
+"PrimaryArgument": {
+"$id": "17",
+"AbsoluteKey": "NetRequest",
+"SchemaSource": 1
+},
+"SecondaryArgument": {
+"$id": "18",
+"AbsoluteKey": "IdsId",
+"SchemaSource": 1
+},
+"TargetString": {
+"$id": "19",
+"AbsoluteKey": "NetRequest"
+},
+"Comment": "",
+"Router": {
+"$id": "20",
+"SelectionStates": {
+"$id": "21",
+"$values": [
+{
+"$id": "22",
+"Name": "Default",
+"Targets": {
+"$id": "23",
+"$values": [
+{
+"$id": "24",
+"$type": "Mutation.Mutators.FormatStringMutator, Assembly-CSharp",
+"FormatString": {
+"$id": "25",
+"LiteralValue": "{0} {1}",
+"SchemaSource": 0
+},
+"PrimaryArgument": {
+"$id": "26",
+"AbsoluteKey": "NetRequest",
+"SchemaSource": 1
+},
+"SecondaryArgument": {
+"$id": "27",
+"GlobalParameterKey": "PassArgs",
+"SchemaSource": 3
+},
+"TargetString": {
+"$id": "28",
+"AbsoluteKey": "NetRequest"
+},
+"Comment": "",
+"Router": {
+"$id": "29",
+"SelectionStates": {
+"$id": "30",
+"$values": [
+{
+"$id": "31",
+"Name": "Default",
+"Targets": {
+"$id": "32",
+"$values": [
+{
+"$id": "33",
+"$type": "Mutation.Mutators.UriEncodeMutator, Assembly-CSharp",
+"InputString": {
+"$id": "34",
+"AbsoluteKey": "NetRequest",
+"SchemaSource": 1
+},
+"OutputUri": {
+"$id": "35",
+"AbsoluteKey": "EncodedURI"
+},
+"Comment": "",
+"Router": {
+"$id": "36",
+"SelectionStates": {
+"$id": "37",
+"$values": [
+{
+"$id": "38",
+"Name": "Default",
+"Targets": {
+"$id": "39",
+"$values": [
+{
+"$id": "40",
+"$type": "Mutation.Mutators.NetworkRequestMutator, Assembly-CSharp",
+"Url": {
+"$id": "41",
+"LiteralValue": "192.168.1.39:8003/",
+"SchemaSource": 0
+},
+"Request": {
+"$id": "42",
+"AbsoluteKey": "EncodedURI",
+"SchemaSource": 1
+},
+"WaitForCompletion": {
+"$id": "43",
+"LiteralValue": false,
+"SchemaSource": 0
+},
+"Comment": "",
+"Router": {
+"$id": "44",
+"SelectionStates": {
+"$id": "45",
+"$values": [
+{
+"$id": "46",
+"Name": "Default",
+"Targets": {
+"$id": "47",
+"$values": []
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+},
+{
+"$id": "48",
+"$type": "Mutation.PrintStringMutator, Assembly-CSharp",
+"StringToPrintField": {
+"$id": "49",
+"AbsoluteKey": "EncodedURI",
+"SchemaSource": 1
+},
+"Comment": "",
+"Router": {
+"$id": "50",
+"SelectionStates": {
+"$id": "51",
+"$values": [
+{
+"$id": "52",
+"Name": "Default",
+"Targets": {
+"$id": "53",
+"$values": []
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": true
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+},
+{
+"$ref": "40"
+},
+{
+"$ref": "15"
+},
+{
+"$id": "54",
+"$type": "Adapters.GlobalParameters.CommandLineArgumentAdapter, Assembly-CSharp",
+"ParameterName": {
+"$id": "55",
+"LiteralValue": "csv",
+"SchemaSource": 0
+},
+"DefaultValue": {
+"$id": "56",
+"LiteralValue": "1319,773,-1",
+"SchemaSource": 0
+},
+"ParameterTarget": {
+"$id": "57",
+"AbsoluteKey": "CSV"
+},
+"Comment": "CSV of CSVs, the second layer indicating the PoV ID, the Binary Set ID, and IDS ID of the filament to generate.",
+"Router": {
+"$id": "58",
+"SelectionStates": {
+"$id": "59",
+"$values": [
+{
+"$id": "60",
+"Name": "Default",
+"Targets": {
+"$id": "61",
+"$values": [
+{
+"$id": "62",
+"$type": "Adapters.GlobalParameters.WriteGlobalValueNode, Assembly-CSharp",
+"Parameter": {
+"$id": "63",
+"AbsoluteKey": "CSV",
+"SchemaSource": 1
+},
+"ParameterName": {
+"$id": "64",
+"LiteralValue": "CSV",
+"SchemaSource": 0
+},
+"Comment": "",
+"Router": {
+"$id": "65",
+"SelectionStates": {
+"$id": "66",
+"$values": [
+{
+"$id": "67",
+"Name": "Pass Through",
+"Targets": {
+"$id": "68",
+"$values": []
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+},
+{
+"$id": "69",
+"$type": "Mutation.Mutators.Enumeration.ThreeTargetCsvEnumerator, Assembly-CSharp",
+"CsvField": {
+"$id": "70",
+"GlobalParameterKey": "CSV",
+"SchemaSource": 3
+},
+"Entry1Target": {
+"$id": "71",
+"AbsoluteKey": "RequestId"
+},
+"Entry2Target": {
+"$id": "72",
+"AbsoluteKey": "BinaryId"
+},
+"Entry3Target": {
+"$id": "73",
+"AbsoluteKey": "IdsId"
+},
+"NumberOfElementsTarget": {
+"$id": "74",
+"AbsoluteKey": "Number Of Elements"
+},
+"Comment": "",
+"Router": {
+"$id": "75",
+"SelectionStates": {
+"$id": "76",
+"$values": [
+{
+"$id": "77",
+"Name": "Per Four Elements",
+"Targets": {
+"$id": "78",
+"$values": [
+{
+"$id": "79",
+"$type": "Mutation.Mutators.IfMutator.IfBoolMutator, Assembly-CSharp",
+"Condition": {
+"$id": "80",
+"GlobalParameterKey": "SlowerBool",
+"SchemaSource": 3
+},
+"Comment": "",
+"Router": {
+"$id": "81",
+"SelectionStates": {
+"$id": "82",
+"$values": [
+{
+"$id": "83",
+"Name": "If",
+"Targets": {
+"$id": "84",
+"$values": [
+{
+"$id": "85",
+"$type": "Mutation.Mutators.FormatStringMutator, Assembly-CSharp",
+"FormatString": {
+"$id": "86",
+"LiteralValue": "StartVideoGen/FilamentView\\FilamentViewSlower.json/26/-1/-1/MassFilament{0}_{1}/-binaryIds={1} -requestIds={0}",
+"SchemaSource": 0
+},
+"PrimaryArgument": {
+"$id": "87",
+"AbsoluteKey": "RequestId",
+"SchemaSource": 1
+},
+"SecondaryArgument": {
+"$id": "88",
+"AbsoluteKey": "BinaryId",
+"SchemaSource": 1
+},
+"TargetString": {
+"$id": "89",
+"AbsoluteKey": "NetRequest"
+},
+"Comment": "",
+"Router": {
+"$id": "90",
+"SelectionStates": {
+"$id": "91",
+"$values": [
+{
+"$id": "92",
+"Name": "Default",
+"Targets": {
+"$id": "93",
+"$values": [
+{
+"$id": "94",
+"$type": "Mutation.Mutators.FormatStringMutator, Assembly-CSharp",
+"FormatString": {
+"$id": "95",
+"LiteralValue": "{0} -IdsIds={1}",
+"SchemaSource": 0
+},
+"PrimaryArgument": {
+"$id": "96",
+"AbsoluteKey": "NetRequest",
+"SchemaSource": 1
+},
+"SecondaryArgument": {
+"$id": "97",
+"AbsoluteKey": "IdsId",
+"SchemaSource": 1
+},
+"TargetString": {
+"$id": "98",
+"AbsoluteKey": "NetRequest"
+},
+"Comment": "",
+"Router": {
+"$id": "99",
+"SelectionStates": {
+"$id": "100",
+"$values": [
+{
+"$id": "101",
+"Name": "Default",
+"Targets": {
+"$id": "102",
+"$values": [
+{
+"$id": "103",
+"$type": "Mutation.Mutators.FormatStringMutator, Assembly-CSharp",
+"FormatString": {
+"$id": "104",
+"LiteralValue": "{0} {1}",
+"SchemaSource": 0
+},
+"PrimaryArgument": {
+"$id": "105",
+"AbsoluteKey": "NetRequest",
+"SchemaSource": 1
+},
+"SecondaryArgument": {
+"$id": "106",
+"GlobalParameterKey": "PassArgs",
+"SchemaSource": 3
+},
+"TargetString": {
+"$id": "107",
+"AbsoluteKey": "NetRequest"
+},
+"Comment": "",
+"Router": {
+"$id": "108",
+"SelectionStates": {
+"$id": "109",
+"$values": [
+{
+"$id": "110",
+"Name": "Default",
+"Targets": {
+"$id": "111",
+"$values": [
+{
+"$id": "112",
+"$type": "Mutation.Mutators.UriEncodeMutator, Assembly-CSharp",
+"InputString": {
+"$id": "113",
+"AbsoluteKey": "NetRequest",
+"SchemaSource": 1
+},
+"OutputUri": {
+"$id": "114",
+"AbsoluteKey": "EncodedURI"
+},
+"Comment": "",
+"Router": {
+"$id": "115",
+"SelectionStates": {
+"$id": "116",
+"$values": [
+{
+"$id": "117",
+"Name": "Default",
+"Targets": {
+"$id": "118",
+"$values": [
+{
+"$id": "119",
+"$type": "Mutation.Mutators.NetworkRequestMutator, Assembly-CSharp",
+"Url": {
+"$id": "120",
+"LiteralValue": "192.168.1.39:8003/",
+"SchemaSource": 0
+},
+"Request": {
+"$id": "121",
+"AbsoluteKey": "EncodedURI",
+"SchemaSource": 1
+},
+"WaitForCompletion": {
+"$id": "122",
+"LiteralValue": false,
+"SchemaSource": 0
+},
+"Comment": "",
+"Router": {
+"$id": "123",
+"SelectionStates": {
+"$id": "124",
+"$values": [
+{
+"$id": "125",
+"Name": "Default",
+"Targets": {
+"$id": "126",
+"$values": []
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+},
+{
+"$id": "127",
+"$type": "Mutation.PrintStringMutator, Assembly-CSharp",
+"StringToPrintField": {
+"$id": "128",
+"AbsoluteKey": "EncodedURI",
+"SchemaSource": 1
+},
+"Comment": "",
+"Router": {
+"$id": "129",
+"SelectionStates": {
+"$id": "130",
+"$values": [
+{
+"$id": "131",
+"Name": "Default",
+"Targets": {
+"$id": "132",
+"$values": []
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": true
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+}
+},
+{
+"$id": "133",
+"Name": "Else",
+"Targets": {
+"$id": "134",
+"$values": [
+{
+"$ref": "6"
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+},
+{
+"$id": "135",
+"$type": "Adapters.GlobalParameters.CommandLineArgumentAdapter, Assembly-CSharp",
+"ParameterName": {
+"$id": "136",
+"LiteralValue": "slower",
+"SchemaSource": 0
+},
+"DefaultValue": {
+"$id": "137",
+"LiteralValue": "False",
+"SchemaSource": 0
+},
+"ParameterTarget": {
+"$id": "138",
+"AbsoluteKey": "SlowerStr"
+},
+"Comment": "A boolean indicating whether or not to use the \"slower\" version of the Filament View package, a 30 second sweep instead of 10.",
+"Router": {
+"$id": "139",
+"SelectionStates": {
+"$id": "140",
+"$values": [
+{
+"$id": "141",
+"Name": "Default",
+"Targets": {
+"$id": "142",
+"$values": [
+{
+"$id": "143",
+"$type": "Mutation.Mutators.Axes.ArrityTypeAxes.ParseStringToBool, Assembly-CSharp",
+"AxisKey": {
+"$id": "144",
+"AbsoluteKey": "SlowerStr",
+"SchemaSource": 1
+},
+"TargetField": {
+"$id": "145",
+"AbsoluteKey": "SlowerBool"
+},
+"Comment": "",
+"Router": {
+"$id": "146",
+"SelectionStates": {
+"$id": "147",
+"$values": [
+{
+"$id": "148",
+"Name": "Default",
+"Targets": {
+"$id": "149",
+"$values": [
+{
+"$id": "150",
+"$type": "Adapters.GlobalParameters.WriteGlobalValueNode, Assembly-CSharp",
+"Parameter": {
+"$id": "151",
+"AbsoluteKey": "SlowerBool",
+"SchemaSource": 1
+},
+"ParameterName": {
+"$id": "152",
+"LiteralValue": "SlowerBool",
+"SchemaSource": 0
+},
+"Comment": "",
+"Router": {
+"$id": "153",
+"SelectionStates": {
+"$id": "154",
+"$values": [
+{
+"$id": "155",
+"Name": "Pass Through",
+"Targets": {
+"$id": "156",
+"$values": []
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+},
+{
+"$ref": "143"
+},
+{
+"$ref": "119"
+},
+{
+"$ref": "94"
+},
+{
+"$ref": "85"
+},
+{
+"$id": "157",
+"$type": "Adapters.GlobalParameters.CommandLineArgumentAdapter, Assembly-CSharp",
+"ParameterName": {
+"$id": "158",
+"LiteralValue": "args",
+"SchemaSource": 0
+},
+"DefaultValue": {
+"$id": "159",
+"LiteralValue": "",
+"SchemaSource": 0
+},
+"ParameterTarget": {
+"$id": "160",
+"AbsoluteKey": "PassArgs"
+},
+"Comment": "A string of extra arguments to pass through to the Filaments.  View the full documentation on the Filament View to see what can be executed.",
+"Router": {
+"$id": "161",
+"SelectionStates": {
+"$id": "162",
+"$values": [
+{
+"$id": "163",
+"Name": "Default",
+"Targets": {
+"$id": "164",
+"$values": [
+{
+"$id": "165",
+"$type": "Adapters.GlobalParameters.WriteGlobalValueNode, Assembly-CSharp",
+"Parameter": {
+"$id": "166",
+"AbsoluteKey": "PassArgs",
+"SchemaSource": 1
+},
+"ParameterName": {
+"$id": "167",
+"LiteralValue": "PassArgs",
+"SchemaSource": 0
+},
+"Comment": "",
+"Router": {
+"$id": "168",
+"SelectionStates": {
+"$id": "169",
+"$values": [
+{
+"$id": "170",
+"Name": "Pass Through",
+"Targets": {
+"$id": "171",
+"$values": []
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+},
+{
+"$ref": "103"
+},
+{
+"$ref": "24"
+},
+{
+"$ref": "48"
+},
+{
+"$ref": "127"
+},
+{
+"$ref": "165"
+},
+{
+"$ref": "150"
+},
+{
+"$ref": "79"
+},
+{
+"$ref": "62"
+},
+{
+"$ref": "33"
+},
+{
+"$ref": "112"
+}
+]
+},
+"Comment": ""
+}
+},
+"ChainViewModel": {
+"$id": "172",
+"RootGroupViewModel": {
+"$id": "173",
+"Group": {
+"$ref": "3"
+},
+"Position": {
+"x": 0.0,
+"y": 0.0,
+"z": 0.0
+},
+"RelativePath": "",
+"NodeViewModels": {
+"$id": "174",
+"$values": [
+{
+"$id": "175",
+"ChainNode": {
+"$ref": "6"
+},
+"Position": {
+"x": 650.0,
+"y": -300.0,
+"z": 0.0
+}
+},
+{
+"$id": "176",
+"ChainNode": {
+"$ref": "40"
+},
+"Position": {
+"x": 1900.0,
+"y": -300.0,
+"z": 0.0
+}
+},
+{
+"$id": "177",
+"ChainNode": {
+"$ref": "15"
+},
+"Position": {
+"x": 950.0,
+"y": -300.0,
+"z": 0.0
+}
+},
+{
+"$id": "178",
+"ChainNode": {
+"$ref": "54"
+},
+"Position": {
+"x": 0.0,
+"y": 150.0,
+"z": 0.0
+}
+},
+{
+"$id": "179",
+"ChainNode": {
+"$ref": "69"
+},
+"Position": {
+"x": 0.0,
+"y": -50.0,
+"z": 0.0
+}
+},
+{
+"$id": "180",
+"ChainNode": {
+"$ref": "135"
+},
+"Position": {
+"x": 0.0,
+"y": 350.0,
+"z": 0.0
+}
+},
+{
+"$id": "181",
+"ChainNode": {
+"$ref": "143"
+},
+"Position": {
+"x": 300.0,
+"y": 350.0,
+"z": 0.0
+}
+},
+{
+"$id": "182",
+"ChainNode": {
+"$ref": "119"
+},
+"Position": {
+"x": 1900.0,
+"y": -50.0,
+"z": 0.0
+}
+},
+{
+"$id": "183",
+"ChainNode": {
+"$ref": "94"
+},
+"Position": {
+"x": 950.0,
+"y": -50.0,
+"z": 0.0
+}
+},
+{
+"$id": "184",
+"ChainNode": {
+"$ref": "85"
+},
+"Position": {
+"x": 650.0,
+"y": -50.0,
+"z": 0.0
+}
+},
+{
+"$id": "185",
+"ChainNode": {
+"$ref": "157"
+},
+"Position": {
+"x": 0.0,
+"y": 550.0,
+"z": 0.0
+}
+},
+{
+"$id": "186",
+"ChainNode": {
+"$ref": "103"
+},
+"Position": {
+"x": 1250.0,
+"y": -50.0,
+"z": 0.0
+}
+},
+{
+"$id": "187",
+"ChainNode": {
+"$ref": "24"
+},
+"Position": {
+"x": 1250.0,
+"y": -300.0,
+"z": 0.0
+}
+},
+{
+"$id": "188",
+"ChainNode": {
+"$ref": "48"
+},
+"Position": {
+"x": 1900.0,
+"y": -450.0,
+"z": 0.0
+}
+},
+{
+"$id": "189",
+"ChainNode": {
+"$ref": "127"
+},
+"Position": {
+"x": 1900.0,
+"y": -200.0,
+"z": 0.0
+}
+},
+{
+"$id": "190",
+"ChainNode": {
+"$ref": "165"
+},
+"Position": {
+"x": 300.0,
+"y": 550.0,
+"z": 0.0
+}
+},
+{
+"$id": "191",
+"ChainNode": {
+"$ref": "150"
+},
+"Position": {
+"x": 600.0,
+"y": 350.0,
+"z": 0.0
+}
+},
+{
+"$id": "192",
+"ChainNode": {
+"$ref": "79"
+},
+"Position": {
+"x": 300.0,
+"y": -50.0,
+"z": 0.0
+}
+},
+{
+"$id": "193",
+"ChainNode": {
+"$ref": "62"
+},
+"Position": {
+"x": 300.0,
+"y": 150.0,
+"z": 0.0
+}
+},
+{
+"$id": "194",
+"ChainNode": {
+"$ref": "33"
+},
+"Position": {
+"x": 1550.0,
+"y": -300.0,
+"z": 0.0
+}
+},
+{
+"$id": "195",
+"ChainNode": {
+"$ref": "112"
+},
+"Position": {
+"x": 1550.0,
+"y": -50.0,
+"z": 0.0
+}
+}
+]
+},
+"GroupViewModels": {
+"$id": "196",
+"$values": []
+}
+},
+"NodeViewModels": null
+},
+"Choreography": null
+}

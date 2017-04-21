@@ -1,0 +1,949 @@
+{
+"$id": "1",
+"Chain": {
+"$id": "2",
+"RootGroup": {
+"$id": "3",
+"Groups": {
+"$id": "4",
+"$values": [
+{
+"$id": "5",
+"Groups": {
+"$id": "6",
+"$values": []
+},
+"Nodes": {
+"$id": "7",
+"$values": [
+{
+"$id": "8",
+"$type": "Mutation.Mutators.FormatStringMutator, Assembly-CSharp",
+"FormatString": {
+"$id": "9",
+"LiteralValue": "/StartVideoGen/CSView%5CSingleCSView.json/26/-1/-1/CSView_{1:D3}/-CSId={1}",
+"SchemaSource": 0
+},
+"PrimaryArgument": {
+"$id": "10",
+"AbsoluteKey": "Cs ID",
+"SchemaSource": 1
+},
+"SecondaryArgument": {
+"$id": "11",
+"AbsoluteKey": "Cs ID",
+"SchemaSource": 1
+},
+"TargetString": {
+"$id": "12",
+"AbsoluteKey": "Formatted String"
+},
+"Comment": "Create HTTP request string; use %5C to encode backslashes between folder and HP name if needed",
+"Router": {
+"$id": "13",
+"SelectionStates": {
+"$id": "14",
+"$values": [
+{
+"$id": "15",
+"Name": "Default",
+"Targets": {
+"$id": "16",
+"$values": [
+{
+"$id": "17",
+"$type": "Mutation.PrintStringMutator, Assembly-CSharp",
+"StringToPrintField": {
+"$id": "18",
+"AbsoluteKey": "Formatted String",
+"SchemaSource": 1
+},
+"Comment": "",
+"Router": {
+"$id": "19",
+"SelectionStates": {
+"$id": "20",
+"$values": [
+{
+"$id": "21",
+"Name": "Default",
+"Targets": {
+"$id": "22",
+"$values": []
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+},
+{
+"$id": "23",
+"$type": "Mutation.Mutators.NetworkRequestMutator, Assembly-CSharp",
+"Url": {
+"$id": "24",
+"GlobalParameterKey": "VGSMasterUrl",
+"SchemaSource": 3
+},
+"Request": {
+"$id": "25",
+"AbsoluteKey": "Formatted String",
+"SchemaSource": 1
+},
+"WaitForCompletion": {
+"$id": "26",
+"LiteralValue": true,
+"SchemaSource": 0
+},
+"Comment": "",
+"Router": {
+"$id": "27",
+"SelectionStates": {
+"$id": "28",
+"$values": [
+{
+"$id": "29",
+"Name": "Default",
+"Targets": {
+"$id": "30",
+"$values": []
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+},
+{
+"$ref": "17"
+},
+{
+"$ref": "23"
+}
+]
+},
+"Comment": "Make a single VGS request given a CS ID"
+}
+]
+},
+"Nodes": {
+"$id": "31",
+"$values": [
+{
+"$id": "32",
+"$type": "Adapters.GlobalParameters.CommandLineArgumentAdapter, Assembly-CSharp",
+"ParameterName": {
+"$id": "33",
+"LiteralValue": "CSIds",
+"SchemaSource": 0
+},
+"DefaultValue": {
+"$id": "34",
+"LiteralValue": "20,21,53",
+"SchemaSource": 0
+},
+"ParameterTarget": {
+"$id": "35",
+"AbsoluteKey": "Str"
+},
+"Comment": "For testing",
+"Router": {
+"$id": "36",
+"SelectionStates": {
+"$id": "37",
+"$values": [
+{
+"$id": "38",
+"Name": "Default",
+"Targets": {
+"$id": "39",
+"$values": [
+{
+"$id": "40",
+"$type": "Adapters.GlobalParameters.WriteGlobalValueNode, Assembly-CSharp",
+"Parameter": {
+"$id": "41",
+"AbsoluteKey": "Str",
+"SchemaSource": 1
+},
+"ParameterName": {
+"$id": "42",
+"LiteralValue": "CSIds",
+"SchemaSource": 0
+},
+"Comment": "",
+"Router": {
+"$id": "43",
+"SelectionStates": {
+"$id": "44",
+"$values": [
+{
+"$id": "45",
+"Name": "Pass Through",
+"Targets": {
+"$id": "46",
+"$values": []
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": true
+},
+{
+"$ref": "40"
+},
+{
+"$id": "47",
+"$type": "Mutation.Mutators.Enumeration.CsvEnumerator, Assembly-CSharp",
+"CommaSeparatedValues": {
+"$id": "48",
+"GlobalParameterKey": "CSIds",
+"SchemaSource": 3
+},
+"SingleEntryTarget": {
+"$id": "49",
+"AbsoluteKey": "Element"
+},
+"NumberOfElementsTarget": {
+"$id": "50",
+"AbsoluteKey": "Number Of Elements"
+},
+"Comment": "",
+"Router": {
+"$id": "51",
+"SelectionStates": {
+"$id": "52",
+"$values": [
+{
+"$id": "53",
+"Name": "Per Element",
+"Targets": {
+"$id": "54",
+"$values": [
+{
+"$id": "55",
+"$type": "Mutation.Mutators.Axes.ArrityTypeAxes.ParseStringToInt, Assembly-CSharp",
+"AxisKey": {
+"$id": "56",
+"AbsoluteKey": "Element",
+"SchemaSource": 1
+},
+"TargetField": {
+"$id": "57",
+"AbsoluteKey": "CSId"
+},
+"Comment": "",
+"Router": {
+"$id": "58",
+"SelectionStates": {
+"$id": "59",
+"$values": [
+{
+"$id": "60",
+"Name": "Default",
+"Targets": {
+"$id": "61",
+"$values": []
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": true
+},
+{
+"$ref": "55"
+},
+{
+"$id": "62",
+"$type": "Adapters.GlobalParameters.CommandLineArgumentAdapter, Assembly-CSharp",
+"ParameterName": {
+"$id": "63",
+"LiteralValue": "Round",
+"SchemaSource": 0
+},
+"DefaultValue": {
+"$id": "64",
+"LiteralValue": "8",
+"SchemaSource": 0
+},
+"ParameterTarget": {
+"$id": "65",
+"AbsoluteKey": "Str"
+},
+"Comment": "",
+"Router": {
+"$id": "66",
+"SelectionStates": {
+"$id": "67",
+"$values": [
+{
+"$id": "68",
+"Name": "Default",
+"Targets": {
+"$id": "69",
+"$values": [
+{
+"$id": "70",
+"$type": "Mutation.Mutators.Axes.ArrityTypeAxes.ParseStringToInt, Assembly-CSharp",
+"AxisKey": {
+"$id": "71",
+"AbsoluteKey": "Str",
+"SchemaSource": 1
+},
+"TargetField": {
+"$id": "72",
+"AbsoluteKey": "New Key"
+},
+"Comment": "",
+"Router": {
+"$id": "73",
+"SelectionStates": {
+"$id": "74",
+"$values": [
+{
+"$id": "75",
+"Name": "Default",
+"Targets": {
+"$id": "76",
+"$values": [
+{
+"$id": "77",
+"$type": "Adapters.GlobalParameters.WriteGlobalValueNode, Assembly-CSharp",
+"Parameter": {
+"$id": "78",
+"AbsoluteKey": "New Key",
+"SchemaSource": 1
+},
+"ParameterName": {
+"$id": "79",
+"LiteralValue": "Round",
+"SchemaSource": 0
+},
+"Comment": "",
+"Router": {
+"$id": "80",
+"SelectionStates": {
+"$id": "81",
+"$values": [
+{
+"$id": "82",
+"Name": "Pass Through",
+"Targets": {
+"$id": "83",
+"$values": []
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+},
+{
+"$ref": "77"
+},
+{
+"$id": "84",
+"$type": "Adapters.GlobalParameters.CommandLineArgumentAdapter, Assembly-CSharp",
+"ParameterName": {
+"$id": "85",
+"LiteralValue": "VGSMasterUrl",
+"SchemaSource": 0
+},
+"DefaultValue": {
+"$id": "86",
+"LiteralValue": "va-cgc-0.viz.lan:8003",
+"SchemaSource": 0
+},
+"ParameterTarget": {
+"$id": "87",
+"AbsoluteKey": "str"
+},
+"Comment": "",
+"Router": {
+"$id": "88",
+"SelectionStates": {
+"$id": "89",
+"$values": [
+{
+"$id": "90",
+"Name": "Default",
+"Targets": {
+"$id": "91",
+"$values": [
+{
+"$id": "92",
+"$type": "Adapters.GlobalParameters.WriteGlobalValueNode, Assembly-CSharp",
+"Parameter": {
+"$id": "93",
+"AbsoluteKey": "str",
+"SchemaSource": 1
+},
+"ParameterName": {
+"$id": "94",
+"LiteralValue": "VGSMasterUrl",
+"SchemaSource": 0
+},
+"Comment": "",
+"Router": {
+"$id": "95",
+"SelectionStates": {
+"$id": "96",
+"$values": [
+{
+"$id": "97",
+"Name": "Pass Through",
+"Targets": {
+"$id": "98",
+"$values": []
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+},
+{
+"$ref": "92"
+},
+{
+"$id": "99",
+"$type": "Adapters.GameEvents.GameEventFromTraceApiAdapter, Assembly-CSharp",
+"RoundIndexField": {
+"$id": "100",
+"GlobalParameterKey": "Round",
+"SchemaSource": 3
+},
+"SpoofData": {
+"$id": "101",
+"LiteralValue": false,
+"SchemaSource": 0
+},
+"GameEventsTarget": {
+"$id": "102",
+"AbsoluteKey": "Game Events"
+},
+"Comment": "",
+"Router": {
+"$id": "103",
+"SelectionStates": {
+"$id": "104",
+"$values": [
+{
+"$id": "105",
+"Name": "All",
+"Targets": {
+"$id": "106",
+"$values": [
+{
+"$id": "107",
+"$type": "GroupSplitters.StringMatchSplitter, Assembly-CSharp",
+"Scope": {
+"$id": "108",
+"AbsoluteKey": ""
+},
+"EntryField": {
+"$id": "109",
+"AbsoluteKey": "Game Events.Rounds.Events"
+},
+"StringProperty": {
+"$id": "110",
+"AbsoluteKey": "Game Events.Rounds.Events.TypeString",
+"SchemaSource": 1
+},
+"StringArgument": {
+"$id": "111",
+"LiteralValue": "Cs Added",
+"SchemaSource": 0
+},
+"NewPayloadOnly": {
+"$id": "112",
+"LiteralValue": true,
+"SchemaSource": 0
+},
+"SelectedListTarget": {
+"$id": "113",
+"AbsoluteKey": "CsAdds"
+},
+"UnSelectedListTarget": {
+"$id": "114",
+"AbsoluteKey": "Unselected Entries"
+},
+"AllowEmptyLists": {
+"$id": "115",
+"LiteralValue": false,
+"SchemaSource": 0
+},
+"Comment": "",
+"Router": {
+"$id": "116",
+"SelectionStates": {
+"$id": "117",
+"$values": [
+{
+"$id": "118",
+"Name": "Selected",
+"Targets": {
+"$id": "119",
+"$values": []
+}
+},
+{
+"$id": "120",
+"Name": "Unselected",
+"Targets": {
+"$id": "121",
+"$values": []
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": true
+},
+{
+"$id": "122",
+"$type": "Mutation.Mutators.EnumeratorIterator, Assembly-CSharp",
+"EntryField": {
+"$id": "123",
+"AbsoluteKey": "Game Events.Rounds.Cs Added"
+},
+"Comment": "",
+"Router": {
+"$id": "124",
+"SelectionStates": {
+"$id": "125",
+"$values": [
+{
+"$id": "126",
+"Name": "Normal",
+"Targets": {
+"$id": "127",
+"$values": []
+}
+},
+{
+"$id": "128",
+"Name": "Selected",
+"Targets": {
+"$id": "129",
+"$values": []
+}
+},
+{
+"$id": "130",
+"Name": "None Selected",
+"Targets": {
+"$id": "131",
+"$values": [
+{
+"$ref": "8"
+}
+]
+}
+},
+{
+"$id": "132",
+"Name": "Normal (Group)",
+"Targets": {
+"$id": "133",
+"$values": []
+}
+},
+{
+"$id": "134",
+"Name": "Selected (Group)",
+"Targets": {
+"$id": "135",
+"$values": []
+}
+},
+{
+"$id": "136",
+"Name": "None Selected (Group)",
+"Targets": {
+"$id": "137",
+"$values": []
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+},
+{
+"$ref": "70"
+},
+{
+"$ref": "107"
+},
+{
+"$ref": "122"
+}
+]
+},
+"Comment": ""
+}
+},
+"ChainViewModel": {
+"$id": "138",
+"RootGroupViewModel": {
+"$id": "139",
+"Group": {
+"$ref": "3"
+},
+"Position": {
+"x": 0.0,
+"y": 0.0,
+"z": 0.0
+},
+"RelativePath": "",
+"NodeViewModels": {
+"$id": "140",
+"$values": [
+{
+"$id": "141",
+"ChainNode": {
+"$ref": "32"
+},
+"Position": {
+"x": 1100.0,
+"y": -150.0,
+"z": 0.0
+},
+"Expanded": true
+},
+{
+"$id": "142",
+"ChainNode": {
+"$ref": "40"
+},
+"Position": {
+"x": 1100.0,
+"y": -350.0,
+"z": 0.0
+},
+"Expanded": true
+},
+{
+"$id": "143",
+"ChainNode": {
+"$ref": "47"
+},
+"Position": {
+"x": 750.0,
+"y": -750.0,
+"z": 0.0
+},
+"Expanded": true
+},
+{
+"$id": "144",
+"ChainNode": {
+"$ref": "55"
+},
+"Position": {
+"x": 750.0,
+"y": -1000.0,
+"z": 0.0
+},
+"Expanded": true
+},
+{
+"$id": "145",
+"ChainNode": {
+"$ref": "62"
+},
+"Position": {
+"x": 750.0,
+"y": -150.0,
+"z": 0.0
+},
+"Expanded": true
+},
+{
+"$id": "146",
+"ChainNode": {
+"$ref": "77"
+},
+"Position": {
+"x": 750.0,
+"y": -550.0,
+"z": 0.0
+},
+"Expanded": true
+},
+{
+"$id": "147",
+"ChainNode": {
+"$ref": "84"
+},
+"Position": {
+"x": 1450.0,
+"y": -150.0,
+"z": 0.0
+},
+"Expanded": true
+},
+{
+"$id": "148",
+"ChainNode": {
+"$ref": "92"
+},
+"Position": {
+"x": 1450.0,
+"y": -350.0,
+"z": 0.0
+},
+"Expanded": true
+},
+{
+"$id": "149",
+"ChainNode": {
+"$ref": "99"
+},
+"Position": {
+"x": 350.0,
+"y": -550.0,
+"z": 0.0
+},
+"Expanded": true
+},
+{
+"$id": "150",
+"ChainNode": {
+"$ref": "70"
+},
+"Position": {
+"x": 750.0,
+"y": -350.0,
+"z": 0.0
+},
+"Expanded": true
+},
+{
+"$id": "151",
+"ChainNode": {
+"$ref": "107"
+},
+"Position": {
+"x": 350.0,
+"y": -750.0,
+"z": 0.0
+},
+"Expanded": true
+},
+{
+"$id": "152",
+"ChainNode": {
+"$ref": "122"
+},
+"Position": {
+"x": 350.0,
+"y": -1200.0,
+"z": 0.0
+},
+"Expanded": true
+}
+]
+},
+"GroupViewModels": {
+"$id": "153",
+"$values": [
+{
+"$id": "154",
+"Group": {
+"$ref": "5"
+},
+"Position": {
+"x": 1753.0,
+"y": -985.0,
+"z": 0.0
+},
+"RelativePath": "",
+"NodeViewModels": {
+"$id": "155",
+"$values": [
+{
+"$id": "156",
+"ChainNode": {
+"$ref": "8"
+},
+"Position": {
+"x": -650.0,
+"y": -750.0,
+"z": 0.0
+},
+"Expanded": true
+},
+{
+"$id": "157",
+"ChainNode": {
+"$ref": "17"
+},
+"Position": {
+"x": -300.0,
+"y": -750.0,
+"z": 0.0
+},
+"Expanded": true
+},
+{
+"$id": "158",
+"ChainNode": {
+"$ref": "23"
+},
+"Position": {
+"x": -650.0,
+"y": -1000.0,
+"z": 0.0
+},
+"Expanded": true
+}
+]
+},
+"GroupViewModels": {
+"$id": "159",
+"$values": []
+}
+}
+]
+}
+},
+"NodeViewModels": null
+},
+"Choreography": {
+"$id": "160",
+"Timeline": {
+"$id": "161",
+"StartStep": {
+"$id": "162",
+"$type": "Choreography.Steps.Timeline.TimelineStartStep, Assembly-CSharp",
+"Delay": 0.0,
+"Note": "",
+"Router": {
+"$id": "163",
+"Events": {
+"$id": "164",
+"$values": [
+{
+"$id": "165",
+"Name": "Start",
+"Targets": {
+"$id": "166",
+"$values": [
+{
+"$id": "167",
+"$type": "Choreography.Steps.Recording.StartRecordingStep, Assembly-CSharp",
+"Delay": 0.0,
+"Note": "",
+"Router": {
+"$id": "168",
+"Events": {
+"$id": "169",
+"$values": [
+{
+"$id": "170",
+"Name": "End",
+"Targets": {
+"$id": "171",
+"$values": [
+{
+"$id": "172",
+"$type": "Choreography.Steps.Recording.StopRecordingStep, Assembly-CSharp",
+"Delay": 0.5,
+"Note": "",
+"Router": {
+"$id": "173",
+"Events": {
+"$id": "174",
+"$values": [
+{
+"$id": "175",
+"Name": "End",
+"Targets": {
+"$id": "176",
+"$values": []
+}
+}
+]
+}
+},
+"NameOverride": null
+}
+]
+}
+}
+]
+}
+},
+"NameOverride": null
+}
+]
+}
+}
+]
+}
+},
+"NameOverride": null
+}
+}
+}
+}

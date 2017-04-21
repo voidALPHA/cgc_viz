@@ -1,0 +1,24 @@
+Log "Playing choreography (which records video)"
+console -off
+choreography -startplayback
+console -on
+
+wait 1
+
+chainview -new
+wait .5
+
+chainview -load smoke/SMOKE_score_iso_grid.json
+#isogrid -XAxis "Scores.Z Axis" -Zaxis "Scores.X Axis"
+chainview -eval
+wait 2
+
+chainview -new
+wait .25
+
+chainview -load smoke/SMOKE_score_iso_grid.json
+chainview -eval
+wait .5
+
+log "Done exercising an isogrid instance"
+wait 2

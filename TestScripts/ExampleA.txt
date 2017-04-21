@@ -1,0 +1,11 @@
+Log "ExampleA - line 1"
+Log "ExampleA - line 2"
+Log "ExampleA - line 3"
+test ExampleB
+Log "ExampleA - after ExampleB was called"
+Log "ExampleA - Another line, before calling ExampleB again"
+test ExampleB
+log "ExampleA - Now exampleA calls exampleC"
+test ExampleC
+Log "ExampleA - last line"
+

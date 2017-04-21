@@ -1,0 +1,23 @@
+console -on
+Log "Starting smoke test"
+
+screen -fullscreenoff	# Theory: x264 video codec does not play well with full screen mode
+stats -displayOn
+
+chainview -load smoke/SMOKE_score_iso_grid.json
+chainview -eval
+
+screenshot PreSmokeTest
+
+chainview -off
+
+test SmokeIsoGrid
+
+chainview -new
+wait .25
+chainview -load smoke/SMOKE_score_iso_grid.json
+chainview -eval
+
+stats -dump
+screenshot PostSmokeTest
+Log "Smoke test completed."

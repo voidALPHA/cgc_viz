@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 27ed1405eb5a9ac478736b0289d54343
+timeCreated: 1492446764
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Alte DIN 1451 Mittelschrift gepraegt
+  fontNames:
+  - Alte DIN 1451 Mittelschrift gepraegt
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

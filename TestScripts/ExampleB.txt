@@ -1,0 +1,3 @@
+Log "ExampleB - line 1"
+test ExampleC
+Log "ExampleB - line 2"

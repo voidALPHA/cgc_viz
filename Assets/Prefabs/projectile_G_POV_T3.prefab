@@ -1,0 +1,234 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &190764
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 419280}
+  - 33: {fileID: 3357644}
+  - 23: {fileID: 2379750}
+  - 114: {fileID: 11420020}
+  m_Layer: 0
+  m_Name: projectile_G_POV_T3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &419280
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 190764}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 6}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!23 &2379750
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 190764}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 2100000, guid: e552f251db650574f938aea6a00f3890, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &3357644
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 190764}
+  m_Mesh: {fileID: 4300000, guid: 80d6d4005d6facf46ac42ba8ea7eb95b, type: 3}
+--- !u!114 &11420020
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 190764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05f6c703f2c5548478e438cdc0fcaa51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particleTrail: {fileID: 19825038, guid: eed90ebd270db0342ac2e478d496c847, type: 2}
+  AttackFlagPrefab: {fileID: 166914, guid: 2ce684ab3d929244e9bd34f1ffd20b90, type: 2}
+  ProcessingIcon: {fileID: 142338, guid: 978f0dc394e6bea4aa3af6a292b0d2b9, type: 2}
+  POVReturnShape: {fileID: 145014, guid: 6d234dc1c36484f448e695ba29319400, type: 2}
+  ShatterFX: {fileID: 19870668, guid: d1c789270d514d740a30745cd94b2d5e, type: 2}
+  FailedFX: {fileID: 19858974, guid: 6271d6ac5096c2f4580bff996301d72f, type: 2}
+  SuccessFX: {fileID: 19828852, guid: 25526b1431d5c9641918744d52fd4e2d, type: 2}
+  BurstFX: {fileID: 19828852, guid: 1a20e5d795323364e90c69a814ae255e, type: 2}
+  PlusScoreFX: {fileID: 19844490, guid: 0e92e6ffa9af207499772e2ebf03183a, type: 2}
+  BouncedFX: {fileID: 19836792, guid: 9db2e4bb29523c743914149ba20cd0c5, type: 2}
+  fullCircle: {fileID: 133990, guid: 2321f983c07a31c429cac039f8441adc, type: 2}
+  particle: {fileID: 0}
+  HitMesh: {fileID: 109258, guid: c9a089c0def60d545b1dc01c07f0fe9d, type: 2}
+  HL_ring: {fileID: 199490, guid: 8feb0c5f53a9b094c82dc602067b8746, type: 2}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e552f251db650574f938aea6a00f3890, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.z
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: myParticle
+      value: 
+      objectReference: {fileID: 106524, guid: 86680cd61018d2047b27db19c7211c91, type: 2}
+    - target: {fileID: 0}
+      propertyPath: particle
+      value: 
+      objectReference: {fileID: 106524, guid: 86680cd61018d2047b27db19c7211c91, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: InitialModule.maxNumParticles
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: moveWithTransform
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: ShapeModule.type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: ShapeModule.radius
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: InitialModule.startSize.scalar
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: EmissionModule.rate.scalar
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: DamagedMesh
+      value: 
+      objectReference: {fileID: 109258, guid: e29d97bfe10b3e44d8ea7d1de21e620d, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 80d6d4005d6facf46ac42ba8ea7eb95b, type: 3}
+    - target: {fileID: 0}
+      propertyPath: HitMesh
+      value: 
+      objectReference: {fileID: 109258, guid: c9a089c0def60d545b1dc01c07f0fe9d, type: 2}
+    - target: {fileID: 0}
+      propertyPath: HL_ring
+      value: 
+      objectReference: {fileID: 199490, guid: 8feb0c5f53a9b094c82dc602067b8746, type: 2}
+    - target: {fileID: 0}
+      propertyPath: FailedFX
+      value: 
+      objectReference: {fileID: 19858974, guid: 6271d6ac5096c2f4580bff996301d72f,
+        type: 2}
+    - target: {fileID: 0}
+      propertyPath: ProcessingIcon
+      value: 
+      objectReference: {fileID: 142338, guid: 978f0dc394e6bea4aa3af6a292b0d2b9, type: 2}
+    - target: {fileID: 0}
+      propertyPath: POVReturnShape
+      value: 
+      objectReference: {fileID: 145014, guid: 6d234dc1c36484f448e695ba29319400, type: 2}
+    - target: {fileID: 0}
+      propertyPath: fullCircle
+      value: 
+      objectReference: {fileID: 133990, guid: 2321f983c07a31c429cac039f8441adc, type: 2}
+    - target: {fileID: 0}
+      propertyPath: SuccessFX
+      value: 
+      objectReference: {fileID: 19828852, guid: 25526b1431d5c9641918744d52fd4e2d,
+        type: 2}
+    - target: {fileID: 0}
+      propertyPath: PlusScoreFX
+      value: 
+      objectReference: {fileID: 19844490, guid: 0e92e6ffa9af207499772e2ebf03183a,
+        type: 2}
+    - target: {fileID: 0}
+      propertyPath: BouncedFX
+      value: 
+      objectReference: {fileID: 19836792, guid: 9db2e4bb29523c743914149ba20cd0c5,
+        type: 2}
+    - target: {fileID: 0}
+      propertyPath: BurstFX
+      value: 
+      objectReference: {fileID: 19828852, guid: 1a20e5d795323364e90c69a814ae255e,
+        type: 2}
+    - target: {fileID: 0}
+      propertyPath: ShatterFX
+      value: 
+      objectReference: {fileID: 19870668, guid: d1c789270d514d740a30745cd94b2d5e,
+        type: 2}
+    - target: {fileID: 0}
+      propertyPath: AttackFlagPrefab
+      value: 
+      objectReference: {fileID: 166914, guid: 2ce684ab3d929244e9bd34f1ffd20b90, type: 2}
+    - target: {fileID: 0}
+      propertyPath: particleTrail
+      value: 
+      objectReference: {fileID: 19825038, guid: eed90ebd270db0342ac2e478d496c847,
+        type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 190764}
+  m_IsPrefabParent: 1

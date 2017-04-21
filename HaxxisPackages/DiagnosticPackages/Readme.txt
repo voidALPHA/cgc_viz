@@ -1,0 +1,1 @@
+A collection of example diagnostic packages used to test information pipelines and display collected information.

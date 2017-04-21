@@ -1,0 +1,1 @@
+Haxxis.exe -traceApiURL=db.viz.lan:8000 -runonstartup=StoryFinderFilamentViewFromFile.txt -disableEditor -showDisassembly=true -showComms=true -showMemory=true -requestIds=664 -binaryIds=867 -traceTeamIds=1 -TraceFilename=exampleSnailMailTrace

@@ -1,0 +1,11 @@
+Log "Haxxis Startup Test Script"
+Log ""
+Log "Command line arguments:"
+cla -dump
+
+# This script is run automatically when Haxxis starts.
+# In an automated build we would do things like run the smoke test, performance test, etc.
+# To do that we rename one of those scripts to "Startup.txt" (locally, as part of that process) so that when the app starts the test runs.
+
+test StandaloneBuildVersion -ifexists
+screen -dump
