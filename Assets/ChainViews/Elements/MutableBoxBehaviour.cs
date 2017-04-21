@@ -418,7 +418,8 @@ namespace ChainViews.Elements
 
             GetComponent<LayoutElement>().preferredHeight = 16;
 
-            ShowItemDropDown = false;
+            if(ShowItemDropDown)
+                ShowItemDropDown = false;
 
             BoundsChanged();
 
@@ -529,7 +530,10 @@ namespace ChainViews.Elements
         [UsedImplicitly]
         private void Start()
         {
-            ShowItemDropDown = false;
+            DestroyMutableDropDownItems();
+            ItemsRootOverlay.gameObject.SetActive(false);
+            m_showDropDown = false;
+            DropDownButtonTextComponent.text = "▼";
 
             IndicateError = !MutableField.KeyValid;
 

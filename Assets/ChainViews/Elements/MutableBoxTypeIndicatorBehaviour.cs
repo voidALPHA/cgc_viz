@@ -144,7 +144,7 @@ public class MutableBoxTypeIndicatorBehaviour : MonoBehaviour, IPointerEnterHand
 
     public void OnPointerEnter( PointerEventData eventData )
     {
-        if ( RunningShowCoroutine != null )
+        if ( RunningShowCoroutine != null || Type == null)
             return;
 
         RunningShowCoroutine = StartCoroutine(ShowCoroutine());
@@ -181,6 +181,8 @@ public class MutableBoxTypeIndicatorBehaviour : MonoBehaviour, IPointerEnterHand
 
     public void OnPointerExit( PointerEventData eventData )
     {
+        if(Type == null) return;
+
         if ( RunningShowCoroutine != null )
         {
             StopCoroutine( RunningShowCoroutine );

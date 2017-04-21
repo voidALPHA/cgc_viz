@@ -283,7 +283,10 @@ namespace ChainViews.Elements
         [UsedImplicitly]
         private void Start()
         {
-            ShowItemDropDown = false;
+            DestroyMutableDropDownItems();
+            ItemsRootOverlay.gameObject.SetActive(false);
+            m_showDropDown = false;
+            DropDownButtonTextComponent.text = "▼";
 
             Scope.KeyValidChanged += HandleValidationErrorState;
         }
