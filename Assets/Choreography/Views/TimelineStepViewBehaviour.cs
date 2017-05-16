@@ -367,12 +367,14 @@ namespace Choreography.Views
         public void HandleMoveUpArrowPressed()
         {
             Step.RequestMoveUp();
+            GraphicRaycasterVA.Instance.ForceReset();
         }
 
         [UsedImplicitly]
         public void HandleMoveDownArrowPressed()
         {
             Step.RequestMoveDown();
+            GraphicRaycasterVA.Instance.ForceReset();
         }
 
         [UsedImplicitly]

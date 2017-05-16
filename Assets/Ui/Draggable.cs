@@ -57,6 +57,10 @@ namespace Ui
         private bool m_DragRootOnMiddleMouse = false;
         private bool DragRootOnMiddleMouse { get { return m_DragRootOnMiddleMouse; } }
 
+        [SerializeField]
+        private bool m_DragInScreenSpace = false;
+        private bool DragInScreenSpace { get { return m_DragInScreenSpace; } }
+
         //[SerializeField]
         //private bool m_MoveToTopWhenReleased;
         //private bool MoveToTopWhenReleased { get { return m_MoveToTopWhenReleased; } set { m_MoveToTopWhenReleased = value; } }
@@ -155,7 +159,15 @@ namespace Ui
             Targets.ForEach( t => TargetStartPositions.Add( t, t.position ) );
 
             Vector3 smp;
-            RectTransformUtility.ScreenPointToWorldPointInRectangle((RectTransform)transform, Input.mousePosition, ChainView.Instance.Camera, out smp);
+            if(DragInScreenSpace)
+            {
+                smp = Input.mousePosition;
+            }
+            else
+            {
+                RectTransformUtility.ScreenPointToWorldPointInRectangle((RectTransform)transform, Input.mousePosition, ChainView.Instance.Camera, out smp);
+            }
+            
             StartMousePosition = smp;
 
             pointerEventData.Use();
@@ -257,7 +269,15 @@ namespace Ui
             }
 
             Vector3 currentMousePosition;
-            RectTransformUtility.ScreenPointToWorldPointInRectangle((RectTransform)transform, Input.mousePosition, ChainView.Instance.Camera, out currentMousePosition);
+            if(DragInScreenSpace)
+            {
+                currentMousePosition = Input.mousePosition;
+            }
+            else
+            {
+                RectTransformUtility.ScreenPointToWorldPointInRectangle((RectTransform)transform, Input.mousePosition, ChainView.Instance.Camera, out currentMousePosition);
+            }
+            
 
             if ( !IsDragging )
                 if ( Vector3.Distance( currentMousePosition, StartMousePosition ) >= DragThreshold )

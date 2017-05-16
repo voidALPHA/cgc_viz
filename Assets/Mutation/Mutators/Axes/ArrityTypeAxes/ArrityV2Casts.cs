@@ -285,4 +285,16 @@ namespace Mutation.Mutators.Axes.ArrityTypeAxes
             return Color.magenta;
         }
     }
+    public class CaseIntToListOfInts : TypeConversionAxis<int, List<int>>
+    {
+        protected override List<int> ConversionFunc(int key, List<MutableObject> entry)
+        {
+            return new List<int> { key };
+        }
+
+        protected override List<int> DefaultValue()
+        {
+            return new List<int> { 1 };
+        }
+    }
 }
