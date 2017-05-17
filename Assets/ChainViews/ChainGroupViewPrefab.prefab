@@ -233,7 +233,6 @@ GameObject:
   - component: {fileID: 22467124}
   - component: {fileID: 22262544}
   - component: {fileID: 11433678}
-  - component: {fileID: 223460642438366474}
   m_Layer: 5
   m_Name: ChainGroupViewPrefab
   m_TagString: Untagged
@@ -1632,6 +1631,7 @@ MonoBehaviour:
   m_DoLog: 0
   m_DropObject: {fileID: 11433678}
   m_DragRootOnMiddleMouse: 0
+  m_DragInScreenSpace: 0
 --- !u!114 &11475894
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2991,25 +2991,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1428210197685794}
---- !u!223 &223460642438366474
-Canvas:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 135116}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_RenderMode: 2
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
 --- !u!224 &224415365129480504
 RectTransform:
   m_ObjectHideFlags: 1

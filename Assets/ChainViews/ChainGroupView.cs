@@ -646,7 +646,7 @@ namespace ChainViews
 
             //InvokeRepeating( "RefreshDirtyState", 0.1f, 3.0f );
             
-            GraphicRaycasterVA.Instance.AddCanvas(GetComponent<Canvas>());
+            //GraphicRaycasterVA.Instance.AddCanvas(GetComponent<Canvas>());
         }
 
         private void HandleDragMoved()

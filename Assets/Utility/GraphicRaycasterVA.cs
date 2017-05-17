@@ -60,6 +60,7 @@ namespace UnityEngine.UI
         {
             base.Awake();
             Instance = this;
+            AddCanvas(GetComponent<Canvas>());
         }
 
         protected const int kNoEventMaskSet = -1;

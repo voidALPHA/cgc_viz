@@ -8,7 +8,6 @@
       "Targets": [],
       "FoldersToCopy": [],
       "LocalFoldersToCopy": [
-        "ScoreData",
         "TestScripts",
         "HaxxisPackages",
         "WinIncludes/Utilities"
@@ -24,7 +23,8 @@
         "ExampleInteractiveFilamentFromFile.bat",
         "HaxxisVideogenAcidTest.bat",
         "RunHaxxisAsOfflineVGS.bat",
-        "RunHaxxisForFilament.bat"
+        "RunHaxxisForFilament.bat",
+        "README.md"
       ],
       "Target": 0
     },
@@ -45,13 +45,7 @@
         "exampleSnailMailTrace",
         "gpl.txt",
         "gpl.md",
-        "ExampleArenaIntro.bat",
-        "ExampleArenaView.bat",
-        "ExampleInteractiveFilament.bat",
-        "ExampleInteractiveFilamentFromFile.bat",
-        "HaxxisVideogenAcidTest.bat",
-        "RunHaxxisAsOfflineVGS.bat",
-        "RunHaxxisForFilament.bat"
+        "README.md"
       ],
       "Target": 2
     },
