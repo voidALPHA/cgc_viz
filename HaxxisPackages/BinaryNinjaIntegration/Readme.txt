@@ -1,0 +1,7 @@
+Socket-based Tool Integration
+
+These three packages demonstrate how to utilize a network socket to send information to an external tool.  In this case the FilamentViewBinja.json package opens a socket to connect to BinaryNinja (https://binary.ninja/) through the Haxxis Filament View integration plugin.
+
+In the FilamentViewBinja package we utilize a SocketConnect group to open a connection to an open socket.  This group takes two command line arguments: ReportFocusIP (defaults to -1) and ReportFocusPort (defaults to 9999).  If ReportFocusIP remains -1 the group terminates without attempting to connect.  Later in the package a SocketSend group is used to transmit information over that socket.  It gets execution each time the user changes the focused instruction and first checks the global variable used to specify whether or not a connection was attempted.  If that is true it selects the EIP of the current focused instruction, formats it into a string, and transmits that over the open socket.
+
+To utilize a similar paradigm in a custom package begin by adding the SocketConnection package and assigning any desired values to its nodes, which should include an IP and a port.  When the chain is constructed such that it can produce the data to be sent import the SocketSend package and connect it to a node that will give it execution.  Be sure to reconfigure its contents to fit the data you intend to send over the socket.

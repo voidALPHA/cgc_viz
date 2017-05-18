@@ -1,0 +1,379 @@
+{
+"$id": "1",
+"Chain": {
+"$id": "2",
+"RootGroup": {
+"$id": "3",
+"Groups": {
+"$id": "4",
+"$values": []
+},
+"Nodes": {
+"$id": "5",
+"$values": [
+{
+"$id": "6",
+"$type": "Adapters.GlobalParameters.CommandLineArgumentAdapter, Assembly-CSharp",
+"ParameterName": {
+"$id": "7",
+"LiteralValue": "ReportFocusIP",
+"SchemaSource": 0
+},
+"DefaultValue": {
+"$id": "8",
+"LiteralValue": "-1",
+"SchemaSource": 0
+},
+"ParameterTarget": {
+"$id": "9",
+"AbsoluteKey": "Address"
+},
+"Comment": "The IP address to connect to for reporting the current trace focus' EIP",
+"Router": {
+"$id": "10",
+"SelectionStates": {
+"$id": "11",
+"$values": [
+{
+"$id": "12",
+"Name": "Default",
+"Targets": {
+"$id": "13",
+"$values": [
+{
+"$id": "14",
+"$type": "Adapters.GlobalParameters.CommandLineArgumentAdapter, Assembly-CSharp",
+"ParameterName": {
+"$id": "15",
+"LiteralValue": "ReportFocusPort",
+"SchemaSource": 0
+},
+"DefaultValue": {
+"$id": "16",
+"LiteralValue": "9999",
+"SchemaSource": 0
+},
+"ParameterTarget": {
+"$id": "17",
+"AbsoluteKey": "Port"
+},
+"Comment": "",
+"Router": {
+"$id": "18",
+"SelectionStates": {
+"$id": "19",
+"$values": [
+{
+"$id": "20",
+"Name": "Default",
+"Targets": {
+"$id": "21",
+"$values": [
+{
+"$id": "22",
+"$type": "Mutation.Mutators.Axes.ArrityTypeAxes.ParseStringToInt, Assembly-CSharp",
+"AxisKey": {
+"$id": "23",
+"AbsoluteKey": "Port",
+"SchemaSource": 1
+},
+"TargetField": {
+"$id": "24",
+"AbsoluteKey": "Port Int"
+},
+"Comment": "",
+"Router": {
+"$id": "25",
+"SelectionStates": {
+"$id": "26",
+"$values": [
+{
+"$id": "27",
+"Name": "Default",
+"Targets": {
+"$id": "28",
+"$values": [
+{
+"$id": "29",
+"$type": "Mutation.Mutators.Axes.ArrityTypeAxes.StringMatchToBool, Assembly-CSharp",
+"AxisKey": {
+"$id": "30",
+"AbsoluteKey": "Address",
+"SchemaSource": 1
+},
+"ToMatch": {
+"$id": "31",
+"LiteralValue": "-1",
+"SchemaSource": 0
+},
+"TargetField": {
+"$id": "32",
+"AbsoluteKey": "New Key"
+},
+"Comment": "",
+"Router": {
+"$id": "33",
+"SelectionStates": {
+"$id": "34",
+"$values": [
+{
+"$id": "35",
+"Name": "Default",
+"Targets": {
+"$id": "36",
+"$values": [
+{
+"$id": "37",
+"$type": "Adapters.GlobalParameters.WriteGlobalValueNode, Assembly-CSharp",
+"Parameter": {
+"$id": "38",
+"AbsoluteKey": "New Key",
+"SchemaSource": 1
+},
+"ParameterName": {
+"$id": "39",
+"LiteralValue": "Socket Not Attempted",
+"SchemaSource": 0
+},
+"Comment": "",
+"Router": {
+"$id": "40",
+"SelectionStates": {
+"$id": "41",
+"$values": [
+{
+"$id": "42",
+"Name": "Pass Through",
+"Targets": {
+"$id": "43",
+"$values": []
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+},
+{
+"$id": "44",
+"$type": "Mutation.Mutators.IfMutator.IfBoolMutator, Assembly-CSharp",
+"Condition": {
+"$id": "45",
+"GlobalParameterKey": "Socket Not Attempted",
+"SchemaSource": 3
+},
+"Comment": "",
+"Router": {
+"$id": "46",
+"SelectionStates": {
+"$id": "47",
+"$values": [
+{
+"$id": "48",
+"Name": "If",
+"Targets": {
+"$id": "49",
+"$values": []
+}
+},
+{
+"$id": "50",
+"Name": "Else",
+"Targets": {
+"$id": "51",
+"$values": [
+{
+"$id": "52",
+"$type": "Mutation.Mutators.SocketConnection.ConnectToDataSharedSocketMutator, Assembly-CSharp",
+"GroupId": {
+"$id": "53",
+"LiteralValue": "ReportFocusID",
+"SchemaSource": 0
+},
+"TargetAddress": {
+"$id": "54",
+"AbsoluteKey": "Address",
+"SchemaSource": 1
+},
+"TargetPort": {
+"$id": "55",
+"AbsoluteKey": "Port Int",
+"SchemaSource": 1
+},
+"Comment": "",
+"Router": {
+"$id": "56",
+"SelectionStates": {
+"$id": "57",
+"$values": []
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+}
+]
+}
+}
+]
+}
+},
+"ExplicitlyDisabled": false
+},
+{
+"$ref": "52"
+},
+{
+"$ref": "14"
+},
+{
+"$ref": "22"
+},
+{
+"$ref": "29"
+},
+{
+"$ref": "37"
+},
+{
+"$ref": "44"
+}
+]
+},
+"Comment": ""
+}
+},
+"ChainViewModel": {
+"$id": "58",
+"RootGroupViewModel": {
+"$id": "59",
+"Group": {
+"$ref": "3"
+},
+"Position": {
+"x": 0.0,
+"y": 0.0,
+"z": 0.0
+},
+"RelativePath": "",
+"NodeViewModels": {
+"$id": "60",
+"$values": [
+{
+"$id": "61",
+"ChainNode": {
+"$ref": "6"
+},
+"Position": {
+"x": -50.0,
+"y": -50.0,
+"z": 0.0
+}
+},
+{
+"$id": "62",
+"ChainNode": {
+"$ref": "52"
+},
+"Position": {
+"x": 300.0,
+"y": -650.0,
+"z": 0.0
+}
+},
+{
+"$id": "63",
+"ChainNode": {
+"$ref": "14"
+},
+"Position": {
+"x": -50.0,
+"y": -250.0,
+"z": 0.0
+}
+},
+{
+"$id": "64",
+"ChainNode": {
+"$ref": "22"
+},
+"Position": {
+"x": -50.0,
+"y": -450.0,
+"z": 0.0
+}
+},
+{
+"$id": "65",
+"ChainNode": {
+"$ref": "29"
+},
+"Position": {
+"x": 300.0,
+"y": -100.0,
+"z": 0.0
+}
+},
+{
+"$id": "66",
+"ChainNode": {
+"$ref": "37"
+},
+"Position": {
+"x": 300.0,
+"y": -350.0,
+"z": 0.0
+}
+},
+{
+"$id": "67",
+"ChainNode": {
+"$ref": "44"
+},
+"Position": {
+"x": 300.0,
+"y": -500.0,
+"z": 0.0
+}
+}
+]
+},
+"GroupViewModels": {
+"$id": "68",
+"$values": []
+}
+},
+"NodeViewModels": null
+},
+"Choreography": null
+}

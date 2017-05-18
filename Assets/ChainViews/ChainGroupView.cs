@@ -1139,7 +1139,7 @@ namespace ChainViews
             if ( !string.IsNullOrEmpty( LoadedPackagePath ) )
                 packageName = HaxxisPackage.GetRelativePath( LoadedPackagePath );
 
-            FilenameTextComponent.text = packageName;
+            FilenameTextComponent.text = packageName==""?"External Path: " + LoadedPackagePath : packageName;
         }
 
         [UsedImplicitly]

@@ -1217,8 +1217,12 @@ namespace ChainViews
                 {
                     // This indicates a group save is happening, for use by children as they are serialized.
                     ChainGroup.SerializingGroup = packageRequest.RequestingGroupView.Group;
-
-                    packageRequest.RequestingGroupView.LoadedPackagePath = packageRequest.Path;
+                    
+                    var formattedPath = packageRequest.Path.Replace('\\', '/');
+                    packageRequest.RequestingGroupView.LoadedPackagePath =
+                        HaxxisPackage.GetRelativePath(formattedPath) == ""
+                            ? packageRequest.RequestingGroupView.LoadedPackagePath
+                            : formattedPath;
 
                     var hp = GetHaxxisPackageForGroupView( packageRequest.RequestingGroupView );
 
