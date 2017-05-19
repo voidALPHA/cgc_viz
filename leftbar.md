@@ -5,6 +5,7 @@
 - [Manipulating the Package Editor](#Basics/Manipulating%20the%20Package%20Editor.md)
 - [Using the Choreography](#Basics/Using%20the%20Choreography.md)
 - [Manipulating the Renderer](#Basics/Manipulating%20the%20Renderer.md)
+- [Haxxis Package Recipes](Haxxis%20Package%20Recipes.pdf)
 
 ### Advanced Topics
 - [Creating Loops](#Advanced/Creating%20Loops.md)
