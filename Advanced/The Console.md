@@ -1,4 +1,5 @@
-## Overview
+# The Console
+
 Haxxis has a built-in command line console that may be used to perform a variety of actions.  To access it, press the grave/tilde key - the key to the left of 1.
    <p style="text-align: center;"> <img src="../WikiImages/console/console0.gif" style="width:50%;"/> </p>
 

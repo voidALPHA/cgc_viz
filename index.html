@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdn.rawgit.com/showdownjs/showdown/1.6.4/dist/showdown.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div id="leftbar"></div>
+        <div id="mainview"></div>
+    </body>
+    <script>
+        var converter = new showdown.Converter();
+        function loadMarkdown(which, where) {
+            var req = new XMLHttpRequest();
+            req.addEventListener("load", function() {
+                document.querySelector(where).innerHTML = converter.makeHtml(this.responseText);
+                document.title = document.querySelector(where + " > h1").innerHTML;
+            });
+            req.open("GET", which);
+            req.send();
+        }
+        window.addEventListener("hashchange", function(){
+            loadMarkdown(location.hash.substr(1), "#mainview");
+        });
+        window.addEventListener("load", function(){
+            if(location.hash == "") {
+                location.hash = "#index.md";
+            } else {
+                loadMarkdown(location.hash.substr(1), "#mainview");
+            }
+            loadMarkdown("leftBar.md", "#leftbar");
+        });
+    </script>
+</html>

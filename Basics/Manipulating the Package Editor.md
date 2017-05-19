@@ -1,15 +1,17 @@
+# Manipulating the Package Editor
+
 ## Overview
-The Haxxis Workspace allows control over how a package will intake, process, and render the data.  To that end, packages contain Chains, each of which consist of one or more Chain Nodes.  Each Chain Node takes in a batch of data, performs some processing on it, and emits that data to all of its children.  Chain Nodes can only have one parent, but may have multiple children:  
+The Haxxis Package Editor allows control over how a package will intake, process, and render the data.  To that end, packages contain Chains, each of which consist of one or more Chain Nodes.  Each Chain Node takes in a batch of data, performs some processing on it, and emits that data to all of its children.  Chain Nodes can only have one parent, but may have multiple children:  
    <p style="text-align: center;"> <img src="../WikiImages/workspace/workspace0.png"/> </p>
 
 ## Chaining Nodes
 Adding a child to a Chain Node is accomplished in one of two methods:  
 Click the plus sign next to the state, then click the Chain Node you wish to attach to it.  
-   <p style="text-align: center;"> <img src="../WikiImages/workspace/workspace1.gif"/> </p>
+   <p style="text-align: center;"> <img src="../WikiImages/workspace/workspace1.gif" style="width:640px;"/> </p>
 OR Shift-left-click the Chain Node to attach, then click the plus sign next to the state to attach it to.  
-   <p style="text-align: center;"> <img src="../WikiImages/workspace/workspace2.gif"/> </p>
+   <p style="text-align: center;"> <img src="../WikiImages/workspace/workspace2.gif" style="width:640px;"/> </p>
 Unticking the checkbox will remove the link between the Chain Nodes.
-   <p style="text-align: center;"> <img src="../WikiImages/workspace/workspace3.gif"/> </p>
+   <p style="text-align: center;"> <img src="../WikiImages/workspace/workspace3.gif" style="width:640px;"/> </p>
   ***
   
 Some Chain Nodes may emit data to different Chains under different circumstances - if that's the case, then multiple rows will display, sometimes broken by a line:
@@ -31,10 +33,10 @@ When a Chain Node processes data and produces mutable data results, the Chain No
 MutableTargets allow the package designer to designate the name and location of the output datum.  The path (the pulldown) dictates the branch of the mutable object the new value will be placed, and the value (the text field) dictates the name.
 
 ## Mutable Fields  
+   <p style="float: right;"> <img src="../WikiImages/workspace/workspace11.png" style="margin-left: 16px" /> </p>
    <p style="text-align: center;"> <img src="../WikiImages/workspace/workspace8.png"/> </p>
 The majority of Chain Nodes will have a variety of arguments that influence their operation, here called mutable fields.  All mutable fields involve a type and a value - the value being either literal or mutable.  
 
-   <p style="float: right;"> <img src="../WikiImages/workspace/workspace11.png" style="margin-left: 16px" /> </p>
 
 - The type of a mutable field is indicated on the left; the first character of the name of the type is shown, and hovering over the character will show the full name of the type.
    <p style="text-align: center;"> <img src="../WikiImages/workspace/workspace9.png"/> </p>
@@ -46,8 +48,8 @@ If a certain mutable field can only take one of certain values in it, the toolti
    <p style="text-align: center;"> <img src="../WikiImages/workspace/workspace12.png"/> </p>
 This dropdown also provides a button to allow one to use a literal value instead of a mutable value.
 
-## Adding a New Node to the Workspace
-Adding a new node to the Workspace can be accessed via right click.  The Node Picker will display, allowing the designer to choose from a large list of different nodes.  A search function is available if the name of the desired node is known.
+## Adding a New Node to the Package Editor
+Adding a new node to the Package Editor can be accessed via right click.  The Node Picker will display, allowing the designer to choose from a large list of different nodes.  A search function is available if the name of the desired node is known.
    <p style="text-align: center;"> <img src="../WikiImages/workspace/workspace14.gif" style="width:50%;"/> </p>
 
 Also available from the Node Picker is the option to create a new group.  Groups can be used to organize nodes, as well as a few other functions.
@@ -61,25 +63,25 @@ Moving an existing node between groups can be accomplished by holding Control.  
 Nodes, groups, and the package as a whole have a space where a comment may be written.  Clicking on the space with three dots will allow you to enter a comment.
    <p style="text-align: center;"> <img src="../WikiImages/workspace/workspace17.gif"/> </p>
 
-## Manipulating the Workspace
+## Manipulating the Package Editor
 Zooming is accomplished by using the scroll wheel.
-   <p style="text-align: center;"> <img src="../WikiImages/workspace/workspace18.gif"/> </p>
+   <p style="text-align: center;"> <img src="../WikiImages/workspace/workspace18.gif" style="width:50%;"/> </p>
 
-Panning around the Workspace is accomplished by dragging the Workspace with the middle mouse button.
-   <p style="text-align: center;"> <img src="../WikiImages/workspace/workspace19.gif"/> </p>
+Panning around the Package Editor is accomplished by dragging the Package Editor with the middle mouse button.
+   <p style="text-align: center;"> <img src="../WikiImages/workspace/workspace19.gif" style="width:50%;"/> </p>
 
-Additionally, the Workspace may be panned using the arrow keys.
-   <p style="text-align: center;"> <img src="../WikiImages/workspace/workspace20.gif"/> </p>
+Additionally, the Package Editor may be panned using the arrow keys.
+   <p style="text-align: center;"> <img src="../WikiImages/workspace/workspace20.gif" style="width:50%;"/> </p>
 
-If the Workspace is fully pushed out of view, Haxxis will automatically snap it to the top left corner so the view is never lost.
-   <p style="text-align: center;"> <img src="../WikiImages/workspace/workspace21.gif"/> </p>
+If the Package Editor is fully pushed out of view, Haxxis will automatically snap it to the top left corner so the view is never lost.
+   <p style="text-align: center;"> <img src="../WikiImages/workspace/workspace21.gif" style="width:50%;"/> </p>
 
 ## Search
 To search for a specific string (including node names and mutable field names), press the F3 key to open the search prompt.  When a search is executed, any instance of the search term will create a vibrant, blinking highlight.
    <p style="text-align: center;"> <img src="../WikiImages/workspace/workspace13.gif" style="width:50%;"/> </p>
 
 ## The File Menu
-At the top right of the Workspace is the File Menu:
+At the top right of the Package Editor is the File Menu:
    <p style="text-align: center;"> <img src="../WikiImages/workspace/workspace22.png"/> </p>
 
 The File Menu has the following actions available to you:
@@ -100,4 +102,4 @@ On the bar are several buttons.  From left to right:
 - Reload will replace the contents of the group with the version that exists in the group's linked file.  If no such file exists, then nothing will happen.
 - Save and (Save) As will allow you to save a group to its own file.
 - Toggle Visibility will toggle the visibility of all Chain Nodes in the group; this does not prevent the nodes from executing on evaluation.
-- Delete will remove this group from the Workspace.
+- Delete will remove this group from the Package Editor.

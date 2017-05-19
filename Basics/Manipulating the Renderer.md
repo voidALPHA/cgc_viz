@@ -1,11 +1,13 @@
+# Manipulating the Renderer
+
 ## Evaluation
-The Main View allows for a user to get an interactive examination of the visualization produced by the package.  To start, pressing the Eval button or the F5 key on the keyboard executes the package.
+The Renderer allows for a user to get an interactive examination of the visualization produced by the package.  To start, pressing the Eval button or the F5 key on the keyboard executes the package.
    <p style="text-align: center;"> <img src="../WikiImages/mainview/mainview0.gif"/> </p>
 
-## Hiding the Workspace and Choreography
-Tab may be used to hide the Workspace, and Shift-Tab to collapse the choreography view, to provide an unobstructed view of the visualization.
+## Hiding the Package Editor and Choreography
+Tab may be used to hide the Package Editor, and Shift-Tab to collapse the choreography view, to provide an unobstructed view of the visualization.
    <p style="text-align: center;"> <img src="../WikiImages/mainview/mainview1.gif"/> </p>
-Using the same keys will also show the Workspace again and expand the choreography.
+Using the same keys will also show the Package Editor again and expand the choreography.
 
 ## Manipulating the Camera
 Clicking and dragging with the right mouse button will let you rotate the camera...

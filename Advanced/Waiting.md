@@ -1,3 +1,5 @@
+# Waiting
+
 While a package will execute events in sequential order, there may be a requirement to wait until another segment of a package executes first.  The Wait node is used for that purpose.
    <p style="text-align: center;"> <img src="../WikiImages/waiting/waiting0.png"/> </p>
 

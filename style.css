@@ -1,0 +1,32 @@
+h1 {
+    text-align: center;
+    border-bottom: solid 1px black;
+}
+
+div#leftbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 280px;
+    height: 100%;
+    padding-left: 16px;
+    background-color: #D5EFFA;
+}
+
+div#mainview {
+    position: absolute;
+    left: 296px;
+    max-width: 960px;
+    padding-left: 16px;
+    padding-right: 16px;
+    top: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+hr {
+    border: 0px;
+    border-bottom: solid 1px black;
+}
