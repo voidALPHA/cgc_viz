@@ -7,9 +7,9 @@ Haxxis also has an in-built recording and choreography system which allows it to
 ***
 
 The Haxxis interface is segmented into three main components:
-- The [Haxxis Workspace](#Basics/Manipulating%20the%20Workspace.md) is where the user can create and modify the data processing side of the Package.
+- The [Package Editor](#Basics/Manipulating%20the%20Package%20Editor.md) is where the user can create and modify the data processing side of the Package.
 - The [Choreography](#Basics/Using%20the%20Choreography.md) is where the user can modify the choreography of the package.
-- The [Main View](#Basics/Manipulating%20the%20Main%20View.md) is the space where the visualization is rendered, and is displayed behind the Workspace and the Choreography.
+- The [Renderer](#Basics/Manipulating%20the%20Renderer.md) is the space where the visualization is rendered, and is displayed behind the Workspace and the Choreography.
 
 Haxxis uses a variety of keybinds.  View the [Readme](#readme.md) to see the full list.
 
