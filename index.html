@@ -28,7 +28,12 @@
             } else {
                 loadMarkdown(location.hash.substr(1), "#mainview");
             }
-            loadMarkdown("leftBar.md", "#leftbar");
+            var req = new XMLHttpRequest();
+            req.addEventListener("load", function() {
+                document.querySelector("#leftbar").innerHTML = converter.makeHtml(this.responseText);
+            });
+            req.open("GET", "leftbar.md");
+            req.send();
         });
     </script>
 </html>
