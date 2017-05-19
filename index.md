@@ -11,7 +11,7 @@ The Haxxis interface is segmented into three main components:
 - The [Choreography](#Basics/Using%20the%20Choreography.md) is where the user can modify the choreography of the package.
 - The [Renderer](#Basics/Manipulating%20the%20Renderer.md) is the space where the visualization is rendered, and is displayed behind the Workspace and the Choreography.
 
-Haxxis uses a variety of keybinds.  View the [Readme](#readme.md) to see the full list.
+Haxxis uses a variety of keybinds.  View the [Readme](#includedreadme.md) to see the full list.
 
 ***
 
