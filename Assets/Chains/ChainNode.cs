@@ -423,7 +423,18 @@ namespace Chains
 
         }
 
-
+        // Each ChainNode ingests and produces a schema object which is passed to child nodes.  This schema object informs
+        //  later nodes of the form of the payload that will be passed through the chain during normal execution.  In the
+        //  schema object each key that will be present is represented with an example of the object type they will refer
+        //  to.  This object is then utilized by each mutableBoxBehaviour to filter the available keys by the type of the
+        //  mutableField it represents.  For example, a FormatStringMutator includes a MutableField<string> used to
+        //  determine the C#-style format string it will form its output from.  When the user opens the pull-down menu
+        //  used to select a string from the data that will be accessible to the node it will filter the schema object by 
+        //  checking each object to see if it is an instance of type string.  The dropdown will then be populated including
+        //  all keys from the schema object, with only the string-typed fields available for selection.  During package
+        //  editing any time a node is modified by the user it executs ProcessOutputSchema, a function overridden by each
+        //  node type.  This function produces default values and uses the MutableTargets of the node to write them into the 
+        //  schema object before passing it to later nodes.
         public void ProcessOutputSchema()
         {
             if ( Schema == null ) 

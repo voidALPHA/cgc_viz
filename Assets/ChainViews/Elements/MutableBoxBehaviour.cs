@@ -261,24 +261,6 @@ namespace ChainViews.Elements
 
             //ShowItemDropDown = false;
         }
-
-        //private void IndicateGlobalValue(MutableBoxMutableItemBehaviour item)
-        //{
-        //    SetSelectedMutableText(item.UserFacingAbsoluteKey);
-        //
-        //    var segmentCount = item.AbsoluteKey.Count(c => c.Equals('.')) + 1;
-        //    GetComponent<LayoutElement>().preferredHeight = segmentCount * 16;
-        //
-        //    MutableField.GlobalParameterKey = item.RelativeKey;
-        //
-        //    MutableField.ValidateKey( SchemaProvider.Schema );
-        //
-        //    IndicateError = !MutableField.KeyValid;
-        //
-        //    SwitchDisplayToMutableValue();
-        //
-        //    //ShowItemDropDown = false;
-        //}
         
         private void SetSelectedMutableText( string absoluteKey )
         {
@@ -547,14 +529,7 @@ namespace ChainViews.Elements
             MutableField.KeyValidChanged -= HandleValidationErrorState;
             SatelliteUpdateLord.mbbUpdate -= CheckMouseInBounds;
         }
-
-        //[UsedImplicitly]
-        //private void Update()
-        //{
-        //    if ( ChainView.Instance.Zooming || ChainView.Instance.Dragging ) return;
-
-        //    CheckMouseInBounds();
-        //}
+        
 
         private void CheckMouseInBounds()
         {

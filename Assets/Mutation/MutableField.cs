@@ -12,7 +12,6 @@
 using System;
 using System.Collections.Generic;
 using Adapters.GlobalParameters;
-using JetBrains.Annotations;
 using Newtonsoft.Json;
 using UnityEngine;
 using System.Linq;
@@ -20,6 +19,8 @@ using Utility;
 
 namespace Mutation
 {
+
+    // an object that may be retrieved by absolute key
     public interface IAbsoluteKeyAssignable
     {
         string AbsoluteKey { get; set; }
@@ -39,6 +40,7 @@ namespace Mutation
         SchemaSource SchemaSource { get; }
     }
 
+    // an object that may have a literal value assigned to it rather than a key reference
     public interface ILiteralValueAssignable
     {
         bool SetLiteralValueAsObject( object value );
@@ -48,6 +50,7 @@ namespace Mutation
         bool UseLiteralValue { get; }
     }
 
+    // an object that may be specified to mean a keyed value from the global values storage
     public interface IGlobalParameterAssignable
     {
         bool UseGlobalParameter { get; }
@@ -57,6 +60,7 @@ namespace Mutation
         //MutableObject GetCurrentScopeMutable( MutableObject mutable );
     }
 
+    // an object that may be specified to mean a keyed value from the currently cached data collection (rather than the normal payload object)
     public interface ICachedSchemaAssignable : IAbsoluteKeyAssignable
     {
         bool UseCachedData { get; set; }
@@ -72,12 +76,8 @@ namespace Mutation
 
         IEnumerable< List< MutableObject > > GetEntries( MutableObject mutable );
     }
-
-    // Could have this generic interface, and literalvalueassignable, and...?
-    //public interface IMutableField < T >
-    //{
-    //}
-
+    
+    // the sources to which a mutable object may refer
     public enum SchemaSource
     {
         Literal,
@@ -97,11 +97,26 @@ namespace Mutation
         }
     }
 
+    // The mutablefield is the normal way by which a chainNode may retrieve information.  Each mutablefield has a specific
+    //  type which may be satisfied by the package designer in one of four ways:
+    //  Literal: The mutable field contains a string value which can be parsed to produce the output type.  This value
+    //   is serialized alongside the chainNode.
+    //  Mutable: The mutable field contains a key into a the dictionary structure it expects to be passed as the local 
+    //   payload.  When evaluated this mutable field will be passed a mutableObject, which it will use the key to index
+    //   into.  The value contained in the mutableObject at this key will be of the output type.  This allows a mutableField 
+    //   to utilize data produced by the chain it is part of.
+    //  Global: The mutable field contains a key into a dictionary of global values.  When evaluated this mutable field will
+    //   not use the local mutable object but the statically-accessible global domain to resolve its key.  This allows a 
+    //   mutableField to make use of values stored by WriteGlobalValue nodes.
+    //  Cached: The mutable field contains a key into a mutable object that is cached by its local context.  This cached
+    //   object differs from the normal payload, but is otherwise treated like the mutable payload: a local key is used
+    //   as an index to this dictionary.
+    //  During package editing the author sets a mutable field to produce data from one of these sources in order to provide
+    //   information from one chainNode to another.
+
     [JsonObject( MemberSerialization = MemberSerialization.OptIn )]
     public class MutableField <T> : IMutableField
     {
-        //private string m_LastKey="";
-        //private string LastKey { get { return m_LastKey; } set { m_LastKey = value; } }
         public string LastKey
         {
             get { return AbsoluteKey.Split('.').LastOrDefault(); }
@@ -217,6 +232,8 @@ namespace Mutation
 
         #endregion
 
+        #region Keying and Type Specification
+
         private string m_AbsoluteKey = "";
         [JsonProperty]
         public string AbsoluteKey
@@ -284,6 +301,7 @@ namespace Mutation
             }
         }
 
+        #endregion
 
         // JSON.NET conditional serialization methods. Usage inferred by method name.
         public bool ShouldSerializeLiteralValue() { return UseLiteralValue; }
@@ -330,72 +348,14 @@ namespace Mutation
         //public event Action<bool> OnFieldValid = delegate { }; 
 
         public event Action AbsoluteKeyChanged = delegate { }; 
-
-        //public IComparable Value { get; set; }
-
-        //private void PrecheckKeyDependencies()
-        //{
-        //    if (KeyDependenciesValid)
-        //        return;
-
-        //    if (UseLiteralValue)
-        //    {
-        //        KeyDependenciesValid = true;
-        //        return;
-        //    }
-
-
-        //    var localKey = AbsoluteKey;
-
-        //    if (ParentField != null)
-        //    {
-        //        if (AbsoluteKey.Length <= ParentField.AbsoluteKey.Length
-        //            ||
-        //            AbsoluteKey.Substring(0, ParentField.AbsoluteKey.Length).CompareTo(ParentField.AbsoluteKey) != 0)
-        //        {
-        //            //Debug.Log("Parent key " + ParentField.AbsoluteKey + " is not the correct parent of " +
-        //            //            AbsoluteKey +
-        //            //            "!");
-
-        //            LastKey = "";
-        //            IntermediateKeys = new List<string>();
-        //            KeyDependenciesValid = false;
-        //            return;
-        //        }
-
-        //        //Debug.LogFormat( "Parent key {0} validated as the correct parent of {1}.", ParentField.AbsoluteKey, AbsoluteKey );
-
-        //        //if (AbsoluteKey.Equals("Scores.Team Name"))
-        //        //    Debug.Log("Team Name validating...");
-
-        //        localKey = AbsoluteKey.Substring(ParentField.AbsoluteKey.Length + 1);
-        //    }
-
-        //    //var splitString = localKey.Split('.');
-        //    //LastKey = splitString.Last();
-        //    //IntermediateKeys = splitString.WithoutLast().ToList();
-
-        //    KeyDependenciesValid = true;
-        //}
-
-        //public IComparable GetValueAsComparable( MutableObject mutable )
-        //{
-        //    if ( UseLiteralValue )
-        //        return LiteralValue as IComparable;
-
-        //    PrecheckKeyDependencies();
-
-        //    var localMutable = ResolveIntermediates( mutable );
-
-        //    return localMutable[LastKey] as IComparable;
-        //}
+        
 
         private MutableObject SwitchToCachedMutable( MutableObject mutable )
         {
             return UseCachedData ? CachedMutableDataStore.DataStore : mutable;
         }
 
-        //[Obsolete("GetValue with one mutable object is deprecated.  Pass an arrity resolution list (List<MutableObject>) instead or use GetFirstValue if you expect just one resolution.")]
+        //[Obsolete("GetValue with one mutable object is mostly deprecated.  Pass an arrity resolution list (List<MutableObject>) instead or use GetFirstValue if you expect just one resolution.")]
         public T GetLastKeyValue(MutableObject mutable)
         {
             if (UseLiteralValue)
@@ -405,14 +365,7 @@ namespace Mutation
                 return (T)(GlobalVariableDataStore.Instance.GetParameter(GlobalParameterKey));
 
             var localMutable = SwitchToCachedMutable(mutable);
-
-            //if ( !KeyValid )
-            //    if ( !ValidateKey( localMutable ) )
-            //    {
-            //        Debug.LogError( "Cannot validate field with this set of data!" );
-            //        return default (T);
-            //    }
-
+            
             if (AbsoluteKey == "")
             {
                 try
@@ -437,6 +390,48 @@ namespace Mutation
             }
         }
 
+
+        //  Mutable Fields are frequencly responsible for resolving GetValue calls from nonspecific arrity.  In order to do 
+        //   this most cases combine the GetEntries and GetValue calls.  As an example, in order to get the highest score
+        //   from a list of 7 teams (payload.teams.score) using a mutableField 'Score', a chainNode might include the 
+        //   following:
+        //
+        //   float maxScore=0;
+        //   foreach (var entry in Score.GetEntries(payload.data)){
+        //      float localScore = Score.GetValue(entry);
+        //      if (localScore>maxScore) maxScore=localScore;
+        //   }
+        //     
+        //   The GetEntries call iterates through all possible ways to resolve its definition.  In this case the
+        //    mutableField 'Score' has been assigned the absolute key 'teams.score'.  This key can be thought of as two 
+        //    distinct keys: 'team' and 'score'.  In this case the payload contains a key-value pair with the key 'team'
+        //    whose value is an enumerable of seven MutableObjects.  There are thus seven ways to resolve the 'team' key,
+        //    each of which produces a mutableObject.  For every such object the mutableField will now attempt to resolve
+        //    the 'Score' key, which should reference a float.  The GetEntries call will enumerate through each of these
+        //    possibilities by producing a List<MutableObject> containing the mutableObjects at each level of the 
+        //    resolution list, while the GetValue call will use that list to return the actual value the field should
+        //    return from each one.
+        //
+        //   The arrity resolution lists produced by GetEntries have another useful property: they are not specific
+        //    to the mutableField whose key was used to produce them, so they can be utilized by multiple mutable fields
+        //    at the same time as long as they share an operating score.  One example of this would be a node that (for
+        //    some reason) records the disassembly of the instruction with the highest EIP.  Such a node might ingest
+        //    a payload that includes 'payload.instructions.EIP' and 'payload.instructions.disasm', and could operate
+        //    as follows:
+        //
+        //   uint maxEIP=0;
+        //   string foundDisasm;
+        //   foreach (var entry in EIPField.GetEntries(payload.data)){
+        //      uint localEIP = EIPField.GetValue(entry);
+        //      if (localEIP>maxEIP){
+        //          maxEIP = localEIP;
+        //          foundDisasm = DisasmField.GetValue(entry);
+        //      }
+        //   }
+        // 
+        //   In this case every possible arrity resolution of EIPField contains all the information to also resolve
+        //    DisasmField, so the same entry can be resolved to get information from either mutable field.
+
         // arrity-nonspecific getValue call
         public T GetValue(List<MutableObject> mutableData)
         {
@@ -445,10 +440,7 @@ namespace Mutation
 
             if (UseGlobalParameter)
                 return (T)(GlobalVariableDataStore.Instance.GetParameter(GlobalParameterKey));
-
-            //if (!KeyValid)
-            //    if (!ValidateKey(mutableData))
-            //        throw new Exception("Cannot validate field with this set of data!");
+            
 
             if ( AbsoluteKey == "" )
             {
@@ -465,9 +457,6 @@ namespace Mutation
 
             try
             {
-                //if (mutableData.Count<=IntermediateKeys.Count)
-                //    throw new Exception("Invalid intermediate key comparison!");
-
                 var mutableIndex = Mathf.Min( mutableData.Count-1, IntermediateKeys.Count );
 
                 var localMutable = mutableData[ mutableIndex];
@@ -479,8 +468,6 @@ namespace Mutation
                     localMutable = nextLevel;
                     mutableIndex++;
                 }
-
-                //var lastMutable = mutableData[IntermediateKeys.Count];
 
                 return (T) localMutable[LastKey];
             }
@@ -538,6 +525,9 @@ namespace Mutation
             return GetValue( GetEntriesInternal( lastElement, arrityList.WithoutLast().ToList() ).First() );
         }
 
+        //  Some chain nodes are only coded to operate with one set of values.  In these cases the node is configured to
+        //   use GetFirstValue as a shorthand to return the first value that would be produced by the arrity-nonspecific
+        //   approach described above (GetEntries and GetValue).
         public T GetFirstValue(MutableObject mutable)
         {
             return GetValue(GetEntries(mutable).First());
@@ -591,9 +581,7 @@ namespace Mutation
 
             arrityList.RemoveAt(arrityList.Count-1);
         }
-
-        // add list-schema setter
-
+        
         #region Key Validation
 
         public static bool CouldFieldResolveOnEntry( string absoluteKey, List< MutableObject > entry )
@@ -810,23 +798,6 @@ namespace Mutation
         }
 
         
-        //private MutableObject ResolveViaParent( MutableObject mutable )
-        //{
-        //    var scopedMutable = mutable;
-
-        //    var collection = GetValue( scopedMutable ) as IEnumerable< MutableObject >;
-
-        //    if (collection == null)
-        //        return new MutableObject();
-
-        //    scopedMutable = collection.FirstOrDefault();
-
-        //    if ( scopedMutable == null )
-        //        Debug.LogError( "Resolving child mutable element which does not exist or not a mutable; failed." );
-
-        //    return scopedMutable;
-        //}
-
         public bool CouldResolve(MutableObject mutable)
         {
             if (UseLiteralValue)
@@ -890,14 +861,10 @@ namespace Mutation
                 return true;
 
             string ownIntermediateSchema = IntermediateKeys.Aggregate( (a,b)=>a+"."+b );
-            //AbsoluteKey.Split('.').WithoutLast().Aggregate(
-            //(a, b) => a + "." + b);
+
             string patternIntermediateSchema =schemaParent.AbsoluteKey.Contains( '.' )?
                 schemaParent.AbsoluteKey.Substring( 0, schemaParent.AbsoluteKey.LastIndexOf( '.' ))
                 :"";
-//                .TrimEnd(("." + schemaParent.AbsoluteKey.Split('.').LastOrDefault()).ToCharArray());
-            //schemaPattern.AbsoluteKey.Split('.').WithoutLast().Aggregate(
-            //(a, b) => a + "." + b);
 
             if (ownIntermediateSchema.Length < patternIntermediateSchema.Length)
                 return false;
@@ -909,12 +876,6 @@ namespace Mutation
         }
 
 #endregion
-
-        //private int GetKeySteps()
-        //{
-        //    return (ParentField == null?0:ParentField.GetKeySteps())
-        //        + IntermediateKeys.Count + 1;
-        //}
-
+        
     }
 }

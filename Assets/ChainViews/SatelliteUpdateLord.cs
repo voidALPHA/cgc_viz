@@ -51,16 +51,14 @@ public class SatelliteUpdateLord : MonoBehaviour
         Instance.nodesToUpdate.Clear();
         Instance.nodesGenerating.Clear();
     }
-
-    // Use this for initialization
+    
     [UsedImplicitly]
     void Start()
     {
         nodesToUpdate = new Queue<ChainNodeView>();
         nodesGenerating = new Queue<ChainNodeView>();
     }
-
-    // Update is called once per frame
+    
     [UsedImplicitly]
     void Update()
     {

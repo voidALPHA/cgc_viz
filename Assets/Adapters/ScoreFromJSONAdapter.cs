@@ -11,16 +11,12 @@
 
 using System.Collections;
 using System.Collections.Generic;
-using Assets.Utility;
 using Chains;
 using Filters;
 using Mutation;
 using Mutation.Mutators.TeamSpecific;
 using UnityEngine;
 using Visualizers;
-using ColorUtility = Assets.Utility.ColorUtility;
-using Random = System.Random;
-
 namespace Adapters
 {
     public class ScoreFromJSONAdapter : Adapter

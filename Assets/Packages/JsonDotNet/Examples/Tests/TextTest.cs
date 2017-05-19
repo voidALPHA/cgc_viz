@@ -1,8 +1,5 @@
 using System;
-using System.Runtime.InteropServices;
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 
 public class TextTest : MonoBehaviour
 {
@@ -13,7 +10,6 @@ public class TextTest : MonoBehaviour
     private JsonTestScript _tester;
     private bool _complete;
 
-	// Use this for initialization
 	void Start ()
 	{
         //Set the test starting point
@@ -25,7 +21,6 @@ public class TextTest : MonoBehaviour
         
 	}
 	
-	// Update is called once per frame
 	void Update () 
     {	
 	    if (!_complete && (DateTime.Now - _refTime).TotalSeconds >= 3)

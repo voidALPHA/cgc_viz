@@ -11,6 +11,8 @@
 
 using Chains;
 
+// Most Haxxis packages begin with one or more Adapters.  An adapter is simply a ChainNode whose primary purpose
+//  is to prepare data, writing it to a mutableObject so it can be utilized later in the package.
 namespace Adapters
 {
     public abstract class Adapter : ChainNode
