@@ -7,6 +7,8 @@ This project consists of three major parts:
 * The Renderer takes the defined pipeline, fetches the data required, and creates the visualization objects for viewing.
 * The Choreography allows for programmatic control of the camera, letting the user define a specific path to move along for autonomously-generated videos.
 
+Full documentation on the use of Haxxis can be viewed [here](https://voidalpha.github.io/cgc_viz/).
+
 Haxxis can be paired with a Video Generation System to be able to produce videos in bulk.
 
 # Haxxis's License

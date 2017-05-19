@@ -1,5 +1,7 @@
 Haxxis README
 
+Full documentation on the use of Haxxis is available at https://voidalpha.github.io/cgc_viz/.
+
 ===================================================
 A brief tour
 
