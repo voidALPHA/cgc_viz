@@ -108,9 +108,12 @@ namespace UnityEngine.UI
         [NonSerialized] private List<Graphic> m_RaycastResults = new List<Graphic>();
         [NonSerialized] public readonly List<RaycastResult> LastResultList = new List<RaycastResult>(); 
 
+        /// <summary>
+        /// The raycaster main entry point; produced by Unity Techonologies.  Generally left in its original state.
+        /// </summary>
         public override void Raycast(PointerEventData eventData, List<RaycastResult> resultAppendList)
         {
-            m_Canvases.RemoveAll(c => c == null);
+            m_Canvases.RemoveAll(c => c == null); // voidALPHA - this raycaster is actually raycasting against multiple canvases to reduce multiple raycaster overhead
 
             if(m_Canvases.Count == 0)
                 return;
@@ -250,17 +253,44 @@ namespace UnityEngine.UI
                 return m_Canvases[0].worldCamera ?? Camera.main;
             }
         }
-
         /// <summary>
-        /// Perform a raycast into the screen and collect all graphics underneath it.
+        /// A set of Graphics that the raycast actually hit.
         /// </summary>
         [NonSerialized] static readonly HashSet<Graphic> SortedGraphics = new HashSet<Graphic>();
-        [NonSerialized] static readonly List<Graphic> AllWorkspaceGraphics = new List<Graphic>(), AllChoreoGraphics = new List<Graphic>();
+        /// <summary>
+        /// A cached list of all the Graphics in the Haxxis Workspace.
+        /// </summary>
+        [NonSerialized] static readonly List<Graphic> AllWorkspaceGraphics = new List<Graphic>();
+        /// <summary>
+        /// A cached list of all the Graphics in the Haxxis Choreography.
+        /// </summary>
+        [NonSerialized] static readonly List<Graphic> AllChoreoGraphics = new List<Graphic>();
 
+        /// <summary>
+        /// The last known count of Graphics across all canvases; if this number differs from the current count, we need to rebuild the cache.
+        /// </summary>
         private int LastKnownGraphicCount = 0;
+        /// <summary>
+        /// A mapping of a Graphic to a list of child Graphics, so we only need to traverse through Unity's hierarchy once.
+        /// </summary>
         private readonly Dictionary<Graphic, List<Graphic>> HierarchyCacheDictionary = new Dictionary<Graphic, List<Graphic>>(); 
-        private readonly List<Graphic> RootWorkspaceGraphics = new List<Graphic>(); 
+        /// <summary>
+        /// A list of the first-level Workspace Graphics that need to be tested.
+        /// </summary>
+        /// <remarks>
+        /// This list is populated with all the Graphics that have no parent Graphic, and thus cannot be reached via the HeirarchyCacheDictionary.
+        /// </remarks>
+        private readonly List<Graphic> RootWorkspaceGraphics = new List<Graphic>();
+        /// <summary>
+        /// A list of the first-level Choreography Graphics that need to be tested.
+        /// </summary>
+        /// <remarks>
+        /// This list is populated with all the Graphics that have no parent Graphic, and thus cannot be reached via the HeirarchyCacheDictionary.
+        /// </remarks>
         private readonly List<Graphic> RootChoreoGraphics = new List<Graphic>();
+        /// <summary>
+        /// A Queue of Graphics that still need to be tested this raycast.
+        /// </summary>
         private readonly Queue<Graphic> GraphicsToTest = new Queue<Graphic>();
         private TransformTestDictionary transformTester = new TransformTestDictionary();
 
@@ -269,6 +299,9 @@ namespace UnityEngine.UI
             LastKnownGraphicCount = 0;
         }
 
+        /// <summary>
+        /// Perform a raycast into the screen and collect all graphics underneath it.
+        /// </summary>
         private void Raycast(List<Canvas> canvases, Camera eventCamera, Vector2 pointerPosition, List<Graphic> results)
         {
             var workspaceTest = new Predicate<Graphic>( // Unity's original test, with modifications from voidALPHA to perform less intensive tests first
@@ -295,10 +328,11 @@ namespace UnityEngine.UI
             
             if(AllWorkspaceGraphics.Count + AllChoreoGraphics.Count != LastKnownGraphicCount) // Graphics count changed
             {
-                HierarchyCacheDictionary.Clear(); // Clear out cached dictionary and root graphic list
+                HierarchyCacheDictionary.Clear(); // Clear out cached dictionary and root graphic lists
                 RootWorkspaceGraphics.Clear();
                 RootChoreoGraphics.Clear();
-                if(SatelliteUpdateLord.Instance.NodesProcessing) // We're still processing nodes; perform (slower) non-cached tests while nodes come up
+                if(SatelliteUpdateLord.Instance.NodesProcessing) // We're still processing nodes; perform slower non-cached tests while nodes come up.
+                                                                 // This provides raycast functionality while generating and is still faster than caching information every frame.
                 {
                     if(Choreography.Views.TimelineViewBehaviour.StepPicker.gameObject.activeInHierarchy ||
                        pointerPosition.y < Choreography.Views.TimelineViewBehaviour.Instance.CurrentHeight)
@@ -309,7 +343,7 @@ namespace UnityEngine.UI
                             SortedGraphics.Add(graphic);
                         }
                     }
-                    else
+                    else if(ChainView.Instance.Visible)
                     {
                         AllWorkspaceGraphics.RemoveAll(workspaceTest);
                         foreach(var graphic in AllWorkspaceGraphics)
@@ -317,21 +351,22 @@ namespace UnityEngine.UI
                             SortedGraphics.Add(graphic);
                         }
                     }
-                    LastKnownGraphicCount = 0;
+                    LastKnownGraphicCount = 0;  // Zero out known Graphic count to force the Raycaster to attempt caching again on next raycast.
                 }
                 else
                 {
                     transformTester.Refresh(AllWorkspaceGraphics, transform);
                     foreach(var g in AllWorkspaceGraphics) // Not processing nodes, do a lot of work up front to improve later speed of calculations
                     {
-                        HierarchyCacheDictionary[g] = new List<Graphic>();
-                        g.transform.GetComponentsInChildren(HierarchyCacheDictionary[g]);
+                        HierarchyCacheDictionary[g] = new List<Graphic>(); // Initialize the list of Children for this Graphic
+                        g.transform.GetComponentsInChildren(HierarchyCacheDictionary[g]); // Ask Unity for the list of Graphics under this Graphic, store it in the cache
                         var p = g.transform.parent;
-                        if(transformTester.TestTransform(p))
-                            RootWorkspaceGraphics.Add(g);
+                        if(transformTester.TestTransform(p)) // If no ancestor is a Graphic
+                            RootWorkspaceGraphics.Add(g); // This Graphic will need to be among the first to be tested
                     }
+
                     transformTester.Refresh(AllChoreoGraphics, ChoreoCanvas.transform);
-                    foreach(var g in AllChoreoGraphics) // Not processing nodes, do a lot of work up front to improve later speed of calculations
+                    foreach(var g in AllChoreoGraphics) // Do the same for the Choreography Canvas
                     {
                         HierarchyCacheDictionary[g] = new List<Graphic>();
                         g.transform.GetComponentsInChildren(HierarchyCacheDictionary[g]);
@@ -339,14 +374,15 @@ namespace UnityEngine.UI
                         if(transformTester.TestTransform(p))
                             RootChoreoGraphics.Add(g);
                     }
+
                     LastKnownGraphicCount = AllWorkspaceGraphics.Count + AllChoreoGraphics.Count;
-                    //Debug.Log(RootWorkspaceGraphics.Count + " root graphics to test against");
                 }
             }
 
+            // If we're working against cached graphic lists (ie nodes aren't currently being populated) prepare for the hierarchy-based test
             var test = workspaceTest;
             if(Choreography.Views.TimelineViewBehaviour.StepPicker.gameObject.activeInHierarchy || pointerPosition.y < Choreography.Views.TimelineViewBehaviour.Instance.CurrentHeight)
-            {
+            { // Mouse is in the Choreography area, perform Choreography tests.
                 test = choreoTest;
                 foreach(var g in RootChoreoGraphics)
                 {
@@ -378,11 +414,10 @@ namespace UnityEngine.UI
 
             var sgraphics = new List<Graphic>(SortedGraphics);
             sgraphics.Sort((g1, g2) => g2.depth.CompareTo(g1.depth));
-            //		StringBuilder cast = new StringBuilder();
             for(int i = 0; i < sgraphics.Count; ++i)
                 results.Add(sgraphics[i]);
-            //		Debug.Log (cast.ToString());
 
+            // Ready the lists for the next run.
             AllWorkspaceGraphics.Clear();
             AllChoreoGraphics.Clear();
             SortedGraphics.Clear();
@@ -403,10 +438,18 @@ namespace UnityEngine.UI
         //    Gizmos.color = Color.white;
         //}
 
+        /// <summary>
+        /// A Helper Class to parse what should be considered a root graphic.
+        /// </summary>
         private class TransformTestDictionary
         {
             private readonly Dictionary<Transform, bool> dict = new Dictionary<Transform, bool>();
 
+            /// <summary>
+            /// Prepares the tester for another round of testing.
+            /// </summary>
+            /// <param name="gfx">An enumeration of Graphics that would cause the tester to return false.</param>
+            /// <param name="root">The root Transform to test against.</param>
             public void Refresh(IEnumerable<Graphic> gfx, Transform root)
             {
                 dict.Clear();
@@ -417,17 +460,26 @@ namespace UnityEngine.UI
                 dict[root] = true;
             }
 
+            /// <summary>
+            /// Tests a specific Transform to see if it's eligile to be a root Graphic.
+            /// </summary>
+            /// <remarks>
+            /// The testing algorithm is recursive, and caches interim results to allow for faster subsequent tests.<br/>
+            /// The test traverses up Unity's hierarchy, returning false if it hits a Transform that has a Graphic on it.
+            /// </remarks>
+            /// <param name="t">The Transform to test.</param>
+            /// <returns>True if it's considered a root, false otherwise.</returns>
             public bool TestTransform(Transform t)
             {
                 try
                 {
-                    return dict[t];
+                    return dict[t]; // Graphics already flagged false, root already flagged true.
                 }
-                catch(KeyNotFoundException)
+                catch(KeyNotFoundException) // The tested Transform is not in the dictionary, fetch the parent's result, cache it, and return it.
                 {
                     return dict[t] = TestTransform(t.parent);
                 }
-                catch(ArgumentNullException)
+                catch(ArgumentNullException) // The traversal didn't hit the root at all; the originally tested Transform is not an ancestor of the root.
                 {
                     return false;
                 }
