@@ -16,4 +16,5 @@
 
 - [Haxxis Package Recipes](Haxxis%20Package%20Recipes.pdf)
 - [Haxxis Package Explanations](voidALPHA_CGC_Visualization101.pdf)
+- [Haxxis Example Videos](#Videos.md)
 - [Final Event Brochure](CGC_CFE_Brochure.pdf)
